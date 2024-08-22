@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@svg/*":["./public/assets/svg/*"],
+      "@png/*":["./public/assets/png/*"],
+      "@components/*":["./src/app/components/*"],
+      "@redux/*":["./redux/*"],
+      "@hooks/*":["./redux/hooks/*"],
+      "@data/*":["./Data/*"],
+      "@handler/*":["./Handler/*"],
+      "root/*":["./*"]
+    }
+  },
+
+  "originWidth": 1440
+}

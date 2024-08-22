@@ -1,0 +1,306 @@
+{
+    "response": {
+        "request": {
+            "searchDt": "2024-08-19"
+        },
+        "results": [
+            {
+                "result": {
+                    "date": "2024-08-19",
+                    "docs": [
+                        {
+                            "doc": {
+                                "no": 1,
+                                "difference": 718,
+                                "baseWeekRank": 51,
+                                "pastWeekRank": 769,
+                                "bookname": "백설공주에게 죽음을 ",
+                                "authors": "넬레 노이하우스 지음 ;김진아 옮김",
+                                "publisher": "북로드",
+                                "publication_year": "2011",
+                                "isbn13": "9788991239685",
+                                "addition_symbol": "03850",
+                                "class_no": "853",
+                                "class_nm": "문학 > 독일문학 > 소설",
+                                "bookImageURL": "http://image.aladin.co.kr/product/873/84/cover500/8991239684_2.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=1139434"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 2,
+                                "difference": 53,
+                                "baseWeekRank": 57,
+                                "pastWeekRank": 110,
+                                "bookname": "파친코 :이민진 장편소설",
+                                "authors": "이민진 지음 ;이미정 옮김",
+                                "publisher": "문학사상",
+                                "publication_year": "2018",
+                                "isbn13": "9788970129815",
+                                "addition_symbol": "04840",
+                                "vol": "1",
+                                "class_no": "843.6",
+                                "class_nm": "문학 > 영미문학 > 소설",
+                                "bookImageURL": "https://image.aladin.co.kr/product/29496/39/cover500/k202838509_3.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=3723218"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 3,
+                                "difference": 40,
+                                "baseWeekRank": 47,
+                                "pastWeekRank": 87,
+                                "bookname": "아주 희미한 빛으로도 :최은영 소설 ",
+                                "authors": "지은이: 최은영",
+                                "publisher": "문학동네",
+                                "publication_year": "2023",
+                                "isbn13": "9788954695053",
+                                "addition_symbol": "03810",
+                                "class_no": "813.7",
+                                "class_nm": "문학 > 한국문학 > 소설",
+                                "bookImageURL": "https://image.aladin.co.kr/product/32129/40/cover500/8954695051_1.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=6738257"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 4,
+                                "difference": 40,
+                                "baseWeekRank": 84,
+                                "pastWeekRank": 124,
+                                "bookname": "(흔한남매) 별난 방탈출 :탈출 미션 스토리북",
+                                "authors": "흔한남매 원작 ;차차 그림",
+                                "publisher": "미래엔",
+                                "publication_year": "2020",
+                                "isbn13": "9791168410541",
+                                "addition_symbol": "77810",
+                                "vol": "4",
+                                "class_no": "691",
+                                "class_nm": "예술 > 오락, 운동 > 오락",
+                                "bookImageURL": "https://image.aladin.co.kr/product/28533/10/cover/k182835138_1.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=6365433"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 5,
+                                "difference": 39,
+                                "baseWeekRank": 81,
+                                "pastWeekRank": 120,
+                                "bookname": "흔한남매 과학 탐험대 5 : 물리 1",
+                                "authors": "흔한남매 (원작), 이현진, 닥터 스코 (글), 김덕영 (그림), 김희목 (감수), 김희목, 정현철, 권경아, 최진수 (기획)",
+                                "publisher": "주니어김영사",
+                                "publication_year": "2022",
+                                "isbn13": "9788934940753",
+                                "class_nm": "null > null > null",
+                                "bookImageURL": "https://image.aladin.co.kr/product/29615/64/cover/8934940751_1.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=6477919"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "result": {
+                    "date": "2024-08-18",
+                    "docs": [
+                        {
+                            "doc": {
+                                "no": 1,
+                                "difference": 761,
+                                "baseWeekRank": 90,
+                                "pastWeekRank": 851,
+                                "bookname": "백설공주에게 죽음을 ",
+                                "authors": "넬레 노이하우스 지음 ;김진아 옮김",
+                                "publisher": "북로드",
+                                "publication_year": "2011",
+                                "isbn13": "9788991239685",
+                                "addition_symbol": "03850",
+                                "class_no": "853",
+                                "class_nm": "문학 > 독일문학 > 소설",
+                                "bookImageURL": "http://image.aladin.co.kr/product/873/84/cover/8991239684_2.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=1139434"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 2,
+                                "difference": 67,
+                                "baseWeekRank": 58,
+                                "pastWeekRank": 125,
+                                "bookname": "파친코 :이민진 장편소설",
+                                "authors": "이민진 지음 ;이미정 옮김",
+                                "publisher": "문학사상",
+                                "publication_year": "2018",
+                                "isbn13": "9788970129815",
+                                "addition_symbol": "04840",
+                                "vol": "1",
+                                "class_no": "843.6",
+                                "class_nm": "문학 > 영미문학 > 소설",
+                                "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/134/282/13428208.jpg?type=m1&udate=20180331",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=3723218"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 3,
+                                "difference": 62,
+                                "baseWeekRank": 96,
+                                "pastWeekRank": 158,
+                                "bookname": "(흔한남매) 별난 방탈출 :탈출 미션 스토리북",
+                                "authors": "흔한남매 원작 ;차차 그림",
+                                "publisher": "미래엔",
+                                "publication_year": "2020",
+                                "isbn13": "9791164137176",
+                                "addition_symbol": "77810",
+                                "vol": "1",
+                                "class_no": "691",
+                                "class_nm": "예술 > 오락, 운동 > 오락",
+                                "bookImageURL": "https://image.aladin.co.kr/product/25813/3/cover/k172736336_1.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=5833701"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 4,
+                                "difference": 58,
+                                "baseWeekRank": 66,
+                                "pastWeekRank": 124,
+                                "bookname": "(흔한남매) 별난 방탈출 :탈출 미션 스토리북",
+                                "authors": "흔한남매 원작 ;차차 그림",
+                                "publisher": "미래엔",
+                                "publication_year": "2020",
+                                "isbn13": "9791168410541",
+                                "addition_symbol": "77810",
+                                "vol": "4",
+                                "class_no": "691",
+                                "class_nm": "예술 > 오락, 운동 > 오락",
+                                "bookImageURL": "https://image.aladin.co.kr/product/28533/10/cover/k182835138_1.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=6365433"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 5,
+                                "difference": 49,
+                                "baseWeekRank": 99,
+                                "pastWeekRank": 148,
+                                "bookname": "녹나무의 여신 ",
+                                "authors": "저자: 히가시노 게이고 ;옮긴이: 양윤옥",
+                                "publisher": "소미미디어",
+                                "publication_year": "2024",
+                                "isbn13": "9791138483049",
+                                "addition_symbol": "03830",
+                                "class_no": "833.6",
+                                "class_nm": "문학 > 일본문학 > 소설",
+                                "bookImageURL": "https://image.aladin.co.kr/product/33953/42/cover200/k682930336_1.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=6876313"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "result": {
+                    "date": "2024-08-17",
+                    "docs": [
+                        {
+                            "doc": {
+                                "no": 1,
+                                "difference": 197,
+                                "baseWeekRank": 99,
+                                "pastWeekRank": 296,
+                                "bookname": "사피엔스 :유인원에서 사이보그까지, 인간 역사의 대담하고 위대한 질문 ",
+                                "authors": "지은이: 유발 하라리 ;옮긴이: 조현욱",
+                                "publisher": "김영사",
+                                "publication_year": "2015",
+                                "isbn13": "9788934972464",
+                                "addition_symbol": "03900",
+                                "class_no": "909",
+                                "class_nm": "역사 > 역사 > 세계사, 세계문화사",
+                                "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/097/807/09780781.jpg?type=m1&udate=20180721",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=3027835"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 2,
+                                "difference": 99,
+                                "baseWeekRank": 97,
+                                "pastWeekRank": 196,
+                                "bookname": "파친코 :이민진 장편소설",
+                                "authors": "이민진 지음 ;이미정 옮김",
+                                "publisher": "문학사상",
+                                "publication_year": "2018",
+                                "isbn13": "9788970129822",
+                                "addition_symbol": "04840",
+                                "vol": "2",
+                                "class_no": "843.6",
+                                "class_nm": "문학 > 영미문학 > 소설",
+                                "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/134/282/13428213.jpg?type=m1&udate=20180331",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=3723461"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 3,
+                                "difference": 90,
+                                "baseWeekRank": 76,
+                                "pastWeekRank": 166,
+                                "bookname": "(흔한남매) 별난 방탈출 :탈출 미션 스토리북",
+                                "authors": "흔한남매 원작 ;차차 그림",
+                                "publisher": "미래엔",
+                                "publication_year": "2020",
+                                "isbn13": "9791164137879",
+                                "addition_symbol": "77810",
+                                "vol": "2",
+                                "class_no": "691",
+                                "class_nm": "예술 > 오락, 운동 > 오락",
+                                "bookImageURL": "https://image.aladin.co.kr/product/26959/80/cover/k182730410_1.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=5962802"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 4,
+                                "difference": 81,
+                                "baseWeekRank": 83,
+                                "pastWeekRank": 164,
+                                "bookname": "찌그러져도 동그라미입니다 :김창완 에세이 ",
+                                "authors": "지은이: 김창완",
+                                "publisher": "웅진씽크빅",
+                                "publication_year": "2024",
+                                "isbn13": "9788901280684",
+                                "addition_symbol": "03810",
+                                "class_no": "818",
+                                "class_nm": "문학 > 한국문학 > 르포르타주 및 기타",
+                                "bookImageURL": "https://image.aladin.co.kr/product/33600/15/cover/890128068x_1.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=6842827"
+                            }
+                        },
+                        {
+                            "doc": {
+                                "no": 5,
+                                "difference": 67,
+                                "baseWeekRank": 62,
+                                "pastWeekRank": 129,
+                                "bookname": "(흔한남매) 별난 방탈출 :탈출 미션 스토리북",
+                                "authors": "흔한남매 원작 ;차차 그림",
+                                "publisher": "미래엔",
+                                "publication_year": "2020",
+                                "isbn13": "9791168410541",
+                                "addition_symbol": "77810",
+                                "vol": "4",
+                                "class_no": "691",
+                                "class_nm": "예술 > 오락, 운동 > 오락",
+                                "bookImageURL": "https://image.aladin.co.kr/product/28533/10/cover/k182835138_1.jpg",
+                                "bookDtlUrl": "https://data4library.kr/bookV?seq=6365433"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,52 @@
+[
+    {
+        "title": "로맨스",
+        "subTitle": "연애세포를 깨울 시간!",
+        "bgColor":"#F9D5D5",
+        "books":[
+            "/assets/png/bookImages/bookCover_1.png",
+            "/assets/png/bookImages/bookCover_2.png",
+            "/assets/png/bookImages/bookCover_3.png"
+        ]
+    },
+    {
+        "title": "코미디",
+        "subTitle": "일상에 웃음을 더하다",
+        "bgColor":"#FFEECC",
+        "books":[
+            "/assets/png/bookImages/bookCover_1.png",
+            "/assets/png/bookImages/bookCover_2.png",
+            "/assets/png/bookImages/bookCover_3.png"
+        ]
+    },
+    {
+        "title": "스릴러",
+        "subTitle": "숨막히는 전율!",
+        "bgColor":"#FFC3C3",
+        "books":[
+            "/assets/png/bookImages/bookCover_1.png",
+            "/assets/png/bookImages/bookCover_2.png",
+            "/assets/png/bookImages/bookCover_3.png"
+        ]
+    },
+    {
+        "title": "추리",
+        "subTitle": "퍼즐이 하나로 맞춰질때",
+        "bgColor":"#FFD16F",
+        "books":[
+            "/assets/png/bookImages/bookCover_1.png",
+            "/assets/png/bookImages/bookCover_2.png",
+            "/assets/png/bookImages/bookCover_3.png"
+        ]
+    },
+    {
+        "title": "SF",
+        "subTitle": "미래세계로의 여행",
+        "bgColor":"#EBB5FF",
+        "books":[
+            "/assets/png/bookImages/bookCover_1.png",
+            "/assets/png/bookImages/bookCover_2.png",
+            "/assets/png/bookImages/bookCover_3.png"
+        ]
+    }
+]
