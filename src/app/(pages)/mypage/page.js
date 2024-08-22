@@ -1,8 +1,7 @@
 import Image from "next/image";
 import bookmarkPicImg from "@png/bookmarkPic.png";
-import SubLayout from "@/app/components/SubLayout";
 import BookData from "root/Data/bookData.json"
-import BookForList2 from "../components/BookForList2";
+import BookForList2 from "@components/BookForList2";
 import profileImg from "@png/profile.jpg"
 
 export default function SearchResultPage(props) {
