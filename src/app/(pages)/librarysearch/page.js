@@ -42,7 +42,7 @@ export default function LibrarySearchPage(props) {
         <div className="flex flex-col flex-grow mt-[33.56px] rounded-l-[23.69px] overflow-clip">
           {Array.from({ length: 9 }).map((library, index) => {
             return (
-              <div className="relative w-full h-[80px]">
+              <div className="relative w-full h-[80px]" key = {index}>
                 <div className="absolute w-full h-hull">
                   <img
                     src={`/assets/png/libraryImages/Library_${index + 1}.jpg`}

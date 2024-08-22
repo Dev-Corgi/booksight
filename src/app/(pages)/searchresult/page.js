@@ -30,7 +30,7 @@ export default function SearchResultPage() {
           <div className="flex flex-wrap w-[80.56vw] st:w-[1160px] h-hull gap-x-[28.98px] gap-y-[25.99px] overflow-clip">
             {books.map((book, index) => {
               return (
-                <div className="w-[169.02px] h-[333.07px]">
+                <div className="w-[169.02px] h-[333.07px]" key = {index}>
                   <BookForList2
                     book={book}
                     key={index}

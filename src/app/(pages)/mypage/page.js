@@ -54,7 +54,7 @@ export default function SearchResultPage(props) {
           <div className="flex flex-wrap w-full gap-[26px] mt-[31px] mr-[79px]">
             {BookData.books.map((book, index) => {
               return (
-                <div className="w-[146.22px] h-[333.07px]">
+                <div className="w-[146.22px] h-[333.07px]" key = {index}>
                   <BookForList2
                     book={book}
                     key={index}
