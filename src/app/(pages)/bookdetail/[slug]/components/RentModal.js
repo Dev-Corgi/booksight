@@ -94,6 +94,7 @@ export default function RentModal({ isOpen, requestClose, isbn13 }) {
 
       const promises = nearbyLibraryCodes.map(async (library) => {
         const libraryInfo = await getLibraryInfoHandler(library.libCode);
+        console.log(library.libCode);
         const libraryPicture = await getLibraryPictureHandler(library.libCode);
         const rentPossible = await isRentPossibleHandler(library.libCode, isbn13);
       
