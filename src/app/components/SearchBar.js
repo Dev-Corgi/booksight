@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import React, { useState } from "react";
-import searchSVG from "@svg/search.svg";
+import UserInterfaceIcon from "@svg/UserInterfaceIcon.svg"
 import { useRouter } from 'next/navigation';
 
 export default function SearchBar(){
@@ -39,7 +38,7 @@ export default function SearchBar(){
     return(
         <div className="w-full h-full flex flex-row items-center justify-start gap-[10px] pl-[10px] bg-searchBar rounded-[40px]">
         <div className="relative w-[30px] h-[30px]">
-          <Image src={searchSVG} alt="searchIcon" fill sizes={1}></Image>
+          <UserInterfaceIcon className = "w-full h-full text-black"></UserInterfaceIcon>
         </div>
         <input
           type="text"

@@ -2,10 +2,8 @@
 import React,{useEffect,useState} from "react";
 
 import Image from "next/image";
-import star_filled from "@png/star_filled.png"
-import star_empty from "@png/star_empty.png"
-import star_filledSVG from "@svg/star_filled.svg";
-import star_emptySVG from "@svg/star_empty.svg"; 
+import StarFill from "@svg/StarFill.svg";
+import StarEmpty from "@svg/StarEmpty.svg"; 
 
 export default function ReviewStars({width,score,className}) {
 
@@ -26,7 +24,8 @@ export default function ReviewStars({width,score,className}) {
     >
     {Array.from({ length: 5 }, (_, i) => (
         <div key={i} className="relative w-[0.89vw] h-[0.89vw] st:w-[12.8px] st:h-[12.8px]">
-          <Image src={i < score ? star_filledSVG : star_emptySVG} alt="star" fill sizes={1}/>
+          {/* <Image src={i < score ? StarFilled : StarEmpty} alt="star" fill sizes={1}/> */}
+          {i<score ? <StarFill className = "text-primary"/> : <StarEmpty className = "text-primary"/>}
         </div>
       ))}
       </div>

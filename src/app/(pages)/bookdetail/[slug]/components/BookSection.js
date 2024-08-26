@@ -5,7 +5,7 @@ import ReviewStars from "@/app/components/ReviewStars";
 import Book from "@/app/components/Book";
 import shelfImg from "@png/shelf.png";
 import Image from "next/image";
-import InfoIMG from "@png/info.png"
+import InfoIcon from "@svg/InfoIcon.svg"
 import RentModal from "./RentModal";
 export default function BookSection({ book }) {
 
@@ -76,7 +76,7 @@ export default function BookSection({ book }) {
 
           <div className = "flex flex-row gap-[6px] mt-[24px]">
             <div className = "relative w-[20px] h-[20px]">
-              <Image src={InfoIMG} alt ="infoIcon" fill sizes={1}></Image>
+              <InfoIcon className = " text-primary"></InfoIcon>
             </div>
             <p className = "font-NotoSansKRMedium text-[15px] text-primary">도서 DB 제공 : 알라딘 인터넷서점(www.aladin.co.kr)</p>
           </div>

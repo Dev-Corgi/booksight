@@ -7,7 +7,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import quote from "@png/quote.png";
 import shelf from "@png/shelf.png";
-import bookData from "root/Data/bookData.json";
 import Book from "@/app/components/Book";
 import hotTrendHandler from "@handler/hotTrendHandler";
 

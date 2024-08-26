@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MenuSVG from "@svg/menu.svg";
+import MoreIcon from "@svg/MoreIcon.svg"
 import shadow2Img from "@png/shadow2.png";
 import TitleTag from "@/app/components/TitleTag";
 export default function DescriptionSection({ className,disc }) {
@@ -23,7 +23,7 @@ export default function DescriptionSection({ className,disc }) {
             <div className="mt-[12.5px] ml-[19px] gap-[8px] w-min h-min flex flex-row items-center">
               <div className="flex items-center justify-center w-[13px] h-[13px]">
                 <div className="relative w-[3.47px] h-[13px] rotate-90">
-                  <Image src={MenuSVG} alt = "menuIcon" fill sizes={1}/>
+                  <MoreIcon className = " text-textColor-primary"></MoreIcon>
                 </div>
               </div>
               <p className="font-NotoSansKRMedium text-[14px] text-textColor-primary whitespace-nowrap">

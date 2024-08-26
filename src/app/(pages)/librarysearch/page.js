@@ -1,9 +1,9 @@
 import Image from "next/image";
-import SubLayout from "@/app/components/SubLayout";
-import mapArrowImg from "@png/mapArrow.png";
+import BackArrowIcon from "@svg/BackArrowIcon.svg";
+import CallIcon from "@svg/CallIcon.svg";
+import PlaceIcon from "@svg/PlaceIcon.svg";
+
 import mapImg from "@png/mapImage.png";
-import CallPrimarySVG from "@svg/phone_primary.svg";
-import PlacePrimarySVG from "@svg/place_primary.svg";
 
 export default function LibrarySearchPage(props) {
   return (
@@ -15,7 +15,7 @@ export default function LibrarySearchPage(props) {
           </p>
           <div className="flex flex-row items-center gap-[5px] mt-[9px]">
             <div className="relative w-[18px] h-[16px]">
-              <Image src={mapArrowImg} alt = "arrowIcon" fill sizes={1}></Image>
+              <BackArrowIcon className = "text-primary"></BackArrowIcon>
             </div>
             <p className="font-NotoSansKRSemiBold text-[16px] text-primary">
               뒤로 가기
@@ -62,7 +62,7 @@ export default function LibrarySearchPage(props) {
                   <div className="flex flex-row justify-start flex-grow gap-[60px]  mt-[30px] ml-[132.08px]">
                     <div className="flex flex-row items-center gap-[2.83px]">
                       <div className="relative w-[19px] h-[19px]">
-                        <Image src={PlacePrimarySVG} alt = "placeIcon" fill sizes={1}></Image>
+                        <PlaceIcon className = "text-primary"></PlaceIcon>
                       </div>
                       <p className="font-NotoSansKRBold text-primary text-[14px]">
                         경기 부천시 원미구 상이로 12
@@ -71,7 +71,7 @@ export default function LibrarySearchPage(props) {
 
                     <div className="flex flex-row items-center gap-[2.83px]">
                     <div className="relative w-[19px] h-[19px]">
-                      <Image src={CallPrimarySVG} alt = "callIcon" fill sizes={1}></Image>
+                      <CallIcon className = "text-primary"></CallIcon>
                       </div>
                       <p className="font-NotoSansKRBold text-primary text-[14px]">
                         010-6440-0688

@@ -10,7 +10,7 @@ export default function SearchResultPage() {
 
   return (
     <div className="flex flex-col items-center">
-        <Booklist className="flex flex-wrap w-[80.56vw] st:w-[1160px] h-hull gap-x-[28.98px] gap-y-[25.99px] overflow-clip" width={169.02} keyword={searchWord}></Booklist>
+        <Booklist className="flex flex-wrap w-[80.56vw] st:w-[1160px] h-hull  gap-x-[28.98px] gap-y-[25.99px] overflow-clip" width={169.02} keyword={searchWord}></Booklist>
     </div>
   );
 }

@@ -1,9 +1,9 @@
-import backArrowSVG from "@svg/backarrow.svg";
+import BackArrowIcon from "@svg/BackArrowIcon.svg";
 import Image from "next/image";
 import InputField from "./components/InputField";
-import googleLogoSVG from "@svg/googleLogo.svg";
-import appleLogoSVG from "@svg/appleLogo.svg";
-import facebookLogoSVG from "@svg/facebookLogo.svg";
+import GoogleLogo from "@svg/GoogleLogo.svg";
+import AppleLogo from "@svg/AppleLogo.svg";
+import FacebookLogo from "@svg/FacebookLogo.svg";
 import loginPicImg from "@png/loginPic.png";
 export default function LoginPage() {
   return (
@@ -13,7 +13,7 @@ export default function LoginPage() {
           <p className="font-NotoSansKRBold text-[30px]">BOOKS</p>
           <div className="flex flex-row items-center gap-[6.5px]">
             <div className="relative w-[18px] h-[16px]">
-              <Image src={backArrowSVG} alt = "backArrowIcon" fill sizes={1}></Image>
+              <BackArrowIcon></BackArrowIcon>
             </div>
             <p className="font-NotoSansKRSemiBold text-[16px]">돌아가기</p>
           </div>
@@ -49,21 +49,21 @@ export default function LoginPage() {
         <div className="flex flex-row gap-[5px]">
           <div className="flex flex-row justify-center items-center w-[10.69vw] h-[4.02vw] st:w-[154px] st:h-[57.92px] rounded-[9.21px] border-[1.5px] border-textColor-primary gap-[11.85px] mt-[30.55px]">
             <div className="relative w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
-              <Image src={googleLogoSVG} alt = "googleLogoIcon" fill sizes={1}></Image>
+              <GoogleLogo></GoogleLogo>
             </div>
             <p className="font-MontserratSemiBold text-[1.19vw] st:text-[17.11px]">Google</p>
           </div>
 
           <div className="flex flex-row justify-center items-center w-[10.69vw] h-[4.02vw]  st:w-[154px] st:h-[57.92px] rounded-[9.21px] border-[1.5px] border-textColor-primary gap-[11.85px] mt-[30.55px]">
             <div className="relative w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
-              <Image src={appleLogoSVG} alt = "appleLogoIcon" fill sizes={1}></Image>
+              <AppleLogo></AppleLogo>
             </div>
             <p className="font-MontserratSemiBold text-[1.19vw] st:text-[17.11px]">Apple</p>
           </div>
 
           <div className="flex flex-row justify-center items-center w-[10.69vw] h-[4.02vw] st:w-[154px] st:h-[57.92px] rounded-[9.21px] border-[1.5px] border-textColor-primary gap-[11.85px] mt-[30.55px]">
             <div className="relative w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
-              <Image src={facebookLogoSVG} alt = "facebookLogoIcon" fill sizes={1}></Image>
+              <FacebookLogo></FacebookLogo>
             </div>
             <p className="font-MontserratSemiBold text-[1.19vw] st:text-[17.11px]">Facebook</p>
           </div>

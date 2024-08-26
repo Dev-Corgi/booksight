@@ -3,19 +3,18 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import TitleTag from "@/app/components/TitleTag";
-import closeSVG from "@svg/close.svg";
+import CloseIcon from "@svg/CloseIcon.svg"
 import Image from "next/image";
-import searchSVG from "@svg/search.svg";
-import placePrimarySVG from "@svg/place_primary.svg";
-import phonePrimarySVG from "@svg/phone_primary.svg";
+// import searchSVG from "@svg/search.svg";
+import PlaceIcon from "@svg/PlaceIcon.svg";
+import CallIcon from "@svg/CallIcon.svg";
+import MenuIcon from "@svg/MenuIcon.svg";
+import FindIcon from "@svg/FindIcon.svg";
 import searchNearByLibraryHandler from "@handler/searchNearByLibraryHandler";
 import isRentPossibleHandler from "@handler/isRentPossibleHandler";
 import reverseGeoCodeHandler from "@handler/reverseGeoCodeHandler";
 import getLibraryPictureHandler from "@handler/getLibraryPictureHandler";
 import getLibraryInfoHandler from "@handler/getLibraryInfoHandler";
-import placeImg from "@png/place.png";
-import menuImg from "@png/menu.png";
-import findImg from "@png/find.png";
 import { useRouter } from 'next/navigation';
 
 export default function RentModal({ isOpen, requestClose, isbn13 }) {
@@ -194,7 +193,7 @@ export default function RentModal({ isOpen, requestClose, isbn13 }) {
               className="absolute right-0 mt-[33px] mr-[41px] w-[17px] h-[17px]"
               onClick={requestClose}
             >
-              <Image src={closeSVG} alt="closeButton" fill sizes={1}></Image>
+              <CloseIcon></CloseIcon>
             </div>
             <div className="w-[166px] h-[59px] mt-[41.19px]">
               <TitleTag
@@ -231,7 +230,7 @@ export default function RentModal({ isOpen, requestClose, isbn13 }) {
                 <div className = "flex justify-center items-center py-[8px] px-[9.6px] border-[1.5px] border-textColor-primary rounded-full">
                   <div className = "flex flex-row">
                     <div className = "relative w-[20px] h-[20px]">
-                      <Image src={placeImg} alt = "placeIcon" fill sizes={1}></Image>
+                      <PlaceIcon className = " text-textColor-primary"></PlaceIcon>
                     </div>
                     <p className ="font-NotoSansKRMedium text-textColor-primary text-[15px] ml-[1px]">{roadaddr}</p>
                   </div>
@@ -239,7 +238,7 @@ export default function RentModal({ isOpen, requestClose, isbn13 }) {
                 <div className = "flex justify-center items-center py-[8px] px-[9.6px] border-[1.5px] border-textColor-primary rounded-full">
                   <div className = "flex flex-row">
                     <div className = "relative w-[20px] h-[20px]">
-                      <Image src={findImg} alt = "findIcon" fill sizes={1}></Image>
+                      <FindIcon className = " text-textColor-primary"></FindIcon>
                     </div>
                     <p className ="font-NotoSansKRMedium text-textColor-primary text-[15px] ml-[1px]">2km</p>
                   </div>
@@ -247,7 +246,7 @@ export default function RentModal({ isOpen, requestClose, isbn13 }) {
                 <div className = "flex justify-center items-center py-[8px] px-[9.6px] border-[1.5px] border-textColor-primary rounded-full">
                   <div className = "flex flex-row">
                     <div className = "relative w-[20px] h-[20px]">
-                      <Image src={menuImg} alt = "menuIcon"></Image>
+                      <MenuIcon className = " text-textColor-primary"></MenuIcon>
                     </div>
                     <p className ="font-NotoSansKRMedium text-textColor-primary text-[15px] ml-[1px]">10개</p>
                   </div>
@@ -288,7 +287,7 @@ export default function RentModal({ isOpen, requestClose, isbn13 }) {
                       <div className="flex flex-row justify-start gap-[60px]">
                         <div className="flex flex-row w-[300px] items-center gap-[2.83px]">
                           <div className="relative w-[19px] h-[19px]">
-                            <Image src={placePrimarySVG} alt = "placeIcon" fill sizes={1}></Image>
+                            <PlaceIcon className = " text-primary"></PlaceIcon>
                           </div>
                           <p className="font-NotoSansKRBold text-primary text-[14px]">
                             {library.address}
@@ -296,7 +295,7 @@ export default function RentModal({ isOpen, requestClose, isbn13 }) {
                         </div>
                         <div className="flex flex-row w-[130px]items-center gap-[2.83px]">
                         <div className="relative w-[19px] h-[19px]">
-                          <Image src={phonePrimarySVG} alt = "callIcon" fill sizes={1}></Image>
+                          <CallIcon className = " text-primary"></CallIcon>
                           </div>
                           <p className="font-NotoSansKRBold text-primary text-[14px]">
                             {library.tel}
