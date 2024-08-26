@@ -36,7 +36,7 @@ export default function BookSection({ book }) {
           <p className="mt-[51px] text-[19px] font-NotoSansKRMedium text-textColor-secondary">
             {book.author}
           </p>
-          <p className="mt-[6px] text-[63px] w-[374px] font-KopubWorldBold text-textColor-primary">
+          <p className="mt-[6px] text-[63px] w-[374px] font-KopubWorldBold text-textColor-primary h-[120px] leading-[65px] text-ellipsis">
             {book.title}
           </p>
           <div className="flex flex-row gap-[7px] mt-[4px]">
