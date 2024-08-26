@@ -1,8 +1,8 @@
 import Image from "next/image";
 import InputField from "./components/InputField";
-import GoogleLogo from "@svg/GoogleLogo.svg";
-import AppleLogo from "@svg/AppleLogo.svg";
-import FacebookLogo from "@svg/FacebookLogo.svg";
+// import GoogleLogo from "@svg/GoogleLogo.svg";
+// import AppleLogo from "@svg/AppleLogo.svg";
+// import FacebookLogo from "@svg/FacebookLogo.svg";
 import BackArrowIcon from "@svg/BackArrowIcon.svg";
 import loginPicImg from "@png/loginPic.png";
 export default function LoginPage() {
@@ -49,21 +49,21 @@ export default function LoginPage() {
         <div className="flex flex-row gap-[5px]">
           <div className="flex flex-row justify-center items-center w-[10.69vw] h-[4.02vw] st:w-[154px] st:h-[57.92px] rounded-[9.21px] border-[1.5px] border-textColor-primary gap-[11.85px] mt-[30.55px]">
             <div className="relative w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
-              <GoogleLogo></GoogleLogo>
+              {/* <GoogleLogo></GoogleLogo> */}
             </div>
             <p className="font-MontserratSemiBold text-[1.19vw] st:text-[17.11px]">Google</p>
           </div>
 
           <div className="flex flex-row justify-center items-center w-[10.69vw] h-[4.02vw]  st:w-[154px] st:h-[57.92px] rounded-[9.21px] border-[1.5px] border-textColor-primary gap-[11.85px] mt-[30.55px]">
             <div className="relative w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
-              <AppleLogo></AppleLogo>
+              {/* <AppleLogo></AppleLogo> */}
             </div>
             <p className="font-MontserratSemiBold text-[1.19vw] st:text-[17.11px]">Apple</p>
           </div>
 
           <div className="flex flex-row justify-center items-center w-[10.69vw] h-[4.02vw] st:w-[154px] st:h-[57.92px] rounded-[9.21px] border-[1.5px] border-textColor-primary gap-[11.85px] mt-[30.55px]">
             <div className="relative w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
-              <FacebookLogo></FacebookLogo>
+              {/* <FacebookLogo></FacebookLogo> */}
             </div>
             <p className="font-MontserratSemiBold text-[1.19vw] st:text-[17.11px]">Facebook</p>
           </div>
