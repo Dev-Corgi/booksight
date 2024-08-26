@@ -6,7 +6,7 @@ import Book from "@/app/components/Book";
 import shelfImg from "@png/shelf.png";
 import Image from "next/image";
 import InfoIcon from "@svg/InfoIcon.svg"
-import RentModal from "./RentModal";
+import RentModal from "./RentModal/RentModal";
 export default function BookSection({ book }) {
 
   const [isOpen, setisOpen] = useState(false);

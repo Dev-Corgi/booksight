@@ -22,7 +22,7 @@ export default function DescriptionSection({ className,disc }) {
             </p>
             <div className="mt-[12.5px] ml-[19px] gap-[8px] w-min h-min flex flex-row items-center">
               <div className="flex items-center justify-center w-[13px] h-[13px]">
-                <div className="relative w-[3.47px] h-[13px] rotate-90">
+                <div className="relative w-[13px] h-[13px] rotate-90">
                   <MoreIcon className = " text-textColor-primary"></MoreIcon>
                 </div>
               </div>

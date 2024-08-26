@@ -23,7 +23,6 @@ export default async function getStaticMapHandler({ longitude, latitude }) {
   try {
     const blob = await fetchGetStaticMap(longitude, latitude);
     const imageUrl = URL.createObjectURL(blob); // Blob 데이터를 URL로 변환
-    console.log(imageUrl);
     return imageUrl;
   } catch (error) {
     console.error('Error fetching static map:', error);

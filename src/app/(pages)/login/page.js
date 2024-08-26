@@ -1,9 +1,9 @@
-import BackArrowIcon from "@svg/BackArrowIcon.svg";
 import Image from "next/image";
 import InputField from "./components/InputField";
 import GoogleLogo from "@svg/GoogleLogo.svg";
 import AppleLogo from "@svg/AppleLogo.svg";
 import FacebookLogo from "@svg/FacebookLogo.svg";
+import BackArrowIcon from "@svg/BackArrowIcon.svg";
 import loginPicImg from "@png/loginPic.png";
 export default function LoginPage() {
   return (
