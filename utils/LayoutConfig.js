@@ -10,9 +10,9 @@ export default function LayoutConfig({children}) {
   const subLayout = ["/librarysearch","/mypage","/searchresult"];
 
    return (
-   <>
+   <div>
    {homeLayout.some(p => pathName.startsWith(p))  && <Header className="mt-[30px]"/>}
    {subLayout.some(p => pathName.startsWith(p)) && <SubLayout pathName = {pathName}/>}
    {children}
-   </>);
+   </div>);
 }

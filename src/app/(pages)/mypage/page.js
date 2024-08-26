@@ -1,8 +1,7 @@
 import Image from "next/image";
 import bookmarkPicImg from "@png/bookmarkPic.png";
-import BookData from "root/Data/bookData.json"
-import BookForList2 from "@components/BookForList2";
 import profileImg from "@png/profile.jpg"
+import Booklist from "@/app/components/Booklist";
 
 export default function SearchResultPage(props) {
   return (
@@ -11,10 +10,10 @@ export default function SearchResultPage(props) {
           <div className="w-full h-full flex flex-col items-center">
 
             <div className="relative flex flex-col items-center w-full h-[384.26px]">
-              <Image src={bookmarkPicImg} className = "absolute"></Image>
+              <Image src={bookmarkPicImg} alt = "bookmarkFramePic" fill sizes={1}></Image>
               <div className = "absolute w-[32.22px] h-[32.22px] rounded-full bg-background mt-[15.16px]"></div>
-              <div className = "absolute w-[267.25px] h-[267.25px] rounded-full mt-[73.92px] border-primary border-[4.74px] overflow-clip">
-                <Image src = {profileImg}></Image>
+              <div className = "relative w-[267.25px] h-[267.25px] rounded-full mt-[73.92px] border-primary border-[4.74px] overflow-clip">
+                <Image src = {profileImg} alt = "profilePic" fill sizes={1}></Image>
               </div>
             </div>
 
@@ -51,19 +50,7 @@ export default function SearchResultPage(props) {
             <div className="absolute w-[102px] h-full bg-primary"></div>
           </div>
 
-          <div className="flex flex-wrap w-full gap-[26px] mt-[31px] mr-[79px]">
-            {BookData.map((book, index) => {
-              return (
-                <div className="w-[146.22px] h-[333.07px]" key = {index}>
-                  <BookForList2
-                    book={book}
-                    key={index}
-                    width={146.22}
-                  ></BookForList2>
-                </div>
-              );
-            })}
-          </div>
+            <Booklist width={146.22} className="flex flex-wrap w-full gap-[26px] mt-[31px] mr-[79px]"></Booklist>
         </div>
       </div>
   );

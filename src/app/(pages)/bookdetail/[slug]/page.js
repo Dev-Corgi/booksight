@@ -3,7 +3,7 @@ import React,{useEffect,useState} from "react";
 import BookSection from "./components/BookSection";
 import DescriptionSection from "./components/DescriptionSection";
 import ReviewSection from "./components/ReviewSection";
-import Booklist2 from "@/app/components/Booklist2";
+import BooklistSection from "@/app/components/BooklistSection";
 import aladinISBNSearchHandler from "@handler/aladinISBNSearchHandler";
 
 export default function BookDetailPage({ params }) {
@@ -30,10 +30,11 @@ export default function BookDetailPage({ params }) {
       <div className="flex flex-col w-[85vw] -mt-[5px] gap-y-[62px]">
         <DescriptionSection disc = {book.description}></DescriptionSection>
         <ReviewSection></ReviewSection>
-        <Booklist2></Booklist2>
-        <Booklist2></Booklist2>
+        <BooklistSection title = "작가의 다른책"></BooklistSection>
+        <BooklistSection title = "이런책은 어떠세요?"></BooklistSection>
       </div>
-    </div>}
+    </div>
+    }
     </>
   );
 }

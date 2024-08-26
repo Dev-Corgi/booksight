@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
       <LayoutConfig>
       {children}
       </LayoutConfig>
+      <div id = "rentModal"></div>
       </Suspense>
       </body>
       

@@ -1,0 +1,173 @@
+{
+    "response": {
+        "request": {
+            "libCode": "127058"
+        },
+        "numFound": 1,
+        "resultNum": 1,
+        "libs": [
+            {
+                "lib": {
+                    "libInfo": {
+                        "libCode": "127058",
+                        "libName": "2.28도서관",
+                        "address": "대구광역시 중구 2·28길 9",
+                        "tel": "053-257-2280",
+                        "fax": "053-257-2284",
+                        "latitude": "35.8592504",
+                        "longitude": "128.5894055",
+                        "homepage": "http://library.daegu.go.kr/228lib/index.do",
+                        "closed": "매주 월요일 / 법정공휴일(일요일을 제외한 관공서 공휴일), 도서관 및 기타 사정으로 위탁기관장이 정하는 날",
+                        "operatingTime": "화~금 09:00~18:00, 토일 09:00~17:00",
+                        "BookCount": "56375"
+                    },
+                    "loanByhours": [
+                        {
+                            "result": {
+                                "hour": "00",
+                                "loan": 0,
+                                "return": 4
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "09",
+                                "loan": 9,
+                                "return": 17
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "10",
+                                "loan": 10,
+                                "return": 11
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "11",
+                                "loan": 8,
+                                "return": 10
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "12",
+                                "loan": 8,
+                                "return": 12
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "13",
+                                "loan": 15,
+                                "return": 6
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "14",
+                                "loan": 10,
+                                "return": 10
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "15",
+                                "loan": 14,
+                                "return": 10
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "16",
+                                "loan": 14,
+                                "return": 8
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "17",
+                                "loan": 4,
+                                "return": 5
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "18",
+                                "loan": 7,
+                                "return": 5
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "19",
+                                "loan": 0,
+                                "return": 1
+                            }
+                        },
+                        {
+                            "result": {
+                                "hour": "20",
+                                "loan": 0,
+                                "return": 1
+                            }
+                        }
+                    ],
+                    "loanByDayofWeek": [
+                        {
+                            "result": {
+                                "dayOfWeek": "Sunday",
+                                "loan": 14,
+                                "return": 15
+                            }
+                        },
+                        {
+                            "result": {
+                                "dayOfWeek": "Monday",
+                                "loan": 0,
+                                "return": 3
+                            }
+                        },
+                        {
+                            "result": {
+                                "dayOfWeek": "Tuesday",
+                                "loan": 20,
+                                "return": 20
+                            }
+                        },
+                        {
+                            "result": {
+                                "dayOfWeek": "Wednesday",
+                                "loan": 14,
+                                "return": 13
+                            }
+                        },
+                        {
+                            "result": {
+                                "dayOfWeek": "Thursday",
+                                "loan": 15,
+                                "return": 13
+                            }
+                        },
+                        {
+                            "result": {
+                                "dayOfWeek": "Friday",
+                                "loan": 20,
+                                "return": 20
+                            }
+                        },
+                        {
+                            "result": {
+                                "dayOfWeek": "Saturday",
+                                "loan": 17,
+                                "return": 16
+                            }
+                        }
+                    ],
+                    "newBooks": ""
+                }
+            }
+        ]
+    }
+}

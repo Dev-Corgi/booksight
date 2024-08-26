@@ -47,13 +47,13 @@ export default async function hotTrendHandler() {
   //   result.push(aladinISBNSearchResult.item[0]);
   // }
 
-  const result = [];
   const hotTrends = [9791130605210,9791130607887,9791130610658];
 
-  for (const isbn13 of hotTrends) {
-    const aladinISBNSearchResult = await aladinISBNSearchHandler(isbn13);
-    result.push(aladinISBNSearchResult);
-  }
+  const result = await Promise.all(
+    hotTrends.map((isbn13) => aladinISBNSearchHandler(isbn13))
+  );
 
   return [result[0], result[1], result[2]];
+
+
 }

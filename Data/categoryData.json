@@ -4,9 +4,9 @@
         "subTitle": "연애세포를 깨울 시간!",
         "bgColor":"#F9D5D5",
         "books":[
-            "/assets/png/bookImages/bookCover_1.png",
-            "/assets/png/bookImages/bookCover_2.png",
-            "/assets/png/bookImages/bookCover_3.png"
+            { "cover": "https://image.aladin.co.kr/product/31282/49/coversum/k162832578_2.jpg"},
+            { "cover": "https://image.aladin.co.kr/product/7980/36/coversum/k632434439_1.jpg"},
+            { "cover": "https://image.aladin.co.kr/product/9649/39/coversum/k652535848_3.jpg"}
         ]
     },
     {
@@ -14,9 +14,9 @@
         "subTitle": "일상에 웃음을 더하다",
         "bgColor":"#FFEECC",
         "books":[
-            "/assets/png/bookImages/bookCover_1.png",
-            "/assets/png/bookImages/bookCover_2.png",
-            "/assets/png/bookImages/bookCover_3.png"
+            { "cover": "https://image.aladin.co.kr/product/31282/49/coversum/k162832578_2.jpg"},
+            { "cover": "https://image.aladin.co.kr/product/7980/36/coversum/k632434439_1.jpg"},
+            { "cover": "https://image.aladin.co.kr/product/9649/39/coversum/k652535848_3.jpg"}
         ]
     },
     {
@@ -24,9 +24,9 @@
         "subTitle": "숨막히는 전율!",
         "bgColor":"#FFC3C3",
         "books":[
-            "/assets/png/bookImages/bookCover_1.png",
-            "/assets/png/bookImages/bookCover_2.png",
-            "/assets/png/bookImages/bookCover_3.png"
+            { "cover": "https://image.aladin.co.kr/product/31282/49/coversum/k162832578_2.jpg"},
+            { "cover": "https://image.aladin.co.kr/product/7980/36/coversum/k632434439_1.jpg"},
+            { "cover": "https://image.aladin.co.kr/product/9649/39/coversum/k652535848_3.jpg"}
         ]
     },
     {
@@ -34,9 +34,9 @@
         "subTitle": "퍼즐이 하나로 맞춰질때",
         "bgColor":"#FFD16F",
         "books":[
-            "/assets/png/bookImages/bookCover_1.png",
-            "/assets/png/bookImages/bookCover_2.png",
-            "/assets/png/bookImages/bookCover_3.png"
+            { "cover": "https://image.aladin.co.kr/product/31282/49/coversum/k162832578_2.jpg"},
+            { "cover": "https://image.aladin.co.kr/product/7980/36/coversum/k632434439_1.jpg"},
+            { "cover": "https://image.aladin.co.kr/product/9649/39/coversum/k652535848_3.jpg"}
         ]
     },
     {
@@ -44,9 +44,9 @@
         "subTitle": "미래세계로의 여행",
         "bgColor":"#EBB5FF",
         "books":[
-            "/assets/png/bookImages/bookCover_1.png",
-            "/assets/png/bookImages/bookCover_2.png",
-            "/assets/png/bookImages/bookCover_3.png"
+            { "cover": "https://image.aladin.co.kr/product/31282/49/coversum/k162832578_2.jpg"},
+            { "cover": "https://image.aladin.co.kr/product/7980/36/coversum/k632434439_1.jpg"},
+            { "cover": "https://image.aladin.co.kr/product/9649/39/coversum/k652535848_3.jpg"}
         ]
     }
 ]

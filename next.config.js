@@ -14,7 +14,18 @@
         {
           protocol:'https',
           hostname:'bookthumb-phinf.pstatic.net'
-        }
+        },
+        {
+          protocol:'https',
+          hostname:'maps.google.com'
+        },
+        {
+          protocol:'https',
+          hostname:'lh5.googleusercontent.com'
+        },
+        
+
+        
       ],
     },
   }

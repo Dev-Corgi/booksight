@@ -1,0 +1,47 @@
+[
+    {
+        "lib": {
+            "libCode": "127058",
+            "libName": "2.28도서관",
+            "address": "대구광역시 중구 2·28길 9",
+            "tel": "053-257-2280",
+            "fax": "053-257-2284",
+            "latitude": "35.8592504",
+            "longitude": "128.5894055",
+            "homepage": "http://library.daegu.go.kr/228lib/index.do",
+            "closed": "매주 월요일 / 법정공휴일(일요일을 제외한 관공서 공휴일), 도서관 및 기타 사정으로 위탁기관장이 정하는 날",
+            "operatingTime": "화~금 09:00~18:00, 토일 09:00~17:00",
+            "BookCount": "56375"
+        }
+    },
+    {
+        "lib": {
+            "libCode": "148096",
+            "libName": "U보라작은도서관",
+            "address": "경상남도 김해시 전하로176번길 71, 반도보라아파트 주민공동시설 2층",
+            "tel": "055-324-3335",
+            "fax": "-",
+            "latitude": "35.223558",
+            "longitude": "128.874226",
+            "homepage": "http://lib.gimhae.go.kr/01293/01298/00212.web",
+            "closed": "매주 일요일 / 법정공휴일, 임시공휴일",
+            "operatingTime": "-",
+            "BookCount": "8132"
+        }
+    },
+    {
+        "lib": {
+            "libCode": "111456",
+            "libName": "가락몰도서관",
+            "address": "서울특별시 송파구 양재대로 932",
+            "tel": "02-3435-0950",
+            "fax": "02-3435-0959",
+            "latitude": "37.492994",
+            "longitude": "127.112326",
+            "homepage": "http://www.splib.or.kr/spalib/",
+            "closed": "매주 월요일 / 법정공휴일, 기타 도서관 사정에 의해 관장이 정한 날",
+            "operatingTime": "09:00 ~ 18:00",
+            "BookCount": "39777"
+        }
+    }
+]

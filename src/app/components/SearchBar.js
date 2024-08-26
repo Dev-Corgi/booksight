@@ -38,8 +38,8 @@ export default function SearchBar(){
 
     return(
         <div className="w-full h-full flex flex-row items-center justify-start gap-[10px] pl-[10px] bg-searchBar rounded-[40px]">
-        <div className="w-[30px] h-[30px]">
-          <Image src={searchSVG} alt="searchIcon"></Image>
+        <div className="relative w-[30px] h-[30px]">
+          <Image src={searchSVG} alt="searchIcon" fill sizes={1}></Image>
         </div>
         <input
           type="text"

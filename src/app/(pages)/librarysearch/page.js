@@ -14,8 +14,8 @@ export default function LibrarySearchPage(props) {
             서울 특별시
           </p>
           <div className="flex flex-row items-center gap-[5px] mt-[9px]">
-            <div className="w-[18px] h-[16px]">
-              <Image src={mapArrowImg}></Image>
+            <div className="relative w-[18px] h-[16px]">
+              <Image src={mapArrowImg} alt = "arrowIcon" fill sizes={1}></Image>
             </div>
             <p className="font-NotoSansKRSemiBold text-[16px] text-primary">
               뒤로 가기
@@ -23,7 +23,7 @@ export default function LibrarySearchPage(props) {
           </div>
         </div>
         <div className="mt-[50px] w-[294.51] h-[526.86]">
-          <Image src={mapImg}></Image>
+          <Image src={mapImg} alt = "mapImage" sizes ={1}></Image>
         </div>
       </div>
 
@@ -43,11 +43,13 @@ export default function LibrarySearchPage(props) {
           {Array.from({ length: 9 }).map((library, index) => {
             return (
               <div className="relative w-full h-[80px]" key = {index}>
-                <div className="absolute w-full h-hull">
-                  <img
+                <div className="absolute w-full h-[80px]">
+                  <Image
                     src={`/assets/png/libraryImages/Library_${index + 1}.jpg`}
-                    layout="fill"
-                  ></img>
+                    alt = "libraryImg"
+                    fill
+                    className = "object-cover"
+                  ></Image>
                 </div>
                 <div className="absolute w-full h-full bg-black opacity-60 border-t-[1px] border-b-[1px] border-white border-opacity-30"></div>
                 <div className="absolute flex flex-row w-full">
@@ -59,8 +61,8 @@ export default function LibrarySearchPage(props) {
                   </p>
                   <div className="flex flex-row justify-start flex-grow gap-[60px]  mt-[30px] ml-[132.08px]">
                     <div className="flex flex-row items-center gap-[2.83px]">
-                      <div className="w-[19px] h-[19px]">
-                        <Image src={PlacePrimarySVG}></Image>
+                      <div className="relative w-[19px] h-[19px]">
+                        <Image src={PlacePrimarySVG} alt = "placeIcon" fill sizes={1}></Image>
                       </div>
                       <p className="font-NotoSansKRBold text-primary text-[14px]">
                         경기 부천시 원미구 상이로 12
@@ -68,7 +70,9 @@ export default function LibrarySearchPage(props) {
                     </div>
 
                     <div className="flex flex-row items-center gap-[2.83px]">
-                      <Image src={CallPrimarySVG}></Image>
+                    <div className="relative w-[19px] h-[19px]">
+                      <Image src={CallPrimarySVG} alt = "callIcon" fill sizes={1}></Image>
+                      </div>
                       <p className="font-NotoSansKRBold text-primary text-[14px]">
                         010-6440-0688
                       </p>

@@ -12,8 +12,8 @@ export default function LoginPage() {
         <div className="flex flex-row justify-between items-center w-[36.18vw] st:w-[521px] mt-[40px]">
           <p className="font-NotoSansKRBold text-[30px]">BOOKS</p>
           <div className="flex flex-row items-center gap-[6.5px]">
-            <div className="w-[18px] h-[16px]">
-              <Image src={backArrowSVG}></Image>
+            <div className="relative w-[18px] h-[16px]">
+              <Image src={backArrowSVG} alt = "backArrowIcon" fill sizes={1}></Image>
             </div>
             <p className="font-NotoSansKRSemiBold text-[16px]">돌아가기</p>
           </div>
@@ -48,22 +48,22 @@ export default function LoginPage() {
 
         <div className="flex flex-row gap-[5px]">
           <div className="flex flex-row justify-center items-center w-[10.69vw] h-[4.02vw] st:w-[154px] st:h-[57.92px] rounded-[9.21px] border-[1.5px] border-textColor-primary gap-[11.85px] mt-[30.55px]">
-            <div className="w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
-              <Image src={googleLogoSVG}></Image>
+            <div className="relative w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
+              <Image src={googleLogoSVG} alt = "googleLogoIcon" fill sizes={1}></Image>
             </div>
             <p className="font-MontserratSemiBold text-[1.19vw] st:text-[17.11px]">Google</p>
           </div>
 
           <div className="flex flex-row justify-center items-center w-[10.69vw] h-[4.02vw]  st:w-[154px] st:h-[57.92px] rounded-[9.21px] border-[1.5px] border-textColor-primary gap-[11.85px] mt-[30.55px]">
-            <div className="w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
-              <Image src={appleLogoSVG}></Image>
+            <div className="relative w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
+              <Image src={appleLogoSVG} alt = "appleLogoIcon" fill sizes={1}></Image>
             </div>
             <p className="font-MontserratSemiBold text-[1.19vw] st:text-[17.11px]">Apple</p>
           </div>
 
           <div className="flex flex-row justify-center items-center w-[10.69vw] h-[4.02vw] st:w-[154px] st:h-[57.92px] rounded-[9.21px] border-[1.5px] border-textColor-primary gap-[11.85px] mt-[30.55px]">
-            <div className="w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
-              <Image src={facebookLogoSVG}></Image>
+            <div className="relative w-[1.65vw] h-[1.65vw] st:w-[23.69px] st:h-[23.69px]">
+              <Image src={facebookLogoSVG} alt = "facebookLogoIcon" fill sizes={1}></Image>
             </div>
             <p className="font-MontserratSemiBold text-[1.19vw] st:text-[17.11px]">Facebook</p>
           </div>
@@ -74,7 +74,7 @@ export default function LoginPage() {
         </p>
       </div>
       <div className="w-[51.74vw] h-screen py-[16px] mr-[16px]">
-        <Image src={loginPicImg} className="w-full h-full object-cover rounded-[40px]"></Image>
+        <Image src={loginPicImg} alt = "loginThumbnailPic" className="w-full h-full object-cover rounded-[40px]"></Image>
       </div>
     </div>
   );

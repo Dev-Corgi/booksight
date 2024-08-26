@@ -1,23 +1,74 @@
-import bookData from "root/Data/bookData.json"
-import BookForList from "./BookForList";
-export default function Booklist(props) {
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import aladinKeywordSearchHandler from "@handler/aladinKeywordSearchHandler";
+import Book from "@components/Book";
+import ReviewStars from "./ReviewStars";
+export default function Booklist({
+  className,
+  keyword,
+  width = 125.2,
+}) {
+  const router = useRouter();
+  const originWidth = 125.2;
+  const scale = width / originWidth;
+
+  const [books, setbooks] = useState(null);
+  const [isFetching, setisFetching] = useState(true);
+
+  useEffect(() => {
+    async function fetchKeywordSearch() {
+      const result = await aladinKeywordSearchHandler(keyword);
+      setbooks(result);
+      setisFetching(false);
+    }
+
+    fetchKeywordSearch();
+  }, []);
+
+  // 스코어 다듬기
+  function getScore(score) {
+    return Math.ceil(score / 2);
+  }
+
+  const handleClick = (isbn13) => {
+    router.push(`/bookdetail/${isbn13}`);
+  };
+
   return (
-    <div className={`${props.className} w-full h-min`}>
-
-      <div className="flex flex-col w-min h-min">
-        <p className="font-KopubWorldBold whitespace-nowrap z-10 text-[1.53vw] tracking-[-0.14vw] pr-[0.49vw] st:text-[22px] st:tracking-[-2px] st:pr-[7px]">
-          베스트 셀러
-        </p>
-        <div className="w-full h-[0.56vw] -mt-[0.97vw] st:h-[8px] st:-mt-[14px] bg-primary z-0"></div>
-      </div>
-
-      <div className = "flex flex-row w-min h-min ml-[1.94vw] mt-[0.97vw] gap-[3.13vw] st:ml-[28px] st:mt-[14px] st:gap-[45px]">
-        {bookData.map((book,index)=>{
-            return(
-             <BookForList width = {125.2} book = {book} key = {index}></BookForList>
-            );
-        })}
-      </div>
-    </div>
+    <>
+      {!isFetching && (
+          <div className={`${className}`}>
+            {books.map((book, index) => {
+              return (
+                <div className = {`w-[${width}px] aspect-[1/2]`}>
+                <div
+                  className={"flex flex-col w-min h-min origin-top-left"}
+                  style={{
+                    scale: `${scale}`,
+                  }}
+                  key={index}
+                  onClick={() => handleClick(book.isbn13)}
+                >
+                  <Book className="w-[125.2px] h-[181.51px]" book={book} shadowType="circle"></Book>
+                  <ReviewStars
+                    width={67.85}
+                    score={getScore(book.customerReviewRank)}
+                    className="mt-[15.09px]"
+                  ></ReviewStars>
+                  <p className="font-KopubWorldBold text-black w-[125.2px] text-[13px] mt-[3.85px] truncate">
+                    {book.title}
+                  </p>
+                  <p className="font-NotoSansKRMedium text-textColor-secondary text-[10px] -mt-[1px]">
+                    {book.author}
+                  </p>
+                </div>
+                </div>
+              );
+            })}
+          </div>
+      )}
+    </>
   );
 }

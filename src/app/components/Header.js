@@ -32,21 +32,25 @@ export default function Header(props) {
 
       <div className="w-min h-full flex flex-row items-center justify-start gap-[40px]">
         <div className="w-min h-full flex flex-row justify-start items-center gap-[25px]">
-          <div className="w-[22px] h-[22px]">
+          <div className="relative w-[22px] h-[22px]">
             <Image
               src={notificationSVG}
               alt="notificationIcon"
               className="absolute w-[22px] h-[22px]"
+              fill
+              sizes={1}
             ></Image>
             <div className="absolute ml-[-7px] mt-[-6px] flex items-center justify-center w-[14px] h-[14px] rounded-full bg-primary overflow-visible">
               <p className="text-[11px] text-white">5</p>
             </div>
           </div>
-          <div className="w-[22px] h-[22px]">
+          <div className="relative w-[22px] h-[22px]">
             <Image
               src={shoppingBagSVG}
               alt="shoppingBagIcon"
               className="absolute w-[22px] h-[22px]"
+              fill
+              sizes = {1}
             ></Image>
             <div className="absolute ml-[-7px] mt-[-6px] flex items-center justify-center w-[14px] h-[14px] rounded-full bg-primary overflow-visible">
               <p className="text-[11px] text-white">5</p>
@@ -55,11 +59,11 @@ export default function Header(props) {
         </div>
 
         <div className="w-min h-full flex flex-row justify-start items-center gap-[20px]">
-          <div className="w-[42px] h-[42px] rounded-full overflow-clip">
-            <Image src={profilePic} alt="profilePic"></Image>
+          <div className="relative w-[42px] h-[42px] rounded-full overflow-clip">
+            <Image src={profilePic} alt="profilePic" fill sizes={1}></Image>
           </div>
-          <div className="w-[4px] h-[15px]">
-            <Image src={menuSVG} alt="searchIcon"></Image>
+          <div className="relative w-[4px] h-[15px]">
+            <Image src={menuSVG} alt="searchIcon" fill sizes={1}></Image>
           </div>
         </div>
       </div>

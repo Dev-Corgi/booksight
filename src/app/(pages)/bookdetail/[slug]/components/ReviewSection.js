@@ -2,17 +2,13 @@ import Image from "next/image";
 import ReviewFrameImg from "@png/reviewSection.png";
 import ReviewStars from "@/app/components/ReviewStars";
 import ProfileImg from "@png/profile.jpg";
+import TitleTag from "@/app/components/TitleTag";
 export default function ReviewSection({ className }) {
   return (
     <div className={`${className} flex flex-col`}>
-      <div className="flex flex-col w-min h-min">
-        <p className="font-KopubWorldBold whitespace-nowrap z-10 text-[1.53vw] tracking-[-0.14vw] pr-[0.49vw] st:text-[22px] st:tracking-[-2px] st:pr-[7px]">
-          독자 서평
-        </p>
-        <div className="w-full h-[0.56vw] -mt-[0.97vw] st:h-[8px] st:-mt-[14px] bg-primary z-0"></div>
-      </div>
+      <TitleTag title = "독자 서평"></TitleTag>
 
-      <div className="flex flex-col items-start ml-[28px] mt-[14px] w-full h-min">
+      <div className="flex flex-col items-start ml-[28px] mt-[14px] w-auto h-min">
         <div className="grid grid-rows-2 grid-flow-col gap-[80.08px] w-full overflow-clip">
           {Array.from({ length: 6 }).map((value, index) => {
             return (
@@ -21,7 +17,7 @@ export default function ReviewSection({ className }) {
                 className="relative w-[544.96px] h-[250.99px] overflow-visible"
               >
                 <div className="absolute w-[611.37px] h-[331.06px] left-0 top-0">
-                  <Image src={ReviewFrameImg}></Image>
+                  <Image src={ReviewFrameImg} alt = "reviewFrame" fill sizes={1} className = "object-cover"></Image>
                 </div>
 
                 <div className="absolute left-[32.23px] top-[31.25px] w-min h-min">
@@ -36,8 +32,8 @@ export default function ReviewSection({ className }) {
                     </p>
 
                     <div className="flex flex-row items-center w-min h-min gap-[11.23px] mt-[21.94px]">
-                      <div className="w-[40.53px] h-[40.53px] rounded-full overflow-clip">
-                        <Image src={ProfileImg}></Image>
+                      <div className="relative w-[40.53px] h-[40.53px] rounded-full overflow-clip">
+                        <Image src={ProfileImg} alt = "profilePic" fill sizes={1}></Image>
                       </div>
 
                       <div className="flex flex-col whitespace-nowrap">

@@ -25,9 +25,8 @@ export default function ReviewStars({width,score,className}) {
       }}
     >
     {Array.from({ length: 5 }, (_, i) => (
-        <div key={i} className="w-[0.89vw] h-[0.89vw] st:w-[12.8px] st:h-[12.8px]">
-          <Image src={i < score ? star_filledSVG : star_emptySVG} alt=""/>
-          {console.log(scale)}
+        <div key={i} className="relative w-[0.89vw] h-[0.89vw] st:w-[12.8px] st:h-[12.8px]">
+          <Image src={i < score ? star_filledSVG : star_emptySVG} alt="star" fill sizes={1}/>
         </div>
       ))}
       </div>
