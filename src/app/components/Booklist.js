@@ -42,7 +42,7 @@ export default function Booklist({
           <div className={`${className}`}>
             {books.map((book, index) => {
               return (
-                <div className = {`w-[${width}px] aspect-[1/2]`}>
+                <div className = {`w-[${width}px] aspect-[1/2]`} key = {index}>
                 <div
                   className={"flex flex-col w-min h-min origin-top-left"}
                   style={{
