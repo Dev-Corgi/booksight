@@ -1,5 +1,3 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import InfogramSection from "./components/InfogramSection";
 import getLibraryInfoHandler from "@handler/getLibraryInfoHandler";
@@ -8,12 +6,9 @@ import DiscriptionSection from "./components/DiscriptionSection";
 import StatsSection from "./components/StatsSection";
 import MapSection from "./components/MapSection";
 import LibraryImageSection from "./components/LibraryImageSection";
-export default function LibraryDetailPage({ params }) {
+export default async function LibraryDetailPage({ params }) {
   const libCode = params.slug;
-  const [libraryInfo, setLibraryInfo] = useState(null);
-  const [isFetching, setisFetching] = useState(true);
 
-  useEffect(() => {
     async function fetchGetLibraryInfo() {
       const [libraryInfoResult, libraryPictureResult] = await Promise.all([
         getLibraryInfoHandler(libCode),
@@ -23,16 +18,13 @@ export default function LibraryDetailPage({ params }) {
       const library = libraryInfoResult;
       library.picture = libraryPictureResult;
 
-      setLibraryInfo(library);
-      setisFetching(false);
+      return library;
     }
 
-    fetchGetLibraryInfo();
-  }, []);
+
+  const libraryInfo =  await fetchGetLibraryInfo();
 
   return (
-    <>
-      {!isFetching && (
         <div className="flex flex-row w-full h-full">
           <div className="flex flex-grow flex-col items-center">
             <div className="flex flex-col items-start w-[36.18vw] st:w-[521px] h-full text-black">
@@ -51,7 +43,5 @@ export default function LibraryDetailPage({ params }) {
 
           <LibraryImageSection libraryInfo={libraryInfo}></LibraryImageSection>
         </div>
-      )}
-    </>
   );
 }

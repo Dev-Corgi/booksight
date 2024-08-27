@@ -30,9 +30,9 @@ export default function Center(props) {
     router.push(`/bookdetail/${isbn13}`);
   };
 
+  if(isFetching){return}
+
   return (
-    <>
-      {!isFetching && (
         <div
           className={`${props.className} flex flex-col items-center w-full h-[33.96vw] st:h-[489px] overflow-visible`}
         >
@@ -100,7 +100,5 @@ export default function Center(props) {
             <Image src={shelf} alt="shelf" layout="responsive"></Image>
           </div>
         </div>
-      )}
-    </>
   );
 }

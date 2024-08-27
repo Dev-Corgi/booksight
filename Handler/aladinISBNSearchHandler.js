@@ -5,7 +5,7 @@ export default async function aladinISBNSearchHandler(ItemId) {
   async function aladinISBNSearchHandler(ItemId) {
 
     try {
-      const response = await fetch(`/api/aladinISBNSearch?ItemId=${ItemId}`);
+      const response = await fetch(`https://localhost:3001/api/aladinISBNSearch?ItemId=${ItemId}`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch aladinISBNSearch");

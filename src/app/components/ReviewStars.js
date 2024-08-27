@@ -1,19 +1,12 @@
-"use client"
-import React,{useEffect,useState} from "react";
 
-import Image from "next/image";
 import StarFill from "@svg/StarFill.svg";
 import StarEmpty from "@svg/StarEmpty.svg"; 
 
 export default function ReviewStars({width,score,className}) {
 
-    const [scale, setScale] = useState(1)
 
-    const originWidth = 67.85
-
-    useEffect(() => {
-     setScale( width / originWidth);
-    }, [width])
+  const originWidth = 67.85
+  const scale =  width / originWidth
 
 
   return (

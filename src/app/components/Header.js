@@ -4,9 +4,10 @@ import Image from "next/image";
 import profilePic from "@png/profile.jpg";
 import SearchBar from "./SearchBar";
 import { useRouter } from "next/navigation";
-import NotificationIcon from "@svg/NotificationIcon.svg"
-import SavedIcon from "@svg/SavedIcon.svg"
-import MoreIcon from "@svg/MoreIcon.svg"
+import NotificationIcon from "@svg/NotificationIcon.svg";
+import SavedIcon from "@svg/SavedIcon.svg";
+import MoreIcon from "@svg/MoreIcon.svg";
+import logoPic from "@png/logo.png";
 export default function Header(props) {
 
   const router = useRouter();
@@ -17,10 +18,11 @@ export default function Header(props) {
 
   return (
     <div
-      className={`${props.className} w-full h-[45px] flex flex-row items-center px-[80px] gap-[50px] font-NotoSansKRMedium text-nowrap`}
+      className={`${props.className} w-full h-[45px] flex flex-row items-center px-[80px] gap-[40px] font-NotoSansKRMedium text-nowrap`}
     >
-      {/* <p className="font-NotoSansKRBold text-[30px] -tracking-tighter" onClick={handleHomeClick}>북사이트</p> */}
-      <p className="font-NotoSansKRBold text-[25px] -tracking-tighter" onClick={handleHomeClick}>북사이트</p>
+      <div className = "relative w-[243px] h-[45px]"> 
+      <Image src={logoPic} fill sizes={1} alt ="logoPic" className = "object-contain"></Image>
+        </div>
 
      <SearchBar></SearchBar>
 

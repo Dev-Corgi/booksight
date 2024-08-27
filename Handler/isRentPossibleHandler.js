@@ -1,7 +1,7 @@
 export default async function isRentPossibleHandler(libCode,isbn13) {
   async function fetchIsRentPossible(libCode,isbn13) {
     try {
-      const response = await fetch(`/api/isRentPossible?libCode=${libCode}&isbn13=${isbn13}`);
+      const response = await fetch(`https://localhost:3001/api/isRentPossible?libCode=${libCode}&isbn13=${isbn13}`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch isRentPossible");

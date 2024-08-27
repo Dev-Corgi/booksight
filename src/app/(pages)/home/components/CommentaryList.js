@@ -1,28 +1,19 @@
-"use client";
 
-import React, { useEffect, useState } from "react";
 import Book from "@/app/components/Book";
 import commentaryData from "@data/commentaryData.json";
 import aladinISBNSearchHandler from "@handler/aladinISBNSearchHandler";
 import TitleTag from "@/app/components/TitleTag";
 
-export default function CommentaryList() {
-  const [book, setbook] = useState(null);
-  const [isFetching, setisFetching] = useState(true);
+export default async function CommentaryList() {
 
-  useEffect(() => {
     async function fetchHotTrend() {
       const result = await aladinISBNSearchHandler(9791130605210);
-      setbook(result);
-      setisFetching(false);
+      return result
     }
+    const book = await fetchHotTrend();
 
-    fetchHotTrend();
-  }, []);
 
   return (
-    <>
-      {!isFetching && (
         <div className={`w-full h-min`}>
           <TitleTag title="베스트 셀러"></TitleTag>
           <div className="flex flex-row gap-[30px] ml-[28px] mt-[14px]">
@@ -50,7 +41,5 @@ export default function CommentaryList() {
             })}
           </div>
         </div>
-      )}
-    </>
   );
 }

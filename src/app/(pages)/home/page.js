@@ -4,6 +4,7 @@ import CommentaryList from "./components/CommentaryList";
 import BooklistSection from "@/app/components/BooklistSection";
 export default function HomePage() {
 
+
   return (
     <div className="w-full h-screen flex flex-col  items-center overflow-x-clip">
       <Center className="mt-[6.46vw] st:mt-[93px]"></Center>

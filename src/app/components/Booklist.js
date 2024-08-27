@@ -36,9 +36,9 @@ export default function Booklist({
     router.push(`/bookdetail/${isbn13}`);
   };
 
+  if(isFetching){ return}
+
   return (
-    <>
-      {!isFetching && (
           <div className={`${className}`}>
             {books.map((book, index) => {
               return (
@@ -68,7 +68,5 @@ export default function Booklist({
               );
             })}
           </div>
-      )}
-    </>
   );
 }

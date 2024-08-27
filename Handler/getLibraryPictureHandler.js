@@ -29,7 +29,7 @@ export default async function getLibraryPictureHandler(libCode) {
 
   //   async function fetchGetLibraryPicture(libCode) {
 
-  //       const response = await fetch(`/api/getLibraryPicture?libCode=${libCode}`);
+  //       const response = await fetch(`https://localhost:3001/api/getLibraryPicture?libCode=${libCode}`);
   //       const data = await response.json();
   //       return data;
   //     };

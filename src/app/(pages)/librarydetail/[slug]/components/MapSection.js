@@ -1,28 +1,18 @@
-"use client"
-import React, { useEffect, useState } from "react";
 import getStaticMapHandler from "@handler/getStaticMapHandler";
 import Image from "next/image";
-export default function MapSection({ libraryInfo }) {
-    const [staticMapImg, setstaticMapImg] = useState("");
-    const [isFetching, setisFetching] = useState(true);
+export default async function MapSection({ libraryInfo }) {
 
-    useEffect(() => {
         async function fetchGetStaticMap() {
           const result = await getStaticMapHandler({
             latitude: libraryInfo.libInfo.latitude,
             longitude: libraryInfo.libInfo.longitude,
           });
-          setstaticMapImg(result);
-          setisFetching(false);
+          return result;
         }
-        if (libraryInfo != null) {
-          fetchGetStaticMap();
-        }
-      }, [libraryInfo]);
+
+      const staticMapImg = await fetchGetStaticMap();
       
   return (
-    <>
-    {!isFetching &&
     <div className="relative w-full h-[262.25px] mt-[40px] rounded-[21px] border-[3px] border-black overflow-clip">
     <Image
       src={staticMapImg}
@@ -37,6 +27,5 @@ export default function MapSection({ libraryInfo }) {
       </p>
     </div>
   </div>
-}</>
   );
 }

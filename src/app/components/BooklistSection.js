@@ -1,4 +1,4 @@
-"use client";
+
 import TitleTag from "./TitleTag";
 import Booklist from "./Booklist";
 export default function BooklistSection({

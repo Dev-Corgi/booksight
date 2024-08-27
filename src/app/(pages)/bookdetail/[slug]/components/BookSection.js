@@ -1,29 +1,14 @@
-"use client"
-
-import React,{useState} from "react";
 import ReviewStars from "@/app/components/ReviewStars";
 import Book from "@/app/components/Book";
 import shelfImg from "@png/shelf.png";
 import Image from "next/image";
 import InfoIcon from "@svg/InfoIcon.svg"
-import RentModal from "./RentModal/RentModal";
+import PurchaseButton from "./PurchaseButton";
+import RentButton from "./RentButton";
 export default function BookSection({ book }) {
 
-  const [isOpen, setisOpen] = useState(false);
 
   const score = Math.ceil(book.customerReviewRank / 2);
-
-  const handlePurchaseButtonClick = () =>{
-      window.open(book.link);
-  }
-
-  const handleRentButtonClick = ()=>{
-    setisOpen(true);
-  }
-
-  const handleRequestClose = () =>{
-    setisOpen(false);
-  }
 
   return (
     <>
@@ -62,16 +47,8 @@ export default function BookSection({ book }) {
           </div>
 
           <div className="flex flex-row w-min h-min mt-[20px] gap-[14px]">
-            <div className="flex items-center justify-center w-[165px] h-[58px] rounded-[18px] bg-primary" onClick = {handleRentButtonClick}>
-              <p className="font-NotoSansKRSemiBold text-[19px] text-white">
-                대여하기
-              </p>
-            </div>
-            <div className="flex items-center justify-center w-[165px] h-[58px] rounded-[18px] bg-white" onClick = {handlePurchaseButtonClick}>
-              <p className="font-NotoSansKRSemiBold text-[19px] text-black">
-                구매하기
-              </p>
-            </div>
+            <RentButton book = {book}></RentButton>
+            <PurchaseButton book = {book}></PurchaseButton>
           </div>
 
           <div className = "flex flex-row gap-[6px] mt-[24px]">
@@ -88,7 +65,6 @@ export default function BookSection({ book }) {
         ></Book>
       </div>
     </div>
-    <RentModal isOpen={isOpen} requestClose={handleRequestClose} isbn13={book.isbn13}></RentModal>
     </>
   );
 }

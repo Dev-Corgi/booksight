@@ -4,7 +4,7 @@ import aladinISBNSearchHandler from "./aladinISBNSearchHandler";
 export default async function hotTrendHandler() {
   async function hotTrendHandler(date) {
     try {
-      const response = await fetch(`/api/hotTrend?searchDt=${date}`);
+      const response = await fetch(`https://localhost:3001/api/hotTrend?searchDt=${date}`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch hotTrend");
