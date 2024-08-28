@@ -2,7 +2,7 @@ import BookSection from "./components/BookSection";
 import DescriptionSection from "./components/DescriptionSection";
 import ReviewSection from "./components/ReviewSection";
 import BooklistSection from "@/app/components/BooklistSection";
-import aladinISBNSearchHandler from "@handler/aladinISBNSearchHandler";
+import aladinISBNSearchHandler from "root/Handler/aladinISBNSearchHandler";
 
 export default async function BookDetailPage({ params }) {
   const isbn13 = params.slug;

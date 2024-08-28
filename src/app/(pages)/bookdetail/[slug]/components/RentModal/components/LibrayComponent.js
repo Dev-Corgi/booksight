@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import PlaceIcon from "@svg/PlaceIcon.svg";
 import CallIcon from "@svg/CallIcon.svg";
 import { useRouter } from "next/navigation";
-import searchNearByLibraryHandler from "@handler/searchNearByLibraryHandler";
-import isRentPossibleHandler from "@handler/isRentPossibleHandler";
-import getLibraryPictureHandler from "@handler/getLibraryPictureHandler";
-import getLibraryInfoHandler from "@handler/getLibraryInfoHandler";
+import searchNearByLibraryHandler from "root/Handler/searchNearByLibraryHandler";
+import isRentPossibleHandler from "root/Handler/isRentPossibleHandler";
+import getLibraryPictureHandler from "root/Handler/getLibraryPictureHandler";
+import getLibraryInfoHandler from "root/Handler/getLibraryInfoHandler";
 
 export default function LibraryComponent({ isOpen, location, isbn13 }) {
   const router = useRouter();

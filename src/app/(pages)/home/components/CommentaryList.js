@@ -1,7 +1,7 @@
 
 import Book from "@/app/components/Book";
 import commentaryData from "@data/commentaryData.json";
-import aladinISBNSearchHandler from "@handler/aladinISBNSearchHandler";
+import aladinISBNSearchHandler from "root/Handler/aladinISBNSearchHandler";
 import TitleTag from "@/app/components/TitleTag";
 
 export default async function CommentaryList() {

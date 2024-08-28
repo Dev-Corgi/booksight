@@ -1,10 +1,11 @@
 export default async function reverseGeoCodeHandler({latitude,longitude}) {
 
+
     async function fetchReverseGeoCode(latitude, longitude) {
 
       const coords = `${longitude},${latitude}`;
 
-        const response = await fetch(`${process.env.DOMAIN}/api/reverseGeoCode?coords=${coords}`);
+        const response = await fetch(`/api/reverseGeoCode?coords=${coords}`);
         const data = await response.json();
         return data;
       };

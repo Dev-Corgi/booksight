@@ -4,24 +4,9 @@ import PlaceIcon from "@svg/PlaceIcon.svg";
 import MenuIcon from "@svg/MenuIcon.svg";
 import FindIcon from "@svg/FindIcon.svg";
 import reverseGeoCodeHandler from "@handler/reverseGeoCodeHandler";
-export default function TagList({ isOpen, location, setLocation }) {
+export default function TagList({ isOpen, location}) {
   const [isFetching, setIsFetching] = useState(true);
   const [roadaddr, setRoadaddr] = useState("");
-
-  useEffect(() => {
-    if (isOpen && "geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setLocation({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-          });
-        },
-        (err) => {}
-      );
-    } else {
-    }
-  }, [isOpen]);
 
   useEffect(() => {
     if (isOpen) {

@@ -3,7 +3,7 @@ export default async function isRentPossibleHandler(libraries,isbn13) {
   async function fetchIsRentPossible(libraries,isbn13) {
     const urls = []
     libraries.map((library,index)=>{
-      urls.push(`${process.env.DOMAIN}/api/isRentPossible?libCode=${library.libCode}&isbn13=${isbn13}`);
+      urls.push(`/api/isRentPossible?libCode=${library.libCode}&isbn13=${isbn13}`);
     })
     try {
   

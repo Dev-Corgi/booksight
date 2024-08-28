@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import ReactDOM from "react-dom";
 import TitleTag from "@/app/components/TitleTag";
 import CloseButton from "./components/CloseButton";
@@ -8,21 +8,38 @@ import TagList from "./components/TagList";
 import LibraryComponent from "./components/LibrayComponent";
 
 export default function RentModal({ isOpen, requestClose, isbn13 }) {
+  
+
+
   const [location, setLocation] = useState({
     latitude: 37.5666,
     longitude: 126.9782,
   });
-  // const [isFetching, setIsFetching] = useState(true);
 
-  if(!isOpen){return}
+  useEffect(() => {
+      if (isOpen && "geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            setLocation({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+            });
+          },
+          (err) => {}
+        );
+      } else {
+      }
+  }, [])
 
   if (typeof window === "undefined") {
     return null;
   }
 
+  if(!isOpen){return}
+
 
   return ReactDOM.createPortal(
-    <>
+    
         <div className="fixed flex flex-col justify-end inset-0 w-full h-screen bg-black bg-opacity-80">
           <div className="relative flex flex-col items-center w-full h-[86%] bg-background rounded-t-[35px]">
             <CloseButton requestClose={requestClose}></CloseButton>
@@ -34,7 +51,6 @@ export default function RentModal({ isOpen, requestClose, isbn13 }) {
               <TagList
                 isOpen={isOpen}
                 location={location}
-                setLocation={setLocation}
               ></TagList>
             </div>
             <LibraryComponent
@@ -44,7 +60,7 @@ export default function RentModal({ isOpen, requestClose, isbn13 }) {
             ></LibraryComponent>
           </div>
         </div>
-    </>,
+    ,
     typeof window !== "undefined" ? document.getElementById("rentModal") : null
   );
 }

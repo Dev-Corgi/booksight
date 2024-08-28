@@ -3,7 +3,7 @@ export default async function getStaticMapHandler({ longitude, latitude }) {
     const coords = `${longitude},${latitude}`;
     const pos = `${longitude} ${latitude}`;
 
-    const response = await fetch(`${process.env.DOMAIN}/api/getStaticMap?coords=${coords}&pos=${pos}`, {
+    const response = await fetch(`/api/getStaticMap?coords=${coords}&pos=${pos}`, {
       method: 'GET',
       headers: {
         'Accept': 'image/png', // 이미지를 반환받기 위해 Accept 헤더를 설정

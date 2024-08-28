@@ -1,4 +1,4 @@
-import getStaticMapHandler from "@handler/getStaticMapHandler";
+import getStaticMapHandler from "root/Handler/getStaticMapHandler";
 import Image from "next/image";
 export default async function MapSection({ libraryInfo }) {
 

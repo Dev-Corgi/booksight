@@ -4,8 +4,9 @@ export default async function aladinKeywordSearchHandler(SearchWord) {
 
   async function aladinKeywordSearchHandler(SearchWord) {
 
+    
     try {
-      const response = await fetch(`${process.env.DOMAIN}/api/aladinKeywordSearch?SearchWord=${SearchWord}`);
+      const response = await fetch(`/api/aladinKeywordSearch?SearchWord=${SearchWord}`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch aladinKeywordSearch");

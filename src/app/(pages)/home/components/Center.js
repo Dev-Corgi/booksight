@@ -8,7 +8,7 @@ import Image from "next/image";
 import quote from "@png/quote.png";
 import shelf from "@png/shelf.png";
 import Book from "@/app/components/Book";
-import hotTrendHandler from "@handler/hotTrendHandler";
+import hotTrendHandler from "root/Handler/hotTrendHandler";
 
 export default function Center(props) {
   const router = useRouter();

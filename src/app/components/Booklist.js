@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import aladinKeywordSearchHandler from "@handler/aladinKeywordSearchHandler";
+import aladinKeywordSearchHandler from "root/Handler/aladinKeywordSearchHandler";
 import Book from "@components/Book";
 import ReviewStars from "./ReviewStars";
 export default function Booklist({
