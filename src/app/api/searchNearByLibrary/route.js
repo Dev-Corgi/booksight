@@ -11,10 +11,10 @@ function isWithinBounds(lat, lon, bounds) {
 // GET 요청 처리 함수
 export async function GET(request) {
     const rTreeData = libraryRtreeData;
-  try {
     const { searchParams } = new URL(request.url);
     const latitude = searchParams.get('latitude');
     const longitude = searchParams.get('longitude');
+  try {
 
     if (!latitude || !longitude) {
       console.error('위도와 경도가 제공되지 않았습니다.');

@@ -1,4 +1,4 @@
-export default async function searchNearByLibraryHandler({latitude,longitude}) {
+export default async function searchNearByLibraryHandler({latitude = 0,longitude = 0}) {
 
     async function fetchSearchNearByLibrary(latitude, longitude) {
 
