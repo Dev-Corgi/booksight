@@ -17,6 +17,7 @@ export async function GET(request) {
   const data = await response.json();
 
   const res =  NextResponse.json(data);
+  console.log(`리버스 결과: ${res}`);
   res.headers.set('Access-Control-Allow-Origin', '*'); // 모든 도메인 허용
   res.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // 허용된 메소드 설정
   res.headers.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type'); // 허용된 헤더 설정
