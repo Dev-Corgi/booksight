@@ -4,7 +4,7 @@ export default async function reverseGeoCodeHandler({latitude,longitude}) {
 
       const coords = `${longitude},${latitude}`;
 
-        const response = await fetch(`https://localhost:3001/api/reverseGeoCode?coords=${coords}`);
+        const response = await fetch(`http://localhost:3000/api/reverseGeoCode?coords=${coords}`);
         const data = await response.json();
         return data;
       };
