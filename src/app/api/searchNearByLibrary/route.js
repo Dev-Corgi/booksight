@@ -10,11 +10,11 @@ function isWithinBounds(lat, lon, bounds) {
 
 // GET 요청 처리 함수
 export async function GET(request) {
-    const rTreeData = libraryRtreeData;
-    const { searchParams } = new URL(request.url);
-    const latitude = searchParams.get('latitude');
-    const longitude = searchParams.get('longitude');
+  const { searchParams } = new URL(request.url);
+  const latitude = searchParams.get('latitude');
+  const longitude = searchParams.get('longitude');
   try {
+    const rTreeData = libraryRtreeData;
 
     if (!latitude || !longitude) {
       console.error('위도와 경도가 제공되지 않았습니다.');
@@ -36,7 +36,6 @@ export async function GET(request) {
       userLat + buffer
     ];
 
-
     // R-트리 데이터에서 도서관 검색
     const results = rTreeData.filter(entry => {
       const { object } = entry;
@@ -47,7 +46,6 @@ export async function GET(request) {
       // 검색 범위 내에 있는 도서관인지 확인
       return isWithinBounds(lat, lon, searchBounds);
     });
-
 
     // 결과에 거리 추가
     const librariesWithDistances = results.map(entry => {
@@ -60,21 +58,19 @@ export async function GET(request) {
       return { ...object, distance: distanceToLibrary };
     });
 
-
     // 거리 기준으로 정렬 후 상위 10개
     const closestLibraries = librariesWithDistances
       .sort((a, b) => a.distance - b.distance)
       .slice(0, 10);
 
-
-    const res =  NextResponse.json(closestLibraries);
+    const res = NextResponse.json(closestLibraries);
     res.headers.set('Access-Control-Allow-Origin', '*'); // 모든 도메인 허용
     res.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // 허용된 메소드 설정
     res.headers.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type'); // 허용된 헤더 설정
-  
+
     return res;
   } catch (error) {
-    console.error('서버 오류 발생:', error);
-    return NextResponse.json({ error: '서버에서 오류가 발생했습니다.' }, { status: 500 });
+    console.error('서버 오류 발생:', error.message);
+    return NextResponse.json({ error: '서버에서 오류가 발생했습니다.', details: error.message }, { status: 500 });
   }
 }
