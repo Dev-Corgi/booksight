@@ -67,7 +67,12 @@ export async function GET(request) {
       .slice(0, 10);
 
 
-    return NextResponse.json(closestLibraries);
+    const res =  NextResponse.json(closestLibraries);
+    res.headers.set('Access-Control-Allow-Origin', '*'); // 모든 도메인 허용
+    res.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // 허용된 메소드 설정
+    res.headers.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type'); // 허용된 헤더 설정
+  
+    return res;
   } catch (error) {
     console.error('서버 오류 발생:', error);
     return NextResponse.json({ error: '서버에서 오류가 발생했습니다.' }, { status: 500 });

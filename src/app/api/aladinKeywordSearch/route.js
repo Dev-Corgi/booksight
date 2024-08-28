@@ -9,5 +9,10 @@ export async function GET(request) {
   const response = await fetch(apiUrl);
   const data = await response.json();
 
-  return NextResponse.json(data);
+  const res =  NextResponse.json(data);
+  res.headers.set('Access-Control-Allow-Origin', '*'); // 모든 도메인 허용
+  res.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // 허용된 메소드 설정
+  res.headers.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type'); // 허용된 헤더 설정
+
+  return res;
 }

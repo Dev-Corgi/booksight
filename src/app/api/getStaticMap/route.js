@@ -23,11 +23,16 @@ export async function GET(request) {
 
   const imageBuffer = await response.arrayBuffer(); // Get image data as ArrayBuffer
 
-  return new NextResponse(imageBuffer, {
+  const res =  new NextResponse.json(imageBuffer, {
     status: 200,
     headers: {
       'Content-Type': 'image/png', // Set the correct MIME type based on the image format
       'Cache-Control': 'public, max-age=86400', // Cache for 1 day
     },
   });
+  res.headers.set('Access-Control-Allow-Origin', '*'); // 모든 도메인 허용
+  res.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // 허용된 메소드 설정
+  res.headers.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type'); // 허용된 헤더 설정
+
+  return res;
 }
