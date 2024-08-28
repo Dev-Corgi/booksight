@@ -23,7 +23,7 @@ export async function GET(request) {
 
   const imageBuffer = await response.arrayBuffer(); // Get image data as ArrayBuffer
 
-  const res =  new NextResponse.json(imageBuffer, {
+  const res = new NextResponse(imageBuffer, {
     status: 200,
     headers: {
       'Content-Type': 'image/png', // Set the correct MIME type based on the image format

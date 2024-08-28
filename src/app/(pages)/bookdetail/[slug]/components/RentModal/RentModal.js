@@ -37,11 +37,11 @@ export default function RentModal({ isOpen, requestClose, isbn13 }) {
                 setLocation={setLocation}
               ></TagList>
             </div>
-            {/* <LibraryComponent
+            <LibraryComponent
               isOpen={isOpen}
               location={location}
               isbn13={isbn13}
-            ></LibraryComponent> */}
+            ></LibraryComponent>
           </div>
         </div>
     </>,
