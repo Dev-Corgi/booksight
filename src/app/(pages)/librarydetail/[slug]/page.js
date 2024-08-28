@@ -1,3 +1,5 @@
+"use client";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import InfogramSection from "./components/InfogramSection";
 import getLibraryInfoHandler from "root/Handler/getLibraryInfoHandler";
@@ -6,10 +8,14 @@ import DiscriptionSection from "./components/DiscriptionSection";
 import StatsSection from "./components/StatsSection";
 import MapSection from "./components/MapSection";
 import LibraryImageSection from "./components/LibraryImageSection";
-export default async function LibraryDetailPage({ params }) {
+export default function LibraryDetailPage({ params }) {
   const libCode = params.slug;
 
-    async function fetchGetLibraryInfo() {
+  const [libraryInfo, setlibraryInfo] = useState(null);
+  const [isFetching, setisFetching] = useState(true);
+
+  useEffect(() => {
+    async function fetchLibraryInfo() {
       const [libraryInfoResult, libraryPictureResult] = await Promise.all([
         getLibraryInfoHandler(libCode),
         getLibraryPictureHandler(libCode),
@@ -18,13 +24,15 @@ export default async function LibraryDetailPage({ params }) {
       const library = libraryInfoResult;
       library.picture = libraryPictureResult;
 
-      return library;
+      setlibraryInfo(library);
+      setisFetching(false);
     }
-
-
-  const libraryInfo =  await fetchGetLibraryInfo();
+    fetchLibraryInfo();
+  }, []);
 
   return (
+    <>
+      {!isFetching && (
         <div className="flex flex-row w-full h-full">
           <div className="flex flex-grow flex-col items-center">
             <div className="flex flex-col items-start w-[36.18vw] st:w-[521px] h-full text-black">
@@ -40,8 +48,9 @@ export default async function LibraryDetailPage({ params }) {
               <MapSection libraryInfo={libraryInfo}></MapSection>
             </div>
           </div>
-
           <LibraryImageSection libraryInfo={libraryInfo}></LibraryImageSection>
         </div>
+      )}
+    </>
   );
 }
