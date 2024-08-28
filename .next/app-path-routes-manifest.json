@@ -1,0 +1,20 @@
+{
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/(pages)/librarysearch/page": "/librarysearch",
+  "/(pages)/home/page": "/home",
+  "/(pages)/mypage/page": "/mypage",
+  "/(pages)/searchresult/page": "/searchresult",
+  "/(pages)/login/page": "/login",
+  "/api/aladinISBNSearch/route": "/api/aladinISBNSearch",
+  "/api/aladinKeywordSearch/route": "/api/aladinKeywordSearch",
+  "/api/getLibraryInfo/route": "/api/getLibraryInfo",
+  "/api/getStaticMap/route": "/api/getStaticMap",
+  "/api/getLibraryPicture/route": "/api/getLibraryPicture",
+  "/api/hotTrend/route": "/api/hotTrend",
+  "/api/isRentPossible/route": "/api/isRentPossible",
+  "/api/searchNearByLibrary/route": "/api/searchNearByLibrary",
+  "/api/reverseGeoCode/route": "/api/reverseGeoCode",
+  "/(pages)/bookdetail/[slug]/page": "/bookdetail/[slug]",
+  "/(pages)/librarydetail/[slug]/page": "/librarydetail/[slug]"
+}
