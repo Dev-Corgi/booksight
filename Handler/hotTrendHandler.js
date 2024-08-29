@@ -36,23 +36,13 @@ export default async function hotTrendHandler() {
   }
 
   const hotTrendBooks = await hotTrendHandler(getYesterday());
-  const result = [];
 
-  for (const book of hotTrendBooks.response.results[0].result.docs) {
-    // console.log(book);
-    const aladinISBNSearchResult = await aladinISBNSearchHandler(
-      book.doc.isbn13
-    );
-    result.push(aladinISBNSearchResult);
-  }
+  const responses = await Promise.all(
+    hotTrendBooks.response.results[0].result.docs.map(async (book) => await aladinISBNSearchHandler(book.doc.isbn13))
+  );
 
-  // const hotTrends = [9791130605210,9791130607887,9791130610658];
 
-  // const result = await Promise.all(
-  //   hotTrends.map((isbn13) => aladinISBNSearchHandler(isbn13))
-  // );
-
-  return [result[0], result[1], result[2]];
+  return [responses[0], responses[1], responses[2]];
 
 
 }

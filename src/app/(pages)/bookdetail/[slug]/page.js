@@ -18,18 +18,20 @@ export default function BookDetailPage({ params }) {
   useEffect(() => {
     async function fetchAladinISBNSearchHandler(){
     setbook(await aladinISBNSearchHandler(isbn13));
+    // console.log(1);
     }
     fetchAladinISBNSearchHandler();
   }, [])
 
   useEffect(() => {
-   async function fetchRecommendations(){
-    setauthorList(await aladinKeywordSearchHandler(book.author,"Author"));
-    setrecommentList(await readersSearchHandler(isbn13))
-    setIsFetching(false);
-   }
-
-   fetchRecommendations();
+    if (book !== null) {
+    async function fetchRecommendations(){
+      setauthorList(await aladinKeywordSearchHandler(book.author,"Author"));
+      setrecommentList(await readersSearchHandler(isbn13))
+      setIsFetching(false);
+    }
+    fetchRecommendations();
+  }
   }, [book])
 
     
@@ -38,6 +40,7 @@ export default function BookDetailPage({ params }) {
     <>
     {!isFetching &&
     <div className="w-full mt-[111px] flex flex-col items-center justify-center">
+      {console.log(3)}
       <BookSection book={book}></BookSection>
       <div className="flex flex-col w-[85vw] -mt-[5px] gap-y-[62px]">
         <DescriptionSection disc = {book.description}></DescriptionSection>

@@ -19,16 +19,12 @@ export default async function naruKeywordSearchHandler(keyword) {
   }
 
   const naruKeywordSearchResult = await fetchReadersSearch(keyword);
-  const result = [];
 
-  for (const book of naruKeywordSearchResult.response.docs) {
-    const aladinISBNSearchResult = await aladinISBNSearchHandler(
-      book.doc.isbn13
-    );
-    result.push(aladinISBNSearchResult);
-  }
+  const responses = await Promise.all(
+    naruKeywordSearchResult.response.docs.map(async (book) => await aladinISBNSearchHandler(book.doc.isbn13))
+  );
 
-  return result;
+  return responses;
 
 
 }

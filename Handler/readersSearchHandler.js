@@ -19,16 +19,22 @@ export default async function readersSearchHandler(isbn13) {
   }
 
   const readersBooks = await fetchReadersSearch(isbn13);
-  const result = [];
+  // const result = [];
 
-  for (const book of readersBooks.response.docs) {
-    const aladinISBNSearchResult = await aladinISBNSearchHandler(
-      book.book.isbn13
-    );
-    result.push(aladinISBNSearchResult);
-  }
+  // for (const book of readersBooks.response.docs) {
+  //   const aladinISBNSearchResult = await aladinISBNSearchHandler(
+  //     book.book.isbn13
+  //   );
+  //   result.push(aladinISBNSearchResult);
+  // }
 
-  return result;
+  // return result;
+
+  const responses = await Promise.all(
+    readersBooks.response.docs.map(async (book) => await aladinISBNSearchHandler(book.book.isbn13))
+  );
+
+  return responses;
 
 
 }
