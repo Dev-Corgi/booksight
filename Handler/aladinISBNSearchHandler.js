@@ -1,4 +1,3 @@
-import aladinData from "@data/aladinData.json";
 
 export default async function aladinISBNSearchHandler(ItemId) {
 
@@ -20,19 +19,21 @@ export default async function aladinISBNSearchHandler(ItemId) {
     }
   }
 
-  function getAuthor(author){
+  function getAuthor(author) {
     const authorInput = author;
     const pattern = /^(.*?)\s*\(지은이\)/;
+    const match = authorInput.match(pattern);
+    
+    return match ? match[1] : author;
+}
 
-    return authorInput.match(pattern)[1];
-    }
+  const aladinISBNSearchResult = await aladinISBNSearchHandler(ItemId);
+  aladinISBNSearchResult.item[0].author = getAuthor(aladinISBNSearchResult.item[0].author);
+  return aladinISBNSearchResult.item[0];
 
-  // const aladinISBNSearchResult = await aladinISBNSearchHandler(ItemId);
-  // return aladinISBNSearchResult.item[0];
-
-  const result = JSON.parse(JSON.stringify(aladinData[ItemId].item[0]));
-  result.author = getAuthor(result.author);
-  return result;
+  // const result = JSON.parse(JSON.stringify(aladinData[ItemId].item[0]));
+  // result.author = getAuthor(result.author);
+  // return result;
 
 
 

@@ -1,0 +1,1 @@
+ssh -i C:\Users\bora5\Working\booksight\booksight.pem ubuntu@3.38.230.213

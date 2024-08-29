@@ -1,31 +1,16 @@
 "use client";
-
-import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import aladinKeywordSearchHandler from "root/Handler/aladinKeywordSearchHandler";
 import Book from "@components/Book";
 import ReviewStars from "./ReviewStars";
 export default function Booklist({
   className,
-  keyword,
   width = 125.2,
+  books
 }) {
   const router = useRouter();
   const originWidth = 125.2;
   const scale = width / originWidth;
-
-  const [books, setbooks] = useState(null);
-  const [isFetching, setisFetching] = useState(true);
-
-  useEffect(() => {
-    async function fetchKeywordSearch() {
-      const result = await aladinKeywordSearchHandler(keyword);
-      setbooks(result);
-      setisFetching(false);
-    }
-
-    fetchKeywordSearch();
-  }, []);
+  
 
   // 스코어 다듬기
   function getScore(score) {
@@ -36,13 +21,15 @@ export default function Booklist({
     router.push(`/bookdetail/${isbn13}`);
   };
 
-  if(isFetching){ return}
 
   return (
           <div className={`${className}`}>
             {books.map((book, index) => {
               return (
-                <div className = {`w-[${width}px] aspect-[1/2]`} key = {index}>
+                <div className = "aspect-[1/2]" key = {index}
+                style={{
+                  width : width
+                }}>
                 <div
                   className={"flex flex-col w-min h-min origin-top-left"}
                   style={{

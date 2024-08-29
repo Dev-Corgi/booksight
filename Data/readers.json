@@ -1,0 +1,160 @@
+{
+    "response": {
+        "request": {
+            "isbn13": "9791130605210"
+        },
+        "resultNum": 10,
+        "docs": [
+            {
+                "book": {
+                    "no": 1,
+                    "bookname": "할머니가 미안하다고 전해달랬어요 :프레드릭 배크만 장편소설 ",
+                    "authors": "지은이: 프레드릭 배크만 ;옮긴이: 이은선",
+                    "publisher": "다산북스",
+                    "publication_year": "2016",
+                    "isbn13": "9791130607887",
+                    "addition_symbol": "",
+                    "vol": "",
+                    "class_no": "859.7",
+                    "class_nm": "문학 > 독일문학 > 기타 게르만 문학",
+                    "bookImageURL": "http://image.aladin.co.kr/product/7980/36/cover/k632434439_1.jpg"
+                }
+            },
+            {
+                "book": {
+                    "no": 2,
+                    "bookname": "브릿마리 여기 있다 :프레드릭 배크만 장편소설 ",
+                    "authors": "지은이: 프레드릭 배크만 ;옮긴이: 이은선",
+                    "publisher": "다산북스",
+                    "publication_year": "2016",
+                    "isbn13": "9791130610375",
+                    "addition_symbol": "",
+                    "vol": "",
+                    "class_no": "859.7",
+                    "class_nm": "문학 > 독일문학 > 기타 게르만 문학",
+                    "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/112/970/11297042.jpg?type=m1&udate=20170906"
+                }
+            },
+            {
+                "book": {
+                    "no": 3,
+                    "bookname": "우리와 당신들 :프레드릭 배크만 장편소설 ",
+                    "authors": "지은이: 프레드릭 배크만 ;옮긴이: 이은선",
+                    "publisher": "다산북스",
+                    "publication_year": "2019",
+                    "isbn13": "9791130620473",
+                    "addition_symbol": "",
+                    "vol": "",
+                    "class_no": "859.7",
+                    "class_nm": "문학 > 독일문학 > 기타 게르만 문학",
+                    "bookImageURL": "https://image.aladin.co.kr/product/17971/51/cover/k272534438_1.jpg"
+                }
+            },
+            {
+                "book": {
+                    "no": 4,
+                    "bookname": "베어타운 :프레드릭 배크만 장편소설 ",
+                    "authors": "지은이: 프레드릭 배크만 ;옮긴이: 이은선",
+                    "publisher": "다산북스",
+                    "publication_year": "2018",
+                    "isbn13": "9791130616650",
+                    "addition_symbol": "",
+                    "vol": "",
+                    "class_no": "859.7",
+                    "class_nm": "문학 > 독일문학 > 기타 게르만 문학",
+                    "bookImageURL": "http://image.aladin.co.kr/product/15166/8/cover/k772533669_1.jpg"
+                }
+            },
+            {
+                "book": {
+                    "no": 5,
+                    "bookname": "일생일대의 거래 :프레드릭 배크만 소설 ",
+                    "authors": "지은이: 프레드릭 배크만 ;옮긴이: 이은선",
+                    "publisher": "다산북스",
+                    "publication_year": "2019",
+                    "isbn13": "9791130626963",
+                    "addition_symbol": "",
+                    "vol": "",
+                    "class_no": "859.7",
+                    "class_nm": "문학 > 독일문학 > 기타 게르만 문학",
+                    "bookImageURL": "https://image.aladin.co.kr/product/21411/63/cover/s722636890_1.jpg"
+                }
+            },
+            {
+                "book": {
+                    "no": 6,
+                    "bookname": "하루하루가 이별의 날 :프레드릭 배크만 소설 ",
+                    "authors": "지은이: 프레드릭 배크만 ;옮긴이: 이은선",
+                    "publisher": "다산북스",
+                    "publication_year": "2017",
+                    "isbn13": "9791130613208",
+                    "addition_symbol": "",
+                    "vol": "",
+                    "class_no": "859.7",
+                    "class_nm": "문학 > 독일문학 > 기타 게르만 문학",
+                    "bookImageURL": "http://image.aladin.co.kr/product/11167/15/cover/k272531086_2.jpg"
+                }
+            },
+            {
+                "book": {
+                    "no": 7,
+                    "bookname": "셈을 할 줄 아는 까막눈이 여자 :요나스 요나손 장편소설 ",
+                    "authors": "지은이: 요나스 요나손 ;옮긴이: 임호경",
+                    "publisher": "열린책들",
+                    "publication_year": "2014",
+                    "isbn13": "9788932916637",
+                    "addition_symbol": "",
+                    "vol": "",
+                    "class_no": "859.73",
+                    "class_nm": "문학 > 독일문학 > 기타 게르만 문학",
+                    "bookImageURL": "http://image.aladin.co.kr/product/4333/99/cover/8932916632_1.jpg"
+                }
+            },
+            {
+                "book": {
+                    "no": 8,
+                    "bookname": "감옥에 가기로 한 메르타 할머니 :카타리나 잉엘만순드베리 장편소설 ",
+                    "authors": "지은이: 카타리나 잉엘만순드베리 ;옮긴이: 정장진",
+                    "publisher": "열린책들",
+                    "publication_year": "2016",
+                    "isbn13": "9788932917429",
+                    "addition_symbol": "",
+                    "vol": "",
+                    "class_no": "859.7",
+                    "class_nm": "문학 > 독일문학 > 기타 게르만 문학",
+                    "bookImageURL": "http://image.aladin.co.kr/product/7492/4/cover/8932917426_1.jpg"
+                }
+            },
+            {
+                "book": {
+                    "no": 9,
+                    "bookname": "메르타 할머니, 라스베이거스로 가다 :카타리나 잉엘만순드베리 장편소설 ",
+                    "authors": "지은이: 카타리나 잉엘만순드베리 ;옮긴이: 정장진",
+                    "publisher": "열린책들",
+                    "publication_year": "2017",
+                    "isbn13": "9788932918211",
+                    "addition_symbol": "",
+                    "vol": "",
+                    "class_no": "859.7",
+                    "class_nm": "문학 > 독일문학 > 기타 게르만 문학",
+                    "bookImageURL": "http://image.aladin.co.kr/product/10587/54/cover/893291821x_1.jpg"
+                }
+            },
+            {
+                "book": {
+                    "no": 10,
+                    "bookname": "창문 넘어 도망친 100세 노인 :요나스 요나손 장편소설 ",
+                    "authors": "지은이: 요나스 요나손 ;옮긴이: 임호경",
+                    "publisher": "열린책들",
+                    "publication_year": "2013",
+                    "isbn13": "9788932916194",
+                    "addition_symbol": "",
+                    "vol": "",
+                    "class_no": "859.7",
+                    "class_nm": "문학 > 독일문학 > 기타 게르만 문학",
+                    "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/072/647/07264703.jpg?type=m1&udate=20180717"
+                }
+            }
+        ]
+    }
+}

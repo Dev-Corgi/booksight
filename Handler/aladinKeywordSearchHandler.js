@@ -1,12 +1,11 @@
-import keywordSearchResultData from "@data/keywordSearchResult.json"
 
-export default async function aladinKeywordSearchHandler(SearchWord) {
+export default async function aladinKeywordSearchHandler(SearchWord,QueryType = Keyword) {
 
-  async function aladinKeywordSearchHandler(SearchWord) {
+  async function aladinKeywordSearchHandler(SearchWord,QueryType) {
 
     
     try {
-      const response = await fetch(`/api/aladinKeywordSearch?SearchWord=${SearchWord}`);
+      const response = await fetch(`/api/aladinKeywordSearch?SearchWord=${SearchWord}&QueryType=${QueryType}`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch aladinKeywordSearch");
@@ -20,23 +19,28 @@ export default async function aladinKeywordSearchHandler(SearchWord) {
     }
   }
 
-  function getAuthor(author){
+  function getAuthor(author) {
     const authorInput = author;
     const pattern = /^(.*?)\s*\(지은이\)/;
+    const match = authorInput.match(pattern);
+    
+    return match ? match[1] : author;
+}
 
-    return authorInput.match(pattern)[1];
-    }
-
-  // const aladinISBNSearchResult = await aladinKeywordSearchHandler(SearchWord);
-  // return aladinISBNSearchResult.item;
-
-  const result = JSON.parse(JSON.stringify(keywordSearchResultData.item));
-  for(const book of result){
+  const aladinKeywordSearchResult = await aladinKeywordSearchHandler(SearchWord,QueryType);
+  const filteredResult = aladinKeywordSearchResult.item.filter(book => book.isbn13 !== "");
+    for(const book of filteredResult){
     book.author = getAuthor(book.author);
   }
-  return result;
+  return filteredResult;
 
-  return keywordSearchResultData.item;
+  // const result = JSON.parse(JSON.stringify(keywordSearchResultData.item));
+  // for(const book of result){
+  //   book.author = getAuthor(book.author);
+  // }
+  // return result;
+
+  // return keywordSearchResultData.item;
 
 
 

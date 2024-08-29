@@ -50,7 +50,7 @@ export default function SearchResultPage(props) {
             <div className="absolute w-[102px] h-full bg-primary"></div>
           </div>
 
-            <Booklist width={146.22} className="flex flex-wrap w-full gap-[26px] mt-[31px] mr-[79px]"></Booklist>
+            {/* <Booklist width={146.22} className="flex flex-wrap w-full gap-[26px] mt-[31px] mr-[79px]"></Booklist> */}
         </div>
       </div>
   );

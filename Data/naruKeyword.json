@@ -1,0 +1,272 @@
+{
+    "response": {
+        "request": {
+            "keyword": "추리소설",
+            "pageNo": 1,
+            "pageSize": 20
+        },
+        "numFound": 614,
+        "docs": [
+            {
+                "doc": {
+                    "bookname": "돌이킬 수 없는 약속 :야쿠마루 가쿠 장편소설 ",
+                    "authors": "저자: 야쿠마루 가쿠 ;옮긴이: 김성미",
+                    "publisher": "Book plaza(북플라자)",
+                    "publication_year": "2017",
+                    "isbn13": "9788998274795",
+                    "vol": "",
+                    "bookImageURL": "http://image.aladin.co.kr/product/10174/56/cover/s572533950_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=3411733",
+                    "loan_count": "123877"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "악의 :히가시노 게이고 장편소설 ",
+                    "authors": "히가시노 게이고 [지음] ;양윤옥 옮김",
+                    "publisher": "현대문학",
+                    "publication_year": "2008",
+                    "isbn13": "9788972754190",
+                    "vol": "",
+                    "bookImageURL": "http://image.aladin.co.kr/product/236/71/cover/8972754196_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=2220808",
+                    "loan_count": "102395"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "동급생 :히가시노 게이고 장편소설 ",
+                    "authors": "히가시노 게이고 [지음] ;신경립 옮김",
+                    "publisher": "창해",
+                    "publication_year": "2014",
+                    "isbn13": "9788979198188",
+                    "vol": "",
+                    "bookImageURL": "http://image.aladin.co.kr/product/254/51/cover/8979198183_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=2237483",
+                    "loan_count": "82508"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "11문자 살인사건",
+                    "authors": "하가시노 게이고 지음;민경욱 옮김",
+                    "publisher": "랜덤하우스코리아",
+                    "publication_year": "2007",
+                    "isbn13": "9788925511238",
+                    "vol": "",
+                    "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/030/248/03024872.jpg?type=m1&udate=20180719",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=2134359",
+                    "loan_count": "65737"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "벚꽃 지는 계절에 그대를 그리워하네",
+                    "authors": "우타노 쇼고 지음;김성기 옮김",
+                    "publisher": "한스미디어",
+                    "publication_year": "2005",
+                    "isbn13": "9788959750221",
+                    "vol": "",
+                    "bookImageURL": "http://image.aladin.co.kr/product/61/13/cover/8959750220_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=921601",
+                    "loan_count": "56580"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "내가 그를 죽였다 :히가시노 게이고 장편소설 ",
+                    "authors": "지은이: 히가시노 게이고 ;옮긴이: 양윤옥",
+                    "publisher": "현대문학",
+                    "publication_year": "2009",
+                    "isbn13": "9788972754398",
+                    "vol": "",
+                    "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/060/303/06030357.jpg?type=m1&udate=20170822",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=2370675",
+                    "loan_count": "46688"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "백마산장 살인사건 :히가시노 게이고 장편소설 ",
+                    "authors": "히가시노 게이고 지음 ;민경욱 옮김",
+                    "publisher": "랜덤하우스코리아",
+                    "publication_year": "2008",
+                    "isbn13": "9788925519708",
+                    "vol": "",
+                    "bookImageURL": "http://image.aladin.co.kr/product/225/10/cover/8925519704_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=2214789",
+                    "loan_count": "45964"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "그리고 아무도 없었다 ",
+                    "authors": "지은이: 애거서 크리스티 ;옮긴이: 이가형",
+                    "publisher": "해문출판사",
+                    "publication_year": "2011",
+                    "isbn13": "9788938201010",
+                    "vol": "",
+                    "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/001/091/00109141.jpg?type=m1&udate=20130130",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=2376334",
+                    "loan_count": "45688"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "밀실살인게임 :우타노 쇼고 장편소설 ",
+                    "authors": "지은이: 우타노 쇼고 ;옮긴이: 김은모",
+                    "publisher": "한스미디어(한즈미디어)",
+                    "publication_year": "2010",
+                    "isbn13": "9788959752935",
+                    "vol": "",
+                    "bookImageURL": "http://image.aladin.co.kr/product/806/44/cover/8959752975_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=1110924",
+                    "loan_count": "44925"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "용의자 X의 헌신 ",
+                    "authors": "히가시노 게이고 지음 ;양억관 옮김",
+                    "publisher": "재인",
+                    "publication_year": "2017",
+                    "isbn13": "9788990982704",
+                    "vol": "",
+                    "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/124/818/12481857.jpg?type=m1&udate=20170914",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=3541024",
+                    "loan_count": "44824"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "모방범 :미야베 미유키 장편소설",
+                    "authors": "지은이: 미야베 미유키 ;옮긴이: 양억관",
+                    "publisher": "문학동네",
+                    "publication_year": "2012",
+                    "isbn13": "9788954617710",
+                    "vol": "1",
+                    "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/068/587/06858743.jpg?type=m1&udate=20150715",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=2373136",
+                    "loan_count": "36071"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "백조와 박쥐 :히가시노 게이고 장편소설 ",
+                    "authors": "지은이: 히가시노 게이고 ;옮긴이: 양윤옥",
+                    "publisher": "현대문학",
+                    "publication_year": "2021",
+                    "isbn13": "9791190885928",
+                    "vol": "",
+                    "bookImageURL": "https://image.aladin.co.kr/product/27736/48/cover/k902733648_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=6068422",
+                    "loan_count": "34674"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "범죄 수학 ",
+                    "authors": "리스 하스아우트 글 ;오혜정 옮김",
+                    "publisher": "Gbrain",
+                    "publication_year": "2010",
+                    "isbn13": "9788959791927",
+                    "vol": "",
+                    "bookImageURL": "http://image.aladin.co.kr/product/740/68/cover/895979192x_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=1093769",
+                    "loan_count": "32146"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "13·67 :찬호께이 장편소설 ",
+                    "authors": "지은이: 찬호께이 ;옮긴이: 강초아",
+                    "publisher": "한스미디어",
+                    "publication_year": "2015",
+                    "isbn13": "9788959758340",
+                    "vol": "",
+                    "bookImageURL": "http://image.aladin.co.kr/product/6036/7/cover/8959758345_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=2621274",
+                    "loan_count": "31840"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "11문자 살인사건 ",
+                    "authors": "지은이: 히가시노 게이고 ;옮긴이: 민경욱",
+                    "publisher": "RHK(알에이치코리아)",
+                    "publication_year": "2018",
+                    "isbn13": "9788925563770",
+                    "vol": "",
+                    "bookImageURL": "https://image.aladin.co.kr/product/15645/53/cover/8925563770_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=3835266",
+                    "loan_count": "31227"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "그리고 명탐정이 태어났다 :우타노 쇼고 소설 ",
+                    "authors": "지은이: 우타노 쇼고 ;옮긴이: 현정수",
+                    "publisher": "문학동네",
+                    "publication_year": "2010",
+                    "isbn13": "9788954611343",
+                    "vol": "",
+                    "bookImageURL": "http://image.aladin.co.kr/product/728/68/cover/8954611346_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=1075249",
+                    "loan_count": "28741"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "오리엔트 특급 살인",
+                    "authors": "애거서 크리스티 지음;신영희 옮김",
+                    "publisher": "황금가지",
+                    "publication_year": "2002",
+                    "isbn13": "9788982737039",
+                    "vol": "3",
+                    "bookImageURL": "http://image.aladin.co.kr/product/13822/12/cover/k672532125_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=2405849",
+                    "loan_count": "26833"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "하쿠바산장 살인사건 ",
+                    "authors": "지은이: 히가시노 게이고 ;옮긴이: 민경욱",
+                    "publisher": "RHK(알에이치코리아)",
+                    "publication_year": "2020",
+                    "isbn13": "9788925569130",
+                    "vol": "",
+                    "bookImageURL": "https://image.aladin.co.kr/product/23862/94/cover/8925569132_1.jpg",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=5659523",
+                    "loan_count": "26102"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "회랑정 살인사건 :히가시노 게이고 장편소설 ",
+                    "authors": "지은이: 히가시노 게이고 ;옮긴이: 임경화",
+                    "publisher": "RHK(알에이치코리아)",
+                    "publication_year": "2016",
+                    "isbn13": "9788925560298",
+                    "vol": "",
+                    "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/111/970/11197091.jpg?type=m1&udate=20171025",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=3368463",
+                    "loan_count": "25513"
+                }
+            },
+            {
+                "doc": {
+                    "bookname": "미스터 메르세데스 :스티븐 킹 장편소설 ",
+                    "authors": "지은이: 스티븐 킹 ;옮긴이: 이은선",
+                    "publisher": "황금가지",
+                    "publication_year": "2015",
+                    "isbn13": "9788960176751",
+                    "vol": "",
+                    "bookImageURL": "https://bookthumb-phinf.pstatic.net/cover/093/305/09330564.jpg?type=m1&udate=20180703",
+                    "bookDtlUrl": "https://data4library.kr/bookV?seq=2396943",
+                    "loan_count": "23392"
+                }
+            }
+        ]
+    }
+}

@@ -21,7 +21,7 @@ export default function Header(props) {
       className={`${props.className} w-full h-[45px] flex flex-row items-center px-[80px] gap-[40px] font-NotoSansKRMedium text-nowrap`}
     >
       <div className = "relative w-[243px] h-[45px]"> 
-      <Image src={logoPic} fill sizes={1} alt ="logoPic" className = "object-contain"></Image>
+      <Image src={logoPic} fill sizes={1} alt ="logoPic" className = "object-contain" onClick = {handleHomeClick}></Image>
         </div>
 
      <SearchBar></SearchBar>

@@ -6,11 +6,11 @@ import TitleTag from "@/app/components/TitleTag";
 
 export default async function CommentaryList() {
 
-    async function fetchHotTrend() {
-      const result = await aladinISBNSearchHandler(9791130605210);
-      return result
-    }
-    const book = await fetchHotTrend();
+    // async function fetchHotTrend() {
+    //   const result = await aladinISBNSearchHandler(9791130605210);
+    //   return result
+    // }
+    // const book = await fetchHotTrend();
 
 
   return (
