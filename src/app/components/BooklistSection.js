@@ -3,7 +3,7 @@ import TitleTag from "./TitleTag";
 import Booklist from "./Booklist";
 export default function BooklistSection({
   title,
-  books
+  books,
 }) {
 
   return (

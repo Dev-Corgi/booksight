@@ -2,7 +2,9 @@
 
 export default function PurchaseButton({book}){
     const handlePurchaseButtonClick = () =>{
+      if(book != undefined){
         window.open(book.link);
+      }
     }
 
     return(

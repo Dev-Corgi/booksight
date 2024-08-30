@@ -8,12 +8,14 @@ import searchNearByLibraryHandler from "root/Handler/searchNearByLibraryHandler"
 import isRentPossibleHandler from "root/Handler/isRentPossibleHandler";
 import getLibraryPictureHandler from "root/Handler/getLibraryPictureHandler";
 import getLibraryInfoHandler from "root/Handler/getLibraryInfoHandler";
+import LoadingIconFront from "@svg/LoadingIconFront.svg";
+import LoadingIconBack from "@svg/LoadingIconBack.svg";
 
 export default function LibraryComponent({ isOpen, location, isbn13 }) {
   const router = useRouter();
-  const [isFetching, setIsFetching] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [nearbyLibraryCodes, setNearbyLibraryCodes] = useState([]);
-  const [libraryInfos,setLibraryInfos] = useState();
+  const [libraryInfos, setLibraryInfos] = useState(Array.from({ length: 10 }));
 
   useEffect(() => {
     if (isOpen) {
@@ -31,7 +33,6 @@ export default function LibraryComponent({ isOpen, location, isbn13 }) {
       fetchData();
     }
   }, [isOpen, location]);
-  
 
   useEffect(() => {
     async function fetchLibraryInfo() {
@@ -71,7 +72,7 @@ export default function LibraryComponent({ isOpen, location, isbn13 }) {
       });
 
       setLibraryInfos(sortedLibraries);
-      setIsFetching(false);
+      setIsLoading(false);
     }
 
     if (isOpen) {
@@ -84,72 +85,81 @@ export default function LibraryComponent({ isOpen, location, isbn13 }) {
   };
 
   return (
-    <>
-      {!isFetching && (
-        <div className="flex flex-row justify-end w-full pl-[50px]">
-          <div className="flex flex-col flex-grow mt-[33.56px] rounded-l-[23.69px] overflow-clip whitespace-nowrap">
-            {libraryInfos.map((library, index) => (
-              <div className="relative w-full h-[80px]" key={index}>
-                <div className="absolute w-full h-[80px]">
-                  <Image
-                    src={library.picture}
-                    alt="libraryThumbnail"
-                    className="object-cover"
-                    fill
-                    sizes={1}
-                  />
-                </div>
-                <div
-                  className={`absolute w-full h-full bg-black ${
-                    library.rentState === "대출 하기"
-                      ? "bg-opacity-50"
-                      : "bg-opacity-70"
-                  } border-t-[1px] border-b-[1px] border-white border-opacity-30`}
-                ></div>
-                <div className="absolute flex flex-row h-full  justify-between items-center  w-full">
-                  <div className="flex flex-row ml-[18.22px]">
-                    <p className="font-MontserratSemiBold text-[14px] text-primary">
-                      {"0" + (index + 1)}
-                    </p>
-                    <p
-                      className="ml-[15.53px] w-[280px] font-NotoSansKRBold text-[24px] text-primary"
-                      onClick={() => handleLibraryClick(library.libCode)}
-                    >
-                      {library.libName}
-                    </p>
+    <div className="flex flex-row justify-end w-full pl-[50px]">
+      {isLoading ? (
+        <div className = "absolute flex items-center justify-center w-full h-full">
+        <div className="relative w-[35px] h-[35px]">
+          <LoadingIconBack className="absolute"></LoadingIconBack>
+          <LoadingIconFront className="absolute"></LoadingIconFront>
+        </div>
+        </div>
+      ) : (
+        <div className="flex flex-col flex-grow mt-[33.56px] rounded-l-[23.69px] overflow-clip whitespace-nowrap">
+          {libraryInfos.map((library, index) => (
+            <div className="relative w-full h-[80px]" key={index}>
+              {library != undefined && (
+                <>
+                  <div className="absolute w-full h-[80px]">
+                    <Image
+                      src={library.picture}
+                      alt="libraryThumbnail"
+                      className="object-cover"
+                      fill
+                      sizes={1}
+                    />
                   </div>
-                  <div className="flex flex-row justify-start gap-[60px]">
-                    <div className="flex flex-row w-[300px] items-center gap-[2.83px]">
-                      <div className="relative w-[19px] h-[19px]">
-                        <PlaceIcon className="text-primary" />
-                      </div>
-                      <p className="font-NotoSansKRBold text-primary text-[14px]">
-                        {library.address}
+                  <div
+                    className={`absolute w-full h-full bg-black ${
+                      library.rentState === "대출 하기"
+                        ? "bg-opacity-50"
+                        : "bg-opacity-70"
+                    } border-t-[1px] border-b-[1px] border-white border-opacity-30`}
+                  ></div>
+                  <div className="absolute flex flex-row h-full  justify-between items-center  w-full">
+                    <div className="flex flex-row ml-[18.22px]">
+                      <p className="font-MontserratSemiBold text-[14px] text-primary">
+                        {"0" + (index + 1)}
+                      </p>
+                      <p
+                        className="ml-[15.53px] w-[280px] font-NotoSansKRBold text-[24px] text-primary"
+                        onClick={() => handleLibraryClick(library.libCode)}
+                      >
+                        {library.libName}
                       </p>
                     </div>
-                    <div className="flex flex-row w-[130px] items-center gap-[2.83px]">
-                      <div className="relative w-[19px] h-[19px]">
-                        <CallIcon className="text-primary" />
+                    <div className="flex flex-row justify-start gap-[60px]">
+                      <div className="flex flex-row w-[300px] items-center gap-[2.83px]">
+                        <div className="relative w-[19px] h-[19px]">
+                          <PlaceIcon className="text-primary" />
+                        </div>
+                        <p className="font-NotoSansKRBold text-primary text-[14px]">
+                          {library.address}
+                        </p>
                       </div>
-                      <p className="font-NotoSansKRBold text-primary text-[14px]">
-                        {library.tel}
+                      <div className="flex flex-row w-[130px] items-center gap-[2.83px]">
+                        <div className="relative w-[19px] h-[19px]">
+                          <CallIcon className="text-primary" />
+                        </div>
+                        <p className="font-NotoSansKRBold text-primary text-[14px]">
+                          {library.tel}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex justify-center items-center w-[121px] h-[38px] border-[2px] border-primary rounded-[10px] mr-[58px]">
+                      <p className="font-NotoSansKRSemiBold text-[14px] text-primary">
+                        {library.rentState}
                       </p>
                     </div>
                   </div>
-                  <div className="flex justify-center items-center w-[121px] h-[38px] border-[2px] border-primary rounded-[10px] mr-[58px]">
-                    <p className="font-NotoSansKRSemiBold text-[14px] text-primary">
-                      {library.rentState}
-                    </p>
-                  </div>
-                </div>
-                {library.rentState !== "대출 하기" && (
-                  <div className="absolute w-full h-full bg-black opacity-30"></div>
-                )}
-              </div>
-            ))}
-          </div>
+                  {library.rentState !== "대출 하기" && (
+                    <div className="absolute w-full h-full bg-black opacity-30"></div>
+                  )}
+                </>
+              )}
+            </div>
+          ))}
         </div>
       )}
-    </>
+    </div>
   );
 }

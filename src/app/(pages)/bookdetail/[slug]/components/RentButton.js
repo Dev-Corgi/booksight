@@ -7,7 +7,9 @@ export default function RentButton({ book }) {
   const [isOpen, setisOpen] = useState(false);
 
   const handleRentButtonClick = () => {
+    if(book != undefined){
     setisOpen(true);
+    }
   };
 
   const handleRequestClose = () => {
@@ -23,11 +25,14 @@ export default function RentButton({ book }) {
           대여하기
         </p>
       </div>
+      { book &&
       <RentModal
         isOpen={isOpen}
         requestClose={handleRequestClose}
         isbn13={book.isbn13}
       ></RentModal>
+      }
+
     </>
   );
 }

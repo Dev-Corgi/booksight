@@ -1,5 +1,5 @@
 
-export default async function aladinKeywordSearchHandler(SearchWord,QueryType = Keyword) {
+export default async function aladinKeywordSearchHandler(SearchWord,QueryType = "Keyword") {
 
   async function aladinKeywordSearchHandler(SearchWord,QueryType) {
 

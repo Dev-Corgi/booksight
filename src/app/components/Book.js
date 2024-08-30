@@ -1,25 +1,15 @@
-// "use client";
+"use client";
 
-// import React,{useState,useEffect } from "react";
+import React,{useState,useEffect } from "react";
 import Image from "next/image";
 import bookFrame from "@png/bookFrame.png";
 import bookShadow from "@png/bookShadow.png";
-// import { ColorExtractor } from "react-color-extractor";
+import { ColorExtractor } from "react-color-extractor";
 
 export default function Book({ className, book, shadowType = "null" }) {
 
-  // const [dominantColor, setDominantColor] = useState("#000000");
+  const [dominantColor, setDominantColor] = useState("#000000");
 
-  // const [isLoaded, setIsLoaded] = useState(false);
-
-  // // 클라이언트 컴포넌트가 마운트되었을 때 상태를 업데이트
-  // useEffect(() => {
-  //   setIsLoaded(true);
-  // }, []);
-
-  // if (!isLoaded) {
-  //   return
-  // }
   
   return (
     <div className={`${className} relative overflow-visible`}>
@@ -28,28 +18,31 @@ export default function Book({ className, book, shadowType = "null" }) {
           <Image src={bookShadow} alt="bookShadow" fill sizes={1}></Image>
         </div>
       )}
-      {/* {shadowType == "circle" && (
+      {shadowType == "circle" && (
         <div
           className={`absolute w-full pt-[100%]  mt-[6.03vw] st:mt-[86.88px] rounded-full blur-[5.52]`}
           style={{
             background: `radial-gradient(50% 50% at 50% 50%, ${dominantColor}E6, ${dominantColor}00)`,
           }}
         ></div>
-      )} */}
+      )}
       <div className="absolute w-[96.55%] h-full rounded-r-[0.56vw] rounded-l-[0.42vw] st:rounded-r-[8px] st:rounded-l-[6px] overflow-clip">
-      {shadowType == "circle" ? (
-          // <ColorExtractor
-          //   getColors={(colors) => {
-          //     setDominantColor(colors[1]);
-          //   }}
-          // >
+      
+      {book != undefined && 
+      <>
+      { shadowType == "circle" ? (
+          <ColorExtractor
+            getColors={(colors) => {
+              setDominantColor(colors[1]);
+            }}
+          >
             <img
               src={book.cover.replace(/coversum/, "cover500")}
               layout="fill"
               alt="bookCover"
               className="h-full object-cover"
             ></img>
-          // {/* </ColorExtractor> */}
+           </ColorExtractor>
       ) : (
           <Image
             src={book.cover.replace(/coversum/, "cover500")}
@@ -58,6 +51,8 @@ export default function Book({ className, book, shadowType = "null" }) {
             sizes={1}
           ></Image>
       )}
+      </>
+      }
       </div>
       <div className="absolute w-full h-full">
         <Image src={bookFrame} alt="bookFrame" fill sizes={1}></Image>

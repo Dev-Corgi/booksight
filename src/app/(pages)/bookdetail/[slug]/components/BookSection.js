@@ -1,3 +1,5 @@
+"use client";
+import React, { useState, useEffect } from "react";
 import ReviewStars from "@/app/components/ReviewStars";
 import Book from "@/app/components/Book";
 import shelfImg from "@png/shelf.png";
@@ -5,10 +7,21 @@ import Image from "next/image";
 import InfoIcon from "@svg/InfoIcon.svg"
 import PurchaseButton from "./PurchaseButton";
 import RentButton from "./RentButton";
+import Shimmer from "@components/Simmer";
 export default function BookSection({ book }) {
 
+  const [isLoading, setIsLoading] = useState(true);
 
-  const score = Math.ceil(book.customerReviewRank / 2);
+  useEffect(() => {
+    // Set loading to false once books are loaded
+    if (book) {
+      setIsLoading(false);
+    }
+  }, [book]);
+
+  function getScore(score) {
+    return Math.ceil(score / 2);
+  }
 
   return (
     <>
@@ -18,32 +31,37 @@ export default function BookSection({ book }) {
       </div>
       <div className="flex flex-row w-min h-min">
         <div className="flex flex-col w-min h-min">
-          <p className="mt-[51px] text-[19px] font-NotoSansKRMedium text-textColor-secondary">
-            {book.author}
+          <Shimmer isLoading = {isLoading}>
+          <p className="mt-[51px] text-[19px] font-NotoSansKRMedium text-textColor-secondary whitespace-nowrap">
+            {book == undefined ? "this is author" : book.author}
           </p>
+          </Shimmer>
+          <Shimmer isLoading = {isLoading}>
           <p className="mt-[6px] text-[63px] w-[374px] font-KopubWorldBold text-textColor-primary h-[120px] leading-[65px] text-ellipsis">
-            {book.title}
+            {book == undefined ? "this is title" : book.title}
           </p>
+          </Shimmer>
           <div className="flex flex-row gap-[7px] mt-[4px]">
-            {book.categoryName.split('>').map((tag, index) => {
+            {(book == undefined ? "국내도서>소설/시/희곡>세계의 소설>북유럽소설" : book.categoryName).split('>').map((tag, index) => {
               return (
+                <Shimmer isLoading = {isLoading} key={index}>
                 <div
-                  key={index}
                   className="flex px-[9.6px] py-[5px] rounded-full outline outline-[1.5px] outline-primary"
                 >
-                  <p className="text-[14px] font-NotoSansKRSemiBold text-primary">
+                  <p className="text-[14px] font-NotoSansKRSemiBold text-primary whitespace-nowrap">
                     {tag}
                   </p>
                 </div>
+                </Shimmer>
               );
             })}
           </div>
 
           <div className="flex flex-row w-min h-min mt-[20px]">
             <div className="w-[111px] h-[20.94px]">
-              <ReviewStars width={111} score={score}></ReviewStars>
+              <ReviewStars width={111} score={book == undefined ? 5 : getScore(book.customerReviewRank)}></ReviewStars>
             </div>
-            <p className="ml-[10px] text-black text-[14px] font-NotoSansKRMedium -mt-[1px]">{`${score}.0/5.0`}</p>
+            <p className="ml-[10px] text-black text-[14px] font-NotoSansKRMedium -mt-[1px]">{`${book == undefined ? 5 : getScore(book.customerReviewRank)}.0/5.0`}</p>
           </div>
 
           <div className="flex flex-row w-min h-min mt-[20px] gap-[14px]">
