@@ -7,21 +7,26 @@ import Shimmer from "@/app/components/Simmer";
 export default function Header({ isLoading }) {
   const router = useRouter();
 
-  const handleHomeClick = () => {
+  const handleBackClick = () => {
     router.back();
   };
+
+  const handleHomeClick = ()=>{
+    router.push("/home");
+  }
+  
 
   return (
     <div className="flex flex-row justify-between items-center w-full mt-[40px]">
       <Shimmer isLoading={isLoading}>
         <div className="relative w-[124px] h-[23px]">
-          <Image src={logoPic} fill sizes={1} alt="logoPic"></Image>
+          <Image src={logoPic} fill sizes={1} alt="logoPic" onClick = {handleHomeClick}></Image>
         </div>
       </Shimmer>
       <Shimmer isLoading={isLoading}>
         <div
           className="flex flex-row items-center gap-[6.5px] whitespace-nowrap"
-          onClick={handleHomeClick}
+          onClick={handleBackClick}
         >
           <div className="relative w-[18px] h-[16px]">
             <BackArrowIcon></BackArrowIcon>

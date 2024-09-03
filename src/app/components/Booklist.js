@@ -63,7 +63,7 @@ export default function Booklist({ className, width = 125.2, books }) {
                 </p>
               </Shimmer>
               <Shimmer isLoading={isLoading}>
-                <p className="font-NotoSansKRMedium text-textColor-secondary text-[10px] -mt-[1px]">
+                <p className="font-NotoSansKRMedium text-textColor-secondary text-[10px] -mt-[1px] truncate">
                 {book == undefined ? "author" : book.author}
                 </p>
               </Shimmer>

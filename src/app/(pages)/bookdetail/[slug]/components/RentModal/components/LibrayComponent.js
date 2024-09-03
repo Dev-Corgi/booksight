@@ -87,16 +87,20 @@ export default function LibraryComponent({ isOpen, location, isbn13 }) {
   return (
     <div className="flex flex-row justify-end w-full pl-[50px]">
       {isLoading ? (
-        <div className = "absolute flex items-center justify-center w-full h-full">
-        <div className="relative w-[35px] h-[35px]">
-          <LoadingIconBack className="absolute"></LoadingIconBack>
-          <LoadingIconFront className="absolute"></LoadingIconFront>
-        </div>
+        <div className="absolute flex items-center justify-center w-full h-full">
+          <div className="relative w-[35px] h-[35px]">
+            <LoadingIconBack className="absolute"></LoadingIconBack>
+            <LoadingIconFront className="absolute"></LoadingIconFront>
+          </div>
         </div>
       ) : (
         <div className="flex flex-col flex-grow mt-[33.56px] rounded-l-[23.69px] overflow-clip whitespace-nowrap">
           {libraryInfos.map((library, index) => (
-            <div className="relative w-full h-[80px]" key={index}>
+            <div
+              className="relative w-full h-[80px]"
+              key={index}
+              onClick={() => handleLibraryClick(library.libCode)}
+            >
               {library != undefined && (
                 <>
                   <div className="absolute w-full h-[80px]">
@@ -120,10 +124,7 @@ export default function LibraryComponent({ isOpen, location, isbn13 }) {
                       <p className="font-MontserratSemiBold text-[14px] text-primary">
                         {"0" + (index + 1)}
                       </p>
-                      <p
-                        className="ml-[15.53px] w-[280px] font-NotoSansKRBold text-[24px] text-primary"
-                        onClick={() => handleLibraryClick(library.libCode)}
-                      >
+                      <p className="ml-[15.53px] w-[280px] font-NotoSansKRBold text-[24px] text-primary">
                         {library.libName}
                       </p>
                     </div>

@@ -18,16 +18,18 @@ export default function InfogramSection({ libraryInfo }) {
 
   return (
     <>
-      <Shimmer isLoading={isLoading} cla>
-        <div className="flex flex-row gap-[2.37px] mt-[21px]">
+      <div className="flex flex-row gap-[2.37px] mt-[21px]">
+        <Shimmer isLoading={isLoading}>
           <div className="relative w-[23px] h-[23px]">
             <ClockIcon></ClockIcon>
           </div>
           <p className="font-NotoSansKRMedium text-[15.8px] whitespace-nowrap">
-            {libraryInfo == undefined ? "월~금 8:00 ~ 20:00" : libraryInfo.libInfo.operatingTime}
+            {libraryInfo == undefined
+              ? "월~금 8:00 ~ 20:00"
+              : libraryInfo.libInfo.operatingTime}
           </p>
-        </div>
-      </Shimmer>
+        </Shimmer>
+      </div>
       <div className="flex flex-row gap-[18px] mt-[6px] whitespace-nowrap">
         <Shimmer isLoading={isLoading}>
           <div className="flex flex-row gap-[2.37px]">

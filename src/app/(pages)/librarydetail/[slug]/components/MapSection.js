@@ -25,7 +25,7 @@ export default function MapSection({ libraryInfo }) {
 
   return (
     <Shimmer isLoading={isLoading}>
-      <div className="relative w-full h-[262.25px] mt-[40px] rounded-[21px] border-[3px] border-black overflow-clip">
+      <div className="relative w-[36.18vw] st:w-[521px] h-[262.25px] mt-[40px] rounded-[21px] border-[3px] border-black overflow-clip">
         {staticMapImg != undefined && (
           <Image
             src={staticMapImg}

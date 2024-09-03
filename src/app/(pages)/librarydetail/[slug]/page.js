@@ -37,7 +37,7 @@ export default function LibraryDetailPage({ params }) {
             <div className="flex flex-col items-start w-[36.18vw] st:w-[521px] h-full text-black">
               <Header isLoading={isLoading} />
               <Shimmer isLoading = {isLoading}>
-              <p className="font-NotoSansKRBold text-[73.73px] w-[497px] h-[154px] leading-[76.9px] mt-[45px] text-pretty">
+              <p className="font-NotoSansKRBold text-[73.73px] w-[497px] h-[154px] leading-[76.9px] mt-[45px] text-pretty overflow-hidden"  style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
                 {libraryInfo == undefined ? "부천 상동 시립 도서관" : libraryInfo.libInfo.libName}
               </p>
               </Shimmer>

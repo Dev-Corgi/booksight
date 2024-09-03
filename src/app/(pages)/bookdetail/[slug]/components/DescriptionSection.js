@@ -20,13 +20,18 @@ export default function DescriptionSection({ className, book }) {
   return (
     <div className={`${className} flex flex-col`}>
       <TitleTag title="책 살펴보기"></TitleTag>
-      <div className="relative w-full h-[250.51px]">
-        <div className="absolute -right-[68px] top-2 w-[626px] h-[338.98px]">
-          <Image src={shadow2Img} alt="shadow" fill sizes={1}></Image>
-        </div>
+      <div className="relative w-full h-[250.51px] ml-[28px]">
+        {!isLoading && (
+          <div className="absolute w-[98%] flex flex-row">
+            <div className="flex flex-grow w-full"></div>
+            <div className="relative w-[626px] h-[338.98px] mt-2">
+              <Image src={shadow2Img} alt="shadow" fill sizes={1}></Image>
+            </div>
+          </div>
+        )}
 
         <Shimmer isLoading={isLoading}>
-          <div className="absolute flex flex-col w-auto h-full ml-[28px] mt-[14px] rounded-[15px] bg-discriptionPanel">
+          <div className="absolute flex flex-col w-auto h-full  mt-[14px] rounded-[15px] bg-discriptionPanel">
             <p className="mt-[17px] mx-[19px] text-[16px] whitespace-pre-wrap font-NotoSansKRRegular h-[184px] overflow-y-scroll align-text-top no-scrollbar text-textColor-primary">
               {book == undefined ? "this is disc" : disc}
             </p>
