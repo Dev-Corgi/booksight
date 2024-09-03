@@ -20,7 +20,6 @@ export default async function readersSearchHandler(isbn13) {
 
   const readersBooks = await fetchReadersSearch(isbn13);
 
-  console.log(readersBooks);
 
   const responses = await Promise.all(
     readersBooks.response.docs.map(async (book) => await aladinISBNSearchHandler(book.book.isbn13))

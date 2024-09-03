@@ -1,9 +1,9 @@
 
-export default async function aladinListSearchHandler(type) {
+export default async function aladinListSearchHandler(type,CategoryId = null) {
 
-  async function fetchAladinListSearch(type) {
+  async function fetchAladinListSearch(type,CategoryId) {
     try {
-      const response = await fetch(`/api/aladinListSearch?type=${type}`);
+      const response = await fetch(`/api/aladinListSearch?type=${type}&CategoryId=${CategoryId}`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch aladinListSearch");
@@ -25,12 +25,12 @@ export default async function aladinListSearchHandler(type) {
     return match ? match[1] : author;
 }
 
-  const naruKeywordSearchResult = await fetchAladinListSearch(type);
-  const filteredResult = naruKeywordSearchResult.item.filter(book => book.isbn13 !== "");
-    for(const book of filteredResult){
+  const aladinListSearchResult = await fetchAladinListSearch(type,CategoryId);
+  // const filteredResult = naruKeywordSearchResult.item.filter(book => book.isbn13 !== "");
+    for(const book of  aladinListSearchResult.item){
     book.author = getAuthor(book.author);
   }
-  return filteredResult;
+  return aladinListSearchResult.item;
 
 
 

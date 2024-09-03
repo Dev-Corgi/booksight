@@ -7,6 +7,7 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const type = searchParams.get('type');
   const authKey = process.env.ALADIN_API_KEY; // Environment variable
+  const CategoryId = searchParams.get('CategoryId');
 
   if (!type) {
     return NextResponse.json({ error: 'Missing required parameter: type' }, { status: 400 });
@@ -14,7 +15,7 @@ export async function GET(request) {
 
   try {
 
-    const apiUrl = `http://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${authKey}&QueryType=${type}&SearchTarget=Book&output=js&Version=20131101`;
+    const apiUrl = `http://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${authKey}&QueryType=${type}&SearchTarget=Book&output=js&Version=20131101${CategoryId != null ? `&CategoryId=${CategoryId}` : null}`;
     const response = await fetch(apiUrl, {
       method: 'GET',
     });

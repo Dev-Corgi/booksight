@@ -12,7 +12,7 @@ export default function DescriptionSection({ className, book }) {
   useEffect(() => {
     // Set loading to false once books are loaded
     if (book != undefined) {
-      setdisc(book.description);
+      setdisc(book.fullDescription.replace(/<\/?b>/gi, '').replace(/<br\s*\/?>/gi, ''));
       setIsLoading(false);
     }
   }, [book]);

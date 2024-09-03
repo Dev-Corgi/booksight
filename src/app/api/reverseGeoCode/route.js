@@ -36,8 +36,6 @@ export async function GET(request) {
     res.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     res.headers.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
 
-    console.log(`Reverse geocode result: ${JSON.stringify(data)}`);
-
     return res;
   } catch (error) {
     console.error('Error occurred:', error.message);

@@ -7,6 +7,7 @@ import BooklistSection from "@/app/components/BooklistSection";
 import aladinISBNSearchHandler from "root/Handler/aladinISBNSearchHandler";
 import aladinKeywordSearchHandler from "@handler/aladinKeywordSearchHandler";
 import readersSearchHandler from "@handler/readersSearchHandler";
+import aladinListSearchHandler from "@handler/aladinListSearchHandler";
 export default function BookDetailPage({ params }) {
   const isbn13 = params.slug;
   const [book, setbook] = useState(undefined)
@@ -17,7 +18,7 @@ export default function BookDetailPage({ params }) {
 
   useEffect(() => {
     async function fetchAladinISBNSearchHandler(){
-    setbook(await aladinISBNSearchHandler(isbn13));
+    setbook(await aladinISBNSearchHandler(isbn13,["reviewList","fulldescription"]));
     }
     fetchAladinISBNSearchHandler();
   }, [])
@@ -26,7 +27,7 @@ export default function BookDetailPage({ params }) {
     if (book !== undefined) {
     async function fetchRecommendations(){
       setauthorList(await aladinKeywordSearchHandler(book.author,"Author"));
-      setrecommentList(await readersSearchHandler(isbn13))
+      setrecommentList(await aladinListSearchHandler("ItemEditorChoice",book.categoryId))
     }
     fetchRecommendations();
   }
@@ -39,7 +40,7 @@ export default function BookDetailPage({ params }) {
       <BookSection book={book}></BookSection>
       <div className="flex flex-col w-[85vw] -mt-[5px] gap-y-[62px]">
         <DescriptionSection book = {book}></DescriptionSection>
-        <ReviewSection></ReviewSection>
+        <ReviewSection book = {book}></ReviewSection>
         <BooklistSection title = "작가의 다른책" books={authorList}></BooklistSection>
         <BooklistSection title = "이런책은 어떠세요?" books={recommentList}></BooklistSection>
       </div>

@@ -15,10 +15,10 @@ export default function HomePage() {
 
   useEffect(() => {
   async function fetchLists(){
-    setbestSellerList(await aladinListSearchHandler("Bestseller"));
-    setitemNewSpecialList(await aladinListSearchHandler("ItemNewSpecial"));
-    setdeductionList(await naruKeywordSearchHandler("추리 소설"));
-    setromanceList(await naruKeywordSearchHandler("로맨스 소설"));
+    setbestSellerList(await aladinListSearchHandler("Bestseller",1));
+    setitemNewSpecialList(await aladinListSearchHandler("ItemNewSpecial",1));
+    setdeductionList(await aladinListSearchHandler("ItemEditorChoice",50926));
+    setromanceList(await aladinListSearchHandler("ItemEditorChoice",51250));
   }
 
   fetchLists();
@@ -33,9 +33,9 @@ export default function HomePage() {
       <BooklistSection title="베스트 셀러" books={bestSellerList}></BooklistSection>
       <BooklistSection title="주목할 신간 도서" books={itemNewSpecialList}></BooklistSection>
       <CategoryList></CategoryList>
-      <CommentaryList></CommentaryList>
-      {/* <BooklistSection title="범인은 누구?  추리 소설" books={deductionList}></BooklistSection>
-      <BooklistSection title="내 마음이 짜릿해!  로맨스 소설" books={romanceList}></BooklistSection> */}
+      {/* <CommentaryList></CommentaryList> */}
+      <BooklistSection title="범인은 누구?  추리 소설" books={deductionList}></BooklistSection>
+      <BooklistSection title="내 마음이 짜릿해!  로맨스 소설" books={romanceList}></BooklistSection>
       </div>
     </div>
     </>
