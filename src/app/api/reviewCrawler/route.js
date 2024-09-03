@@ -23,7 +23,13 @@ export async function GET(request) {
     const text = metaDescription ? metaDescription.getAttribute('content') : 'No description found';
 
     // 상태에 텍스트 설정
-    return NextResponse.json({ text: text });
+
+    const res = NextResponse.json({ text: text });
+    res.headers.set('Access-Control-Allow-Origin', '*'); // 모든 도메인 허용
+    res.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // 허용된 메소드 설정
+    res.headers.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type'); // 허용된 헤더 설정
+
+    return res;
   } catch (error) {
     console.error('Error fetching data:', error);
     return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
