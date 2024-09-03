@@ -19,9 +19,7 @@ export default function BookSection({ book }) {
     }
   }, [book]);
 
-  function getScore(score) {
-    return Math.ceil(score / 2);
-  }
+
 
   return (
     <>
@@ -37,11 +35,11 @@ export default function BookSection({ book }) {
           </p>
           </Shimmer>
           <Shimmer isLoading = {isLoading}>
-          <p className="mt-[6px] text-[63px] w-[374px] font-KopubWorldBold text-textColor-primary h-[120px] leading-[65px] text-ellipsis">
+          <p className="mt-[6px] text-[63px] w-[374px] font-KopubWorldBold text-textColor-primary h-[125px] leading-[65px] overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
             {book == undefined ? "this is title" : book.title}
           </p>
           </Shimmer>
-          <div className="flex flex-row gap-[7px] mt-[4px]">
+          <div className="flex flex-row gap-[7px] mt-[15px]">
             {(book == undefined ? "국내도서>소설/시/희곡>세계의 소설>북유럽소설" : book.categoryName).split('>').map((tag, index) => {
               return (
                 <Shimmer isLoading = {isLoading} key={index}>
@@ -59,9 +57,9 @@ export default function BookSection({ book }) {
 
           <div className="flex flex-row w-min h-min mt-[20px]">
             <div className="w-[111px] h-[20.94px]">
-              <ReviewStars width={111} score={book == undefined ? 5 : getScore(book.customerReviewRank)}></ReviewStars>
+              <ReviewStars width={111} score={book == undefined ? 5 : book.customerReviewRank}></ReviewStars>
             </div>
-            <p className="ml-[10px] text-black text-[14px] font-NotoSansKRMedium -mt-[1px]">{`${book == undefined ? 5 : getScore(book.customerReviewRank)}.0/5.0`}</p>
+            <p className="ml-[10px] text-black text-[14px] font-NotoSansKRMedium -mt-[1px]">{`${book == undefined ? 5 : book.customerReviewRank}/10.0`}</p>
           </div>
 
           <div className="flex flex-row w-min h-min mt-[20px] gap-[14px]">

@@ -20,11 +20,6 @@ export default function Booklist({ className, width = 125.2, books }) {
     }
   }, [books]);
 
-  // 스코어 다듬기
-  function getScore(score) {
-    return Math.ceil(score / 2);
-  }
-
   const handleClick = (isbn13) => {
     router.push(`/bookdetail/${isbn13}`);
   };
@@ -54,11 +49,11 @@ export default function Booklist({ className, width = 125.2, books }) {
                   book={book}
                   shadowType="circle"
                 ></Book>
-              </Shimmer>
+                </Shimmer>
               <Shimmer isLoading={isLoading}>
                 <ReviewStars
                   width={67.85}
-                  score={getScore(book == undefined ? 5 : book.customerReviewRank)}
+                  score={book == undefined ? 5 : book.customerReviewRank}
                   className="mt-[15.09px]"
                 ></ReviewStars>
               </Shimmer>

@@ -1,1 +1,7 @@
 ssh -i C:\Users\bora5\Working\booksight\booksight.pem ubuntu@3.38.230.213
+
+pm2 start npm --name "my-next-app" -- start
+
+pm2 list
+
+pm2 stop my-next-app

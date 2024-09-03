@@ -33,7 +33,7 @@ export default function HomePage() {
       <BooklistSection title="베스트 셀러" books={bestSellerList}></BooklistSection>
       <BooklistSection title="주목할 신간 도서" books={itemNewSpecialList}></BooklistSection>
       <CategoryList></CategoryList>
-      {/* <CommentaryList></CommentaryList> */}
+      <CommentaryList></CommentaryList>
       {/* <BooklistSection title="범인은 누구?  추리 소설" books={deductionList}></BooklistSection>
       <BooklistSection title="내 마음이 짜릿해!  로맨스 소설" books={romanceList}></BooklistSection> */}
       </div>
