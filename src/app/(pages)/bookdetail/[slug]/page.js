@@ -36,9 +36,9 @@ export default function BookDetailPage({ params }) {
     
 
   return (
-    <div className="w-full mt-[111px] flex flex-col items-center justify-center">
+    <div className="w-full mt-[111px] flex flex-col items-center justify-start overflow-y-scroll scroll no-scrollbar">
       <BookSection book={book}></BookSection>
-      <div className="flex flex-col w-[85vw] -mt-[5px] gap-y-[62px]">
+      <div className="flex flex-col w-[85vw] mt-[110px] gap-y-[62px]">
         <DescriptionSection book = {book}></DescriptionSection>
         <ReviewSection book = {book}></ReviewSection>
         <BooklistSection title = "작가의 다른책" books={authorList}></BooklistSection>

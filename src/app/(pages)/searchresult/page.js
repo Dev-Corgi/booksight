@@ -21,7 +21,7 @@ export default function SearchResultPage() {
 
   return (
     <>
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center overflow-y-scroll scroll no-scrollbar">
         <Booklist className="flex flex-wrap w-[80.56vw] st:w-[1160px] h-hull  gap-x-[28.98px] gap-y-[25.99px] overflow-y-clip" width={169.02} books={searchResult}></Booklist>
     </div>
     </>

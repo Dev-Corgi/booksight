@@ -43,8 +43,8 @@ export default async function getLibraryPictureHandler(libCode) {
     const randomImage = localImages[Math.floor(Math.random() * localImages.length)];
     return randomImage;
   }
-
-  const pictureURL = libraryPictureData[libCode].startsWith('https://maps.google.com') ? getRandomImage(): libraryPictureData[libCode]
+  console.log(libraryPictureData[libCode]);
+  const pictureURL = libraryPictureData[libCode] == undefined? getRandomImage() :libraryPictureData[libCode].startsWith('https://maps.google.com') ? getRandomImage(): libraryPictureData[libCode]
 
   return pictureURL;
 

@@ -9,6 +9,7 @@
       "@hooks/*":["./redux/hooks/*"],
       "@data/*":["./Data/*"],
       "@handler/*":["./Handler/*"],
+      "@maps/*":["./public/assets/svg/Maps/*"],
       "root/*":["./*"]
     }
   },

@@ -1,5 +1,4 @@
 export default async function reviewCrawlerHandler(url) {
-    console.log(url);
     async function fetchReviewCrawler(url) {
       try {
         const response = await fetch(`/api/reviewCrawler?url=${url}`, {

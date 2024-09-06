@@ -1,10 +1,16 @@
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import Shimmer from "@/app/components/Simmer";
 
 export default function InfoTab() {
+  const { addressName,resultNum } = useSelector((state) => state.map);
   return (
     <div className="w-min h-min">
-    <div className="flex font-KopubWorldBold text-textColor-primary text-[23px]">
-      <p>서울 특별시 강서구 - 총 5곳</p>
+    <Shimmer isLoading={resultNum == undefined}>
+    <div className="flex font-KopubWorldBold text-textColor-primary text-[23px] text-nowrap">
+      <p>{`${addressName} - 총 ${resultNum == undefined ? 100 : resultNum}곳`}</p>
     </div>
+    </Shimmer>
 
     <div className="relative mt-[1px] w-[344px] h-[3px]">
       <div className="absolute w-full h-full bg-black opacity-10"></div>

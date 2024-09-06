@@ -11,18 +11,17 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
-
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Suspense fallback = {<LoadingPage></LoadingPage>}>
-      <LayoutConfig/>
-      {children}
-      </Suspense>
-      <div id = "rentModal"></div>
+        <div className="flex flex-col h-screen overflow-hidden">
+          <Suspense fallback={<LoadingPage></LoadingPage>}>
+            <LayoutConfig />
+            {children}
+          </Suspense>
+          <div id="rentModal"></div>
+        </div>
       </body>
-      
     </html>
   );
 }

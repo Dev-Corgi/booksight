@@ -1,0 +1,158 @@
+{
+    "response": {
+        "request": {
+            "pageNo": "1",
+            "pageSize": "10"
+        },
+        "pageNo": 1,
+        "pageSize": 10,
+        "numFound": 51,
+        "resultNum": 10,
+        "libs": [
+            {
+                "lib": {
+                    "libCode": "126156",
+                    "libName": "부산광역시 강서기적의도서관",
+                    "address": "부산광역시 강서구 명지오션시티10로 80",
+                    "tel": "051-970-2317",
+                    "fax": "051-293-2316",
+                    "latitude": "35.0872758",
+                    "longitude": "128.9009941",
+                    "homepage": "https://library.bsgangseo.go.kr/gmlib/",
+                    "BookCount": "61432"
+                }
+            },
+            {
+                "lib": {
+                    "libCode": "121020",
+                    "libName": "부산광역시 강서도서관",
+                    "address": "부산광역시 강서구 공항로811번길 10",
+                    "tel": "051-970-4068",
+                    "fax": "051-970-2909",
+                    "latitude": "35.1804359",
+                    "longitude": "128.9571993",
+                    "homepage": "https://library.bsgangseo.go.kr/gslib/",
+                    "BookCount": "176783"
+                }
+            },
+            {
+                "lib": {
+                    "libCode": "126159",
+                    "libName": "부산광역시 고촌어울림도서관",
+                    "address": "부산광역시 기장군 철마면 고촌로 51",
+                    "tel": "051-709-5381",
+                    "fax": "051-709-3939",
+                    "latitude": "35.2389142",
+                    "longitude": "129.1723178",
+                    "homepage": "http://library.gijang.go.kr/gochon",
+                    "closed": "매주 월요일 / 법정공휴일,기타 특별한 사유로 군수가 인정한 날",
+                    "operatingTime": "평일 09:00~22:00, 주말 09:00~18:00",
+                    "BookCount": "31071"
+                }
+            },
+            {
+                "lib": {
+                    "libCode": "126165",
+                    "libName": "부산광역시 교리도서관",
+                    "address": "부산광역시 기장군 기장읍 차성로417번길 11",
+                    "tel": "051-709-5370",
+                    "fax": "-",
+                    "latitude": "35.2567089",
+                    "longitude": "129.2158008",
+                    "homepage": "http://library.gijang.go.kr/gyori/main.do",
+                    "closed": "매주 월요일 / 공휴일, 기타 특별한 사유로 군수가 인정한 날",
+                    "operatingTime": "종합자료실- 평일 09:00~22:00, 주말 09:00~18:00 / 어린이실- 평일 09:00~20:00, 주말 09:00~18:00",
+                    "BookCount": "23706"
+                }
+            },
+            {
+                "lib": {
+                    "libCode": "126152",
+                    "libName": "부산광역시 금곡도서관",
+                    "address": "부산광역시 북구 효열로203번길 34",
+                    "tel": "051-309-6181",
+                    "fax": "051-309-6199",
+                    "latitude": "35.2631352",
+                    "longitude": "129.0176578",
+                    "homepage": "https://www.bsbukgu.go.kr/bglib/",
+                    "closed": "매주 월요일 / 국경일, 정부 지정 공휴일, 자료의 정리 점검 및 도서관의 시설 보수, 기타 관장이 필요하다고 인정할 시 임시 휴관",
+                    "operatingTime": "-",
+                    "BookCount": "85489"
+                }
+            },
+            {
+                "lib": {
+                    "libCode": "126163",
+                    "libName": "부산광역시 금샘도서관",
+                    "address": "부산광역시 금정구 기찰로 94",
+                    "tel": "051-519-5900",
+                    "fax": "051-519-5909",
+                    "latitude": "35.2391546",
+                    "longitude": "129.0939285",
+                    "homepage": "https://www.geumjeong.go.kr/gslib",
+                    "closed": "매주 월요일 / 법정공휴일",
+                    "operatingTime": "(화~금요일) 종합자료실, 멀티미디어실 09:00~22:00, 어린이자료실 09:00~20:00 (토~일요일) 09:00~17:00",
+                    "BookCount": "95665"
+                }
+            },
+            {
+                "lib": {
+                    "libCode": "121018",
+                    "libName": "부산광역시 금정도서관",
+                    "address": "부산광역시 금정구 금정도서관로 33",
+                    "tel": "051-519-5600",
+                    "fax": "051-519-5609",
+                    "latitude": "35.272458",
+                    "longitude": "129.0961566",
+                    "homepage": "http://library.geumjeong.go.kr/",
+                    "closed": "매주 월요일 / 법정공휴일",
+                    "operatingTime": "화~일요일 07:00~23:00",
+                    "BookCount": "327053"
+                }
+            },
+            {
+                "lib": {
+                    "libCode": "121026",
+                    "libName": "부산광역시 기장도서관",
+                    "address": "부산광역시 기장군 기장읍 차성동로126번길 13-5",
+                    "tel": "051-709-5351",
+                    "fax": "051-724-3074",
+                    "latitude": "35.2497515",
+                    "longitude": "129.2172571",
+                    "homepage": "http://library.gijang.go.kr/",
+                    "closed": "매주 월요일 / 정부지정 공휴일, 기타 특별한 사유로 군수가 인정한 날",
+                    "operatingTime": "07:00~24:00",
+                    "BookCount": "230667"
+                }
+            },
+            {
+                "lib": {
+                    "libCode": "126032",
+                    "libName": "부산광역시 기장디지털도서관",
+                    "address": "부산광역시 기장군 기장읍 기장대로 560, 7층",
+                    "tel": "051-709-5071",
+                    "fax": "051-724-3074",
+                    "latitude": "35.2435223",
+                    "longitude": "129.2229656",
+                    "homepage": "http://www.busanlib.net",
+                    "BookCount": "24712"
+                }
+            },
+            {
+                "lib": {
+                    "libCode": "121019",
+                    "libName": "부산광역시 남구도서관",
+                    "address": "부산광역시 남구 수영로267번길 61",
+                    "tel": "051-621-8160",
+                    "fax": "051-607-6559",
+                    "latitude": "35.1376994",
+                    "longitude": "129.09456",
+                    "homepage": "http://library.bsnamgu.go.kr/",
+                    "closed": "매주 월요일 / 법정공휴일, 기타 도서관장이 지정한 날",
+                    "operatingTime": "-",
+                    "BookCount": "312708"
+                }
+            }
+        ]
+    }
+}

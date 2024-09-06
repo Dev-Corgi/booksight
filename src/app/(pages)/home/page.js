@@ -27,7 +27,7 @@ export default function HomePage() {
 
   return (
     <>
-    <div className="w-full h-full flex flex-col  items-center overflow-x-clip">
+    <div className="w-full h-full flex flex-col  items-center overflow-x-clip overflow-y-scroll scroll no-scrollbar">
       <Center className="mt-[6.46vw] st:mt-[93px]"></Center>
       <div className = "flex flex-col w-full ml-[6.39vw] mt-[3.19vw] st:ml-[108px] st:mt-[46px] gap-[60px]">
       <BooklistSection title="베스트 셀러" books={bestSellerList}></BooklistSection>

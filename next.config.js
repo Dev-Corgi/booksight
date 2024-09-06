@@ -9,6 +9,9 @@
   
       return config;
     },
+
+    reactStrictMode: false,
+    
     images: {
       remotePatterns: [
         {

@@ -16,6 +16,10 @@ export default function Header(props) {
     router.push("/home");
   }
 
+  const handleLibrarySearchClick = ()=>{
+    router.push("/librarysearch");
+  }
+
   return (
     <div
       className={`${props.className} w-full h-[45px] flex flex-row items-center px-[80px] gap-[40px] font-NotoSansKRMedium text-nowrap`}
@@ -28,7 +32,7 @@ export default function Header(props) {
 
       <div className="w-min h-full flex flex-row items-center justify-start gap-[29px] text-[16px] font-NotoSansKRSemiBold">
         <p onClick = {handleHomeClick}>홈으로</p>
-        <p>도서관 정보</p>
+        <p onClick = {handleLibrarySearchClick}>도서관 탐색</p>
         <p>사이트 정보</p>
       </div>
 
