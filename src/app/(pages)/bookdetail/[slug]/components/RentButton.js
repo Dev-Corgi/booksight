@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import RentModal from "./RentModal/RentModal";
-import LocationModal from "./LocationModal";
-import EmptyModal from "./EmptyModal";
 import LocationSetModal from "./LocationSetModal";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -17,7 +15,6 @@ export default function RentButton({ book }) {
 
   const [isLocationModalOpen, setIsLocationModalOpen] = useState(false);
   const [isRentModalOpen, setisRentModalOpen] = useState(false);
-  const [isEmptyModalOpen, setisEmptyModalOpen] = useState(false);
 
   const handleRentButtonClick = () => {
     if (book != undefined) {
@@ -56,16 +53,8 @@ export default function RentButton({ book }) {
           requestOpen={() => setIsLocationModalOpen(true)}
           requestClose={() => setIsLocationModalOpen(false)}
           requestOpenRentModal={() => setisRentModalOpen(true)}
-          requestOpenEmptyModal={() => setisEmptyModalOpen(true)}
-          requestCloseEmptyModal = {() => setisEmptyModalOpen(false)}
           index={0}
         ></LocationSetModal>
-      )}
-      {book && (
-        <EmptyModal
-          isOpen={isEmptyModalOpen}
-          requestClose={() => setisEmptyModalOpen(false)}
-        ></EmptyModal>
       )}
     </>
   );

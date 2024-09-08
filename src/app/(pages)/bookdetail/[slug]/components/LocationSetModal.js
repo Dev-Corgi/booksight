@@ -79,10 +79,7 @@ export default function LocationSetModal({
   isOpen,
   index,
   requestClose,
-  requestOpen,
   requestOpenRentModal =null,
-  requestOpenEmptyModal = null,
-  requestCloseEmptyModal = null,
 }) {
 
   const { location,zoom } = useSelector(
@@ -215,16 +212,17 @@ export default function LocationSetModal({
     // 확인 버튼을 누르면 브라우저의 권한 요청 팝업 띄우기
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        setTempLocation(position.coords);
+        console.log(position);
+        setTempLocation({latitude : position.coords.latitude, longitude : position.coords.longitude});
         setTempZoom(10);
-        console.log("위치 권한이 허용되었습니다.");
+        // console.log("위치 권한이 허용되었습니다.");
         setcurrentIndex(4);
       },
       (error) => {
         if (error.code === 1) {
-          console.log("사용자가 위치 권한을 거부했습니다.");
+          // console.log("사용자가 위치 권한을 거부했습니다.");
         } else {
-          console.log("권한 요청 중 다른 오류가 발생했습니다.", error);
+          // console.log("권한 요청 중 다른 오류가 발생했습니다.", error);
         }
         setcurrentIndex(2);
       }
@@ -236,11 +234,11 @@ export default function LocationSetModal({
   };
 
   const handleConfirm = () => {
-    localStorage.setItem('userAddress', JSON.stringify(location));
-    if(requestOpenRentModal != null){requestOpenRentModal()}
+    localStorage.setItem('userAddress', JSON.stringify(tempLocation));
     dispatch(setLocation(tempLocation));
     dispatch(setZoom(tempZoom))
     requestClose()
+    if(requestOpenRentModal != null){requestOpenRentModal()}
   };
 
   useEffect(() => {

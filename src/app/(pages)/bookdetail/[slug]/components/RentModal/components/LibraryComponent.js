@@ -28,11 +28,10 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
   const [nearbyLibraryCodes, setNearbyLibraryCodes] = useState([]);
   const [rentPossibleLibraries, setrentPossibleLibraries] = useState([]);
   const [processedLibraries, setProcessedLibraries] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
   const [loadIndex, setLoadIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true); // 로딩 상태
   const [hasMore, setHasMore] = useState(true);
-  const itemsPerPage = 10;
+
 
   const { location, zoom} = useSelector(
     (state) => state.location
@@ -67,18 +66,17 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
           if (librariesResult.length == 0) {
             return;
           }
-          console.log(`주변 도서관 결과 : ${librariesResult.length}`);
           setNearbyLibraryCodes(librariesResult);
         } catch (error) {
           console.error("Error fetching data:", error);
         }
       }
-      console.log("주변검색");
       setIsLoading(true);
       setHasMore(true);
       // setProcessedLibraries(Array.from({ length: 10 }));
       setProcessedLibraries([]);
       setNearbyLibraryCodes([]);
+      setLoadIndex(0);
       fetchData();
     }
   }, [isOpen, location,isOnlyPossible]);
@@ -136,7 +134,6 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
       nearbyLibraryCodes != undefined &&
       nearbyLibraryCodes.length != 0
     ) {
-      console.log("대여가능 도서관 조회");
       fetchRentPossibleLibrary();
     }
   }, [nearbyLibraryCodes]);
@@ -177,7 +174,6 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
       rentPossibleLibraries != undefined &&
       rentPossibleLibraries.length != 0
     ) {
-      console.log("도서관 정보 조회");
       fetchLibraryInfo();
     }
   }, [rentPossibleLibraries]);
@@ -197,8 +193,6 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
 
 
     while (tempArr.length < 10) {
-      console.log("search!");
-      console.log(currentIndex);
 
       //배열 끝일때
       if (nearbyLibraryCodes.length - 1 <= currentIndex) {
@@ -219,7 +213,6 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
         slicedArray = nearbyLibraryCodes.slice(currentIndex, currentIndex + 10);
       }
 
-      console.log(slicedArray);
 
       const results = await Promise.all(
         slicedArray.map(
@@ -234,7 +227,6 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
       
 
       results.map((result) => {
-        console.log(tempArr);
         if (tempArr.length >= 10) return;
 
         const libCode = result.response.request.libCode;
@@ -246,11 +238,13 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
             ? "대출 하기"
             : "대출 불가";
 
-        if (isOnlyPossible) {
+        if (isOnlyPossible == true) {
           if (rentState == "대출 하기") {
             tempArr.push({ libCode: libCode, rentState: rentState,distance :  distance});
           }
-        } else {
+        }
+        
+        else {
           tempArr.push({ libCode: libCode, rentState: rentState,distance:distance });
         }
 
@@ -266,7 +260,6 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
     }
 
 
-    console.log(`대여 가능 도서관 결과 : ${tempArr.length}`);
     setLoadIndex(currentIndex);
 
 

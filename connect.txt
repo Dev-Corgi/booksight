@@ -4,4 +4,6 @@ pm2 start npm --name "my-next-app" -- start
 
 pm2 list
 
+pm2 delete all
+
 pm2 stop my-next-app
