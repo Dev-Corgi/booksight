@@ -6,11 +6,11 @@
     },
     "results": [
         {
-            "name": "roadaddr",
+            "name": "admcode",
             "code": {
-                "id": "1114014200",
-                "type": "L",
-                "mappingId": "09140142"
+                "id": "4139057000",
+                "type": "S",
+                "mappingId": "02390126"
             },
             "region": {
                 "area0": {
@@ -24,33 +24,33 @@
                     }
                 },
                 "area1": {
-                    "name": "서울특별시",
+                    "name": "경기도",
                     "coords": {
                         "center": {
                             "crs": "EPSG:4326",
-                            "x": 126.978388,
-                            "y": 37.56661
+                            "x": 127.550802,
+                            "y": 37.436318
                         }
                     },
-                    "alias": "서울"
+                    "alias": "경기"
                 },
                 "area2": {
-                    "name": "중구",
+                    "name": "시흥시",
                     "coords": {
                         "center": {
                             "crs": "EPSG:4326",
-                            "x": 126.997602,
-                            "y": 37.563843
+                            "x": 126.802934,
+                            "y": 37.380177
                         }
                     }
                 },
                 "area3": {
-                    "name": "예장동",
+                    "name": "목감동",
                     "coords": {
                         "center": {
                             "crs": "EPSG:4326",
-                            "x": 126.9898,
-                            "y": 37.5553
+                            "x": 126.870275,
+                            "y": 37.391765
                         }
                     }
                 },
@@ -62,39 +62,6 @@
                             "x": 0.0,
                             "y": 0.0
                         }
-                    }
-                }
-            },
-            "land": {
-                "type": "",
-                "number1": "507",
-                "number2": "",
-                "addition0": {
-                    "type": "building",
-                    "value": ""
-                },
-                "addition1": {
-                    "type": "zipcode",
-                    "value": "04628"
-                },
-                "addition2": {
-                    "type": "roadGroupCode",
-                    "value": "111404103024"
-                },
-                "addition3": {
-                    "type": "",
-                    "value": ""
-                },
-                "addition4": {
-                    "type": "",
-                    "value": ""
-                },
-                "name": "남산공원길",
-                "coords": {
-                    "center": {
-                        "crs": "",
-                        "x": 0.0,
-                        "y": 0.0
                     }
                 }
             }

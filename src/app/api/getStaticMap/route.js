@@ -6,8 +6,9 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const coords = searchParams.get('coords');
   const pos = searchParams.get('pos');
+  const level = searchParams.get('level');
 
-  const apiUrl = `https://naveropenapi.apigw.ntruss.com/map-static/v2/raster?w=900&h=450&center=${coords}&level=15&format=png&markers=type:d|size:mid|pos:${pos}`;
+  const apiUrl = `https://naveropenapi.apigw.ntruss.com/map-static/v2/raster?w=900&h=450&center=${coords}&level=${level}&format=png&markers=type:d|size:mid|pos:${pos}`;
   const response = await fetch(apiUrl, {
     method: 'GET',
     headers: {

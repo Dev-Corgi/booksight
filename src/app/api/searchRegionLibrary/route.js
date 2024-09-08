@@ -12,7 +12,6 @@ export async function GET(request) {
 
   try {
     const apiUrl = `http://data4library.kr/api/libSrch?authKey=${authKey}&pageSize=10&format=json${region != "null" ? `&region=${region}` : ""}${dtl_region != "null" ? `&dtl_region=${dtl_region}` : ""}${pageNo != 1 ? `&pageNo=${pageNo}` : ""}`;
-    console.log(`apiUrl 은 : ${apiUrl}`)
     const response = await fetch(apiUrl, {
       method: 'GET',
     });

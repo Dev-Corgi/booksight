@@ -38,7 +38,7 @@ export default async function hotTrendHandler() {
   const hotTrendBooks = await hotTrendHandler(getYesterday());
 
   const responses = await Promise.all(
-    hotTrendBooks.response.results[0].result.docs.map(async (book) => await aladinISBNSearchHandler(book.doc.isbn13))
+    hotTrendBooks.response.results[0].result.docs.map(async (book) => await aladinISBNSearchHandler(book.doc.isbn13,["authors"]))
   );
 
 

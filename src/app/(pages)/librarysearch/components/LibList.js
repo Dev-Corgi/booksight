@@ -75,7 +75,6 @@ export default function LibList() {
         thislibs = result.libs;
         dispatch(setResultNum(result.numFound))
       }
-     console.log(thislibs)
       if (thislibs.length === 0) {
         setHasMore(false); // 더 이상 데이터가 없을 경우
       }
@@ -126,7 +125,6 @@ export default function LibList() {
 
   return (
     <div onScroll={handleScroll} className = "flex-grow mt-[33.56px] rounded-tl-[23.69px] h-[700px] overflow-y-scroll scroll no-scrollbar">
-      {/* {console.log(libs)} */}
       <div  className="flex flex-col w-full">
         {libs.map((library, index) => (
           <div className="relative w-full h-[80px]" key={index} onClick={() => {if(library != undefined) {handleLibraryClick(library.lib.libCode)}}}>
@@ -147,6 +145,7 @@ export default function LibList() {
                 {library != undefined ? library.lib.libName : "도서관 이름 로딩중"}
               </p>
               <div className="flex flex-row justify-start flex-grow gap-[60px] mt-[30px] ml-[132.08px]">
+
                 <div className="flex flex-row items-center gap-[2.83px]">
                   <div className="relative w-[19px] h-[19px]">
                     <PlaceIcon className="text-primary"></PlaceIcon>
@@ -164,6 +163,7 @@ export default function LibList() {
                     {library != undefined ? library.lib.tel : "010-1234-5678"}
                   </p>
                 </div>
+                
               </div>
             </div>
             {library == undefined && (

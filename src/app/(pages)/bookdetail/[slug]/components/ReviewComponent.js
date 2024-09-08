@@ -63,7 +63,7 @@ function getRandomImage(){
             ></ReviewStars>
 
             <p className="w-[456px] h-[85px] font-NotoSansKRMedium text-[15px] leading-[28px] mt-[23.76px] text-white">
-              {reviewData != undefined && reviewData.text}
+              {reviewData != undefined &&  (reviewData.text == "No description found" ? "" : reviewData.text)}
             </p>
 
             <div className="flex flex-row items-center w-min h-min gap-[11.23px] mt-[21.94px]">

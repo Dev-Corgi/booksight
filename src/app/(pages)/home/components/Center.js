@@ -53,7 +53,7 @@ export default function Center(props) {
             </div>
             <div className="mx-[1.88vw] my-[0.69vw] st:mx-[27px] st:my-[10px] whitespace-pre">
               <Shimmer isLoading={isLoading}>
-                <p className="font-KopubWorldMedium text-[1.74vw] st:text-[25px]">
+                <p className="font-KopubWorldMedium text-[1.74vw] st:text-[25px] w-[14.56vw] st:w-[246px] truncate">
                   {books[currentBook] == undefined
                     ? "This Is Title"
                     : books[currentBook].title}
@@ -63,7 +63,7 @@ export default function Center(props) {
                 <p className="font-NotoSansKRMedium text-[0.9vw] st:text-[13px] mt-[-0.35vw] st:mt-[-5px]">
                   {books[currentBook] == undefined
                     ? "This Is Author"
-                    : books[currentBook].author}
+                    : books[currentBook].subInfo.authors[0].authorName}
                 </p>
               </Shimmer>
               <Shimmer isLoading={isLoading}>

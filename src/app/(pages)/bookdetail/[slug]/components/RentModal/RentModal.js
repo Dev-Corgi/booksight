@@ -5,31 +5,9 @@ import TitleTag from "@/app/components/TitleTag";
 import CloseButton from "./components/CloseButton";
 import Tab from "./components/Tab";
 import TagList from "./components/TagList";
-import LibraryComponent from "./components/LibrayComponent";
+import LibraryComponent from "./components/LibraryComponent";
 
 export default function RentModal({ isOpen, requestClose, isbn13 }) {
-  
-
-
-  const [location, setLocation] = useState({
-    latitude: 37.5666,
-    longitude: 126.9782,
-  });
-
-  useEffect(() => {
-      if (isOpen && "geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            setLocation({
-              latitude: position.coords.latitude,
-              longitude: position.coords.longitude,
-            });
-          },
-          (err) => {}
-        );
-      } else {
-      }
-  }, [])
 
   if (typeof window === "undefined") {
     return null;
@@ -50,12 +28,10 @@ export default function RentModal({ isOpen, requestClose, isbn13 }) {
               <Tab></Tab>
               <TagList
                 isOpen={isOpen}
-                location={location}
               ></TagList>
             </div>
             <LibraryComponent
               isOpen={isOpen}
-              location={location}
               isbn13={isbn13}
             ></LibraryComponent>
           </div>

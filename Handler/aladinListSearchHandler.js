@@ -1,3 +1,4 @@
+import aladinISBNSearchHandler from "./aladinISBNSearchHandler";
 
 export default async function aladinListSearchHandler(type,CategoryId = null) {
 
@@ -26,11 +27,18 @@ export default async function aladinListSearchHandler(type,CategoryId = null) {
 }
 
   const aladinListSearchResult = await fetchAladinListSearch(type,CategoryId);
-  // const filteredResult = naruKeywordSearchResult.item.filter(book => book.isbn13 !== "");
-    for(const book of  aladinListSearchResult.item){
-    book.author = getAuthor(book.author);
-  }
-  return aladinListSearchResult.item;
+  const filteredResult = aladinListSearchResult.item.filter(book => book.isbn13 !== "");
+  //   for(const book of  aladinListSearchResult.item){
+  //   book.author = getAuthor(book.author);
+  // }
+
+  const ISBNSearchResults = await Promise.all(
+    filteredResult.map(async (book) => await aladinISBNSearchHandler(book.isbn13,["authors"]))
+  );
+
+  return ISBNSearchResults;
+
+  // return aladinListSearchResult.item;
 
 
 

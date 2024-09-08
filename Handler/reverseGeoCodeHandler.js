@@ -5,6 +5,8 @@ export default async function reverseGeoCodeHandler({latitude,longitude}) {
 
       const coords = `${longitude},${latitude}`;
 
+      console.log(coords)
+
         const response = await fetch(`/api/reverseGeoCode?coords=${coords}`);
         const data = await response.json();
         return data;
@@ -16,8 +18,7 @@ export default async function reverseGeoCodeHandler({latitude,longitude}) {
   const area2 = region.area2.name + " ";
   const area3 = region.area3.name + " ";
   const area4 = region.area4.name + " ";
-  const land = reverseGeoCodeResult.results[0].land.name;
-  const resultData = `${area1}${area2}${area3}${area4 != " " ? area4: "" }${land}`
+  const resultData = `${area1}${area2}${area3}${area4 != " " ? area4: "" }`
   return resultData;
 
 

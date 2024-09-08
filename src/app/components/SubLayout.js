@@ -1,6 +1,6 @@
 export default function SubLayout({ pathName }) {
   const titles = {
-    "/librarysearch": "도서관 검색",
+    "/librarysearch": "도서관 탐색",
     "/mypage": "마이 페이지",
     "/searchresult": "검색 결과",
   };

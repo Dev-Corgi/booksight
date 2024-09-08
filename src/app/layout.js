@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import LayoutConfig from "root/utils/LayoutConfig";
 import LoadingPage from "./components/LoadingPage";
+import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -13,6 +14,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+      <head>
+        <Script 
+          src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=bod3qzg0rt" 
+          strategy="afterInteractive"
+        />
+      </head>
+      </head>
       <body className={inter.className}>
         <div className="flex flex-col h-screen overflow-hidden">
           <Suspense fallback={<LoadingPage></LoadingPage>}>

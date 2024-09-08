@@ -13,6 +13,7 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const latitude = searchParams.get('latitude');
   const longitude = searchParams.get('longitude');
+
   try {
     const rTreeData = libraryRtreeData;
 
@@ -25,7 +26,7 @@ export async function GET(request) {
     const userLon = parseFloat(longitude);
 
     // 1km 검색 반경 설정
-    const searchRadiusKm = 2;
+    const searchRadiusKm = 15;
     const buffer = searchRadiusKm / 111.32; // 1도는 약 111.32km입니다.
 
     // 범위 설정 (버퍼 포함)
@@ -55,13 +56,13 @@ export async function GET(request) {
         { latitude: userLat, longitude: userLon },
         { latitude: parseFloat(latitude), longitude: parseFloat(longitude) }
       );
-      return { ...object, distance: distanceToLibrary };
+      return { ...object, distance: distanceToLibrary, kiloDistance : (distanceToLibrary / 1000).toFixed(1) };
     });
 
     // 거리 기준으로 정렬 후 상위 10개
     const closestLibraries = librariesWithDistances
       .sort((a, b) => a.distance - b.distance)
-      .slice(0, 10);
+      // .slice(0, 10);
 
     const res = NextResponse.json(closestLibraries);
     res.headers.set('Access-Control-Allow-Origin', '*'); // 모든 도메인 허용

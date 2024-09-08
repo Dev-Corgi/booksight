@@ -21,7 +21,7 @@ export default async function naruKeywordSearchHandler(keyword) {
   const naruKeywordSearchResult = await fetchReadersSearch(keyword);
 
   const responses = await Promise.all(
-    naruKeywordSearchResult.response.docs.map(async (book) => await aladinISBNSearchHandler(book.doc.isbn13))
+    naruKeywordSearchResult.response.docs.map(async (book) => await aladinISBNSearchHandler(book.doc.isbn13,"authors"))
   );
 
   return responses;

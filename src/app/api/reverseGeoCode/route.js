@@ -15,7 +15,7 @@ export async function GET(request) {
     const authID = process.env.NAVER_MAP_API_ID; // Environment variable
     const authKEY = process.env.NAVER_MAP_API_KEY; // Environment variable
 
-    const apiUrl = `https://naveropenapi.apigw.ntruss.com/map-reversegeocode/v2/gc?coords=${coords}&orders=roadaddr&output=json`;
+    const apiUrl = `https://naveropenapi.apigw.ntruss.com/map-reversegeocode/v2/gc?coords=${coords}&orders=admcode&output=json`;
     const response = await fetch(apiUrl, {
       method: 'GET',
       headers: {

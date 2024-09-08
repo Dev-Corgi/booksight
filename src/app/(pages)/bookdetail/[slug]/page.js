@@ -8,6 +8,8 @@ import aladinISBNSearchHandler from "root/Handler/aladinISBNSearchHandler";
 import aladinKeywordSearchHandler from "@handler/aladinKeywordSearchHandler";
 import readersSearchHandler from "@handler/readersSearchHandler";
 import aladinListSearchHandler from "@handler/aladinListSearchHandler";
+import { Provider } from "react-redux";
+import store from "@redux/store";
 export default function BookDetailPage({ params }) {
   const isbn13 = params.slug;
   const [book, setbook] = useState(undefined)
@@ -18,7 +20,7 @@ export default function BookDetailPage({ params }) {
 
   useEffect(() => {
     async function fetchAladinISBNSearchHandler(){
-    setbook(await aladinISBNSearchHandler(isbn13,["reviewList","fulldescription"]));
+    setbook(await aladinISBNSearchHandler(isbn13,["reviewList","fulldescription","authors"]));
     }
     fetchAladinISBNSearchHandler();
   }, [])
@@ -26,17 +28,18 @@ export default function BookDetailPage({ params }) {
   useEffect(() => {
     if (book !== undefined) {
     async function fetchRecommendations(){
-      setauthorList(await aladinKeywordSearchHandler(book.author,"Author"));
+      setauthorList(await aladinKeywordSearchHandler(book.subInfo.authors[0].authorName,"Author"));
       setrecommentList(await aladinListSearchHandler("ItemEditorChoice",book.categoryId))
     }
     fetchRecommendations();
   }
   }, [book])
 
-    
+  // localStorage.removeItem('userAddress');
 
   return (
-    <div className="w-full mt-[111px] flex flex-col items-center justify-start overflow-y-scroll scroll no-scrollbar">
+    <Provider store={store}>
+    <div className="w-full flex flex-col items-center justify-start overflow-y-scroll scroll no-scrollbar">
       <BookSection book={book}></BookSection>
       <div className="flex flex-col w-[85vw] mt-[110px] gap-y-[62px]">
         <DescriptionSection book = {book}></DescriptionSection>
@@ -45,5 +48,6 @@ export default function BookDetailPage({ params }) {
         <BooklistSection title = "이런책은 어떠세요?" books={recommentList}></BooklistSection>
       </div>
     </div>
+    </Provider>
   );
 }
