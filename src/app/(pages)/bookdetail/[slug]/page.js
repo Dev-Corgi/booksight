@@ -6,8 +6,8 @@ import ReviewSection from "./components/ReviewSection";
 import BooklistSection from "@/app/components/BooklistSection";
 import aladinISBNSearchHandler from "root/Handler/aladinISBNSearchHandler";
 import aladinKeywordSearchHandler from "@handler/aladinKeywordSearchHandler";
-import readersSearchHandler from "@handler/readersSearchHandler";
 import aladinListSearchHandler from "@handler/aladinListSearchHandler";
+import AuthorSection from "./components/AuthorSection";
 import { Provider } from "react-redux";
 import store from "@redux/store";
 export default function BookDetailPage({ params }) {
@@ -44,6 +44,7 @@ export default function BookDetailPage({ params }) {
       <div className="flex flex-col w-[85vw] mt-[110px] gap-y-[62px]">
         <DescriptionSection book = {book}></DescriptionSection>
         <ReviewSection book = {book}></ReviewSection>
+        <AuthorSection book = {book}></AuthorSection>
         <BooklistSection title = "작가의 다른책" books={authorList}></BooklistSection>
         <BooklistSection title = "이런책은 어떠세요?" books={recommentList}></BooklistSection>
       </div>

@@ -30,7 +30,6 @@ export default function ReviewComponent({ reviewData }) {
 ];
 
 function getRandomImage(){
-
     // 랜덤으로 이미지 선택
     const randomImage = localImages[Math.floor(Math.random() * localImages.length)];
     return randomImage;
