@@ -39,7 +39,7 @@ export default function Book({ className, book, shadowType = "null" }) {
               src={book.cover.replace(/coversum/, "cover500")}
               layout="fill"
               alt="bookCover"
-              className="h-full object-cover"
+              className="h-full w-full object-fill"
             ></img>
            </ColorExtractor>
       ) : (
@@ -48,6 +48,7 @@ export default function Book({ className, book, shadowType = "null" }) {
             alt="bookCover"
             fill
             sizes={1}
+            className="h-full w-full object-fill"
           ></Image>
       )}
       </>
