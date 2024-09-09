@@ -23,7 +23,7 @@ export default function Jeollanamdo() {
   }, [])
 
   return (
-<svg width="326" height="289" viewBox="0 0 326 289" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 326 289" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="&#236;&#160;&#132;&#235;&#157;&#188;&#235;&#130;&#168;&#235;&#143;&#132; 1" clipPath="url(#clip0_844_3972)">
 <g id="&#235;&#160;&#136;&#236;&#157;&#180;&#236;&#150;&#180; 1">
 <g id="Group">

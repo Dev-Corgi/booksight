@@ -23,7 +23,7 @@ export default function Gyeonggido() {
   }, [])
 
   return (
-<svg width="326" height="432" viewBox="0 0 326 432" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 326 432" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="&#234;&#178;&#189;&#234;&#184;&#176;&#235;&#143;&#132; 1" clipPath="url(#clip0_844_1618)">
 <g id="&#235;&#160;&#136;&#236;&#157;&#180;&#236;&#150;&#180; 1">
 <g id="Group">

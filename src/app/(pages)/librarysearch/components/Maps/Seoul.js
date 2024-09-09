@@ -23,7 +23,7 @@ export default function Seoul() {
   }, [])
 
   return (
-<svg width="326" height="280" viewBox="0 0 326 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 326 280" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="&#236;&#132;&#156;&#236;&#154;&#184;&#237;&#138;&#185;&#235;&#179;&#132;&#236;&#139;&#156; 1">
 <g id="&#235;&#160;&#136;&#236;&#157;&#180;&#236;&#150;&#180; 1">
 <g id="Group">

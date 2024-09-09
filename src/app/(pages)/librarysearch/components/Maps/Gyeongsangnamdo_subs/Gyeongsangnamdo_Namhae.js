@@ -24,8 +24,6 @@ export default function Gyeongsangnamdo_Namhae() {
 
   return (
     <svg
-      width="329"
-      height="378"
       viewBox="0 0 329 378"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

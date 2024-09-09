@@ -19,7 +19,7 @@ export default function Gyeonggido_Gwangmyeong() {
   }, [])
 
   return (
-<svg width="329" height="447" viewBox="0 0 329 447" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 329 447" fill="none" xmlns="http://www.w3.org/2000/svg">
 <MapHoverAnimation>
 <path id="Gwangmyeong" d="M71.7576 176.315L1.60889 153.867L18.4445 94.9423L113.847 55.6588L195.219 2.34595L237.309 61.2706L327.099 277.329L256.95 392.373L234.503 445.686L116.653 428.85L88.5933 207.18L71.7576 176.315Z" fill="black" stroke="#DAAA63" strokeWidth="2"/>
 </MapHoverAnimation>

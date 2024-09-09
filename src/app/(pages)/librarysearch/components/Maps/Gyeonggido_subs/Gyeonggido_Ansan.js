@@ -19,7 +19,7 @@ export default function Gyeonggido_Ansan() {
   }, [])
 
   return (
-<svg width="329" height="192" viewBox="0 0 329 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 329 192" fill="none" xmlns="http://www.w3.org/2000/svg">
 <MapHoverAnimation>
 <g id="Ansan">
 <path d="M153.691 68.7727L189.546 88.3806L227.081 90.6215L236.605 90.0613L254.532 115.271L290.386 102.386L317.837 111.35L327.361 94.543L327.921 83.3385L279.742 63.1705L287.025 25.0752L294.868 22.8344L278.061 2.66626L271.899 16.6719L235.484 25.0752L215.876 43.5626L181.142 46.3638L153.691 68.7727Z" fill="black"/>

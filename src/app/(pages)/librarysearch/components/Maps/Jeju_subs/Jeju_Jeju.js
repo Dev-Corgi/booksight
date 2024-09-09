@@ -10,7 +10,7 @@ import {
 import MapHoverAnimation from "../../MapHoverAnimation";
 export default function Jeju_Jeju() {
   const mapName = "제주시";
-  const addressName = "제주특별자치도 제주시";
+  const addressName = "제주도 제주시";
   const prevId = 39;
   // const mapId = 39010;
 
@@ -24,8 +24,6 @@ export default function Jeju_Jeju() {
 
   return (
     <svg
-      width="328"
-      height="149"
       viewBox="0 0 328 149"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

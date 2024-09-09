@@ -23,7 +23,7 @@ export default function Daegu() {
   }, [])
 
   return (
-<svg width="322" height="531" viewBox="0 0 322 531" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 322 531" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="&#235;&#160;&#136;&#236;&#157;&#180;&#236;&#150;&#180; 1">
 <g id="Group">
 <MapHoverAnimation>

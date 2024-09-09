@@ -19,7 +19,7 @@ export default function Chungcheongnamdo_Boryeong() {
   }, [])
 
   return (
-<svg width="329" height="400" viewBox="0 0 329 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 329 400" fill="none" xmlns="http://www.w3.org/2000/svg">
 <MapHoverAnimation>
 <g id="Boryeong">
 <path d="M42.5327 157.06C38.7258 157.06 1.92578 163.405 1.92578 163.405L3.82923 175.46L43.1672 181.17L64.1052 190.688L67.912 182.439L49.512 165.943L42.5327 157.06Z" fill="black"/>

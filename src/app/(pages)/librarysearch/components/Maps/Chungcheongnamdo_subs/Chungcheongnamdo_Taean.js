@@ -19,7 +19,7 @@ export default function Chungcheongnamdo_Taean() {
   }, [])
 
   return (
-<svg width="329" height="715" viewBox="0 0 329 715" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 329 715" fill="none" xmlns="http://www.w3.org/2000/svg">
 <MapHoverAnimation>
 <g id="Taean">
 <path d="M200.862 2.58179L185.426 16.0041V48.8886L205.56 65.6665L209.586 34.7952L200.862 2.58179Z" fill="black"/>

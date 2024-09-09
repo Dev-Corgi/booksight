@@ -19,7 +19,7 @@ export default function Daegu_Seo() {
   }, [])
 
   return (
-<svg width="328" height="244" viewBox="0 0 328 244" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 328 244" fill="none" xmlns="http://www.w3.org/2000/svg">
 <MapHoverAnimation>
 <path id="Seo" d="M1.21924 167.737L36.5986 50.9855L185.192 1.45435L312.558 22.6819L326.709 125.282L305.482 199.579L195.806 242.034H121.509L1.21924 167.737Z" fill="black" stroke="#DAAA63" strokeWidth="2"/>
 </MapHoverAnimation>

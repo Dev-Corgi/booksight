@@ -561,7 +561,7 @@ export default function MapBrowser() {
 
   return (
     <div className="relative flex flex-col items-center ml-[79px] w-[413.2px] h-[725px] rounded-[45px] bg-black overflow-clip">
-      <div className="flex flow-row justify-between items-start gap-[83px] mt-[29px] whitespace-nowrap">
+      <div className="flex flow-row justify-between items-start w-[337.2px] gap-[83px] mt-[29px] whitespace-nowrap">
         <p className="font-NotoSansKRSemiBold text-[35px] text-primary">
           {mapName}
         </p>
@@ -578,7 +578,7 @@ export default function MapBrowser() {
         </div>
       </div>
       <div className="absolute flex w-full h-full items-center justify-center pointer-events-none">
-        <div className="w-[325px] h-auto pointer-events-auto">
+        <div className="relative flex justify-center items-center w-[325px] h-[471px] pointer-events-auto">
           {Maps[mapId]}
         </div>
       </div>

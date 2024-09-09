@@ -19,7 +19,7 @@ export default function Busan_Sasang() {
   }, [])
 
   return (
-<svg width="328" height="526" viewBox="0 0 328 526" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 328 526" fill="none" xmlns="http://www.w3.org/2000/svg">
 <MapHoverAnimation>
 <path id="Sasang" d="M75.1413 514.622H199.297L306.675 363.622L303.32 158.932L326.809 64.9763L182.519 1.22046L34.8745 138.799L24.8078 397.177L1.31885 524.689L75.1413 514.622Z" fill="black" stroke="#DAAA63" strokeWidth="2"/>
 </MapHoverAnimation>

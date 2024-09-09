@@ -19,7 +19,7 @@ export default function Seoul_Gangdong() {
   }, [])
 
   return (
-<svg width="328" height="365" viewBox="0 0 328 365" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 328 365" fill="none" xmlns="http://www.w3.org/2000/svg">
 <MapHoverAnimation>
 <path id="Gangdong" d="M1 81.5642V171.978L48.0152 222.61L37.1656 266.009L80.5641 338.34L156.512 363.656L170.978 302.174L326.49 186.444L312.024 85.1807L279.475 16.4662L131.196 2L1 81.5642Z" fill="black" stroke="#DAAA63" strokeWidth="2"/>
 </MapHoverAnimation>

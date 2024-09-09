@@ -10,7 +10,7 @@ import {
 import MapHoverAnimation from "../../MapHoverAnimation";
 export default function Jeju_Seogwipo() {
   const mapName = "서귀포시";
-  const addressName = "제주특별자치도 서귀포시";
+  const addressName = "제주도 서귀포시";
   const prevId = 39;
   // const mapId = 39020;
 
@@ -24,8 +24,6 @@ export default function Jeju_Seogwipo() {
 
   return (
     <svg
-      width="329"
-      height="191"
       viewBox="0 0 329 191"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

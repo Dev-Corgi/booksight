@@ -23,7 +23,7 @@ export default function Gangwondo() {
   }, [])
 
   return (
-<svg width="326" height="288" viewBox="0 0 326 288" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 326 288" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="&#234;&#176;&#149;&#236;&#155;&#144;&#235;&#143;&#132; 1" clipPath="url(#clip0_844_1453)">
 <g id="&#235;&#160;&#136;&#236;&#157;&#180;&#236;&#150;&#180; 1">
 <g id="Group">

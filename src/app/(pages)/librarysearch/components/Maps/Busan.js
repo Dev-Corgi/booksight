@@ -23,7 +23,7 @@ export default function Busan() {
   }, [])
 
   return (
-<svg width="326" height="333" viewBox="0 0 326 333" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 326 333" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="&#235;&#182;&#128;&#236;&#130;&#176;&#234;&#180;&#145;&#236;&#151;&#173;&#236;&#139;&#156; 1">
 <g id="&#235;&#160;&#136;&#236;&#157;&#180;&#236;&#150;&#180; 1">
 <g id="Group">

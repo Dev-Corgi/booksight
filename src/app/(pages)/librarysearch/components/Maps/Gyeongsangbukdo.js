@@ -23,7 +23,7 @@ export default function Gyeongsangbukdo() {
   }, [])
 
   return (
-<svg width="326" height="328" viewBox="0 0 326 328" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 326 328" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="&#234;&#178;&#189;&#236;&#131;&#129;&#235;&#182;&#129;&#235;&#143;&#132; 1" clipPath="url(#clip0_844_1964)">
 <g id="&#235;&#160;&#136;&#236;&#157;&#180;&#236;&#150;&#180; 1">
 <g id="Group">

@@ -5,8 +5,8 @@ import { setMapId,setMapName,setPrevMapId,setAddressName } from '@redux/mapSlice
 import MapHoverAnimation from "../MapHoverAnimation";
 export default function Jeju() {
 
-  const mapName = "제주특별자치도"
-  const addressName = "제주특별자치도"
+  const mapName = "제주도"
+  const addressName = "제주도"
   const prevId = 10
   const mapId = 39;
 
@@ -23,7 +23,7 @@ export default function Jeju() {
   }, [])
 
   return (
-<svg width="326" height="225" viewBox="0 0 326 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 326 225" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="&#236;&#160;&#156;&#236;&#163;&#188;&#237;&#138;&#185;&#235;&#179;&#132;&#236;&#158;&#144;&#236;&#185;&#152;&#235;&#143;&#132; 2" clipPath="url(#clip0_844_4179)">
 <g id="&#235;&#160;&#136;&#236;&#157;&#180;&#236;&#150;&#180; 1">
 <g id="Group">

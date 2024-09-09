@@ -23,7 +23,7 @@ export default function Chungcheongnamdo() {
   }, [])
 
   return (
-<svg width="326" height="286" viewBox="0 0 326 286" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 326 286" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="&#236;&#182;&#169;&#236;&#178;&#173;&#235;&#130;&#168;&#235;&#143;&#132; 2" clipPath="url(#clip0_861_91)">
 <g id="&#235;&#160;&#136;&#236;&#157;&#180;&#236;&#150;&#180; 1">
 <g id="Group">

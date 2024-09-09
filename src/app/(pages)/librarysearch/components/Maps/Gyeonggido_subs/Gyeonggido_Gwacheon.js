@@ -19,7 +19,7 @@ export default function Gyeonggido_Gwacheon() {
   }, [])
 
   return (
-<svg width="329" height="270" viewBox="0 0 329 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 329 270" fill="none" xmlns="http://www.w3.org/2000/svg">
 <MapHoverAnimation>
 <path id="Gwacheon" d="M297.594 191.073L78.8216 268.444L40.1364 229.758L1.45117 191.073V119.038L86.8255 1.64844L276.25 17.6559L326.941 140.382L297.594 191.073Z" fill="black" stroke="#DAAA63" strokeWidth="2"/>
 </MapHoverAnimation>

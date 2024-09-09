@@ -24,7 +24,7 @@ export default function Daejeon() {
 
 
   return (
-<svg width="326" height="386" viewBox="0 0 326 386" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 326 386" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="&#235;&#140;&#128;&#236;&#160;&#132;&#234;&#180;&#145;&#236;&#151;&#173;&#236;&#139;&#156; 1">
 <g id="&#235;&#160;&#136;&#236;&#157;&#180;&#236;&#150;&#180; 1">
 <g id="Group">

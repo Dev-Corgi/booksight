@@ -19,7 +19,7 @@ export default function Daegu_Nam() {
   }, [])
 
   return (
-<svg width="328" height="410" viewBox="0 0 328 410" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 328 410" fill="none" xmlns="http://www.w3.org/2000/svg">
 <MapHoverAnimation>
 <path id="Nam" d="M37.0117 149.49L1.34155 287.711L224.28 408.098L308.997 332.299L326.832 73.6903L121.728 55.8552V2.3501L45.9292 46.9378L37.0117 149.49Z" fill="black" stroke="#DAAA63" strokeWidth="2"/>
 </MapHoverAnimation>
