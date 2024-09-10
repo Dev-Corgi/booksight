@@ -27,7 +27,7 @@ export default function DiscriptionSection({ authorCode }) {
       <TitleTag title={"저자 소개"}></TitleTag>
       <div className = "flex ml-[28px]">
       <Shimmer isLoading={authorDisc == undefined}>
-        <div className=" flex flex-col justify-center items-center w-full h-[218px] mt-[16px] rounded-[15px] bg-background">
+        <div className=" flex flex-col justify-start items-center w-full h-[218px] mt-[16px] rounded-[15px] bg-background">
           <div className = "flex flex-col justify-start items-center mx-[18px] my-[17px] overflow-y-scroll scroll no-scrollbar">
           <p className="font-NotoSansKRRegular text-[16px] -tracking-[2px] whitespace-pre-wrap">
             {authorDisc != undefined ? authorDisc : defaultDisc}
