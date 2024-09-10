@@ -33,7 +33,7 @@ export default async function aladinListSearchHandler(type,CategoryId = null) {
   // }
 
   const ISBNSearchResults = await Promise.all(
-    filteredResult.map(async (book) => await aladinISBNSearchHandler(book.isbn13,["authors"]))
+    filteredResult.map(async (book) => await aladinISBNSearchHandler(book.isbn13,["authors","ratingInfo"]))
   );
 
   return ISBNSearchResults;

@@ -8,12 +8,15 @@ import InfoIcon from "@svg/InfoIcon.svg";
 import PurchaseButton from "./PurchaseButton";
 import RentButton from "./RentButton";
 import Shimmer from "@components/Simmer";
+import getScore from "root/utils/getScore";
+
 export default function BookSection({ book }) {
   const [isLoading, setIsLoading] = useState(true);
-
+  const [score, setscore] = useState(undefined)
   useEffect(() => {
     // Set loading to false once books are loaded
     if (book) {
+      setscore(getScore(book))
       setIsLoading(false);
     }
   }, [book]);
@@ -63,15 +66,19 @@ export default function BookSection({ book }) {
             </div>
 
             <div className="flex flex-row w-min h-min mt-[20px]">
+              <Shimmer isLoading={isLoading}>
               <div className="w-[111px] h-[20.94px]">
                 <ReviewStars
                   width={111}
-                  score={book == undefined ? 5 : book.customerReviewRank}
+                  score={book == undefined ? 5 : score}
                 ></ReviewStars>
               </div>
-              <p className="ml-[10px] text-black text-[14px] font-NotoSansKRMedium -mt-[1px]">{`${
-                book == undefined ? 5 : book.customerReviewRank
+              </Shimmer>
+              <Shimmer isLoading={isLoading}>
+              <p className="ml-[10px] text-black text-[14px] font-NotoSansKRMedium -mt-[1px] text-nowrap">{`${
+                book == undefined ? 5 : score == undefined ? "- " : score
               }/10`}</p>
+              </Shimmer>
             </div>
 
             <div className="flex flex-row w-min h-min mt-[20px] gap-[14px]">

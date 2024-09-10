@@ -6,7 +6,7 @@ import SubLayout from '@/app/components/SubLayout';
 export default function LayoutConfig() {
   const pathName = usePathname();
 
-  const homeLayout = ["/home","/librarysearch","/mypage","/bookdetail","/searchresult"];
+  const homeLayout = ["/home","/librarysearch","/mypage","/bookdetail","/searchresult","/authordetail"];
   const subLayout = ["/librarysearch","/mypage","/searchresult"];
 
    return (

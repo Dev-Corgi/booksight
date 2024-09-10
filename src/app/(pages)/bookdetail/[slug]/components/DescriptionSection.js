@@ -22,8 +22,7 @@ export default function DescriptionSection({ className, book }) {
       <TitleTag title="책 살펴보기"></TitleTag>
       <div className="relative w-full h-[250.51px] ml-[28px]">
         {!isLoading && (
-          <div className="absolute w-[98%] flex flex-row">
-            <div className="flex flex-grow w-full"></div>
+          <div className="absolute -right-[68px] top-0 -z-[10]">
             <div className="relative w-[626px] h-[338.98px] mt-2">
               <Image src={shadow2Img} alt="shadow" fill sizes={1}></Image>
             </div>
@@ -31,9 +30,9 @@ export default function DescriptionSection({ className, book }) {
         )}
 
         <Shimmer isLoading={isLoading}>
-          <div className="absolute flex flex-col w-auto h-full  mt-[14px] rounded-[15px] bg-discriptionPanel">
+          <div className="flex flex-col w-full h-full  mt-[14px] rounded-[15px] bg-discriptionPanel">
             <p className="mt-[17px] mx-[19px] text-[16px] whitespace-pre-wrap font-NotoSansKRRegular h-[184px] overflow-y-scroll align-text-top no-scrollbar text-textColor-primary">
-              {book == undefined ? "this is disc" : disc}
+              {book == undefined ? "this is disc" : disc} 
             </p>
             <div className="mt-[12.5px] ml-[19px] gap-[8px] w-min h-min flex flex-row items-center">
               <div className="flex items-center justify-center w-[13px] h-[13px]">

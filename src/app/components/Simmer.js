@@ -1,6 +1,10 @@
+"use client"
 import { motion } from "framer-motion";
-
+import React from "react"
 const Shimmer = ({ isLoading, children }) => {
+
+  const isParagraph = React.isValidElement(children) && children.type === "p";
+  
   return (
     <>
       {isLoading ? (
@@ -12,9 +16,9 @@ const Shimmer = ({ isLoading, children }) => {
             ease: "linear",
             repeat: Infinity,
           }}
-          className="flex w-min h-min bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:300%] bg-[position-x:100%]"
+          className={`flex ${isParagraph &&  "w-min h-min"} bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:300%] bg-[position-x:100%]`}
         >
-          <div className="flex w-min h-min invisible">{children}</div>
+          <div className={`flex ${isParagraph &&  "w-min h-min"} invisible`}>{children}</div>
         </motion.div>
       ) : (
         children

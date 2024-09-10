@@ -32,7 +32,7 @@ export default function LibraryDetailPage({ params }) {
   }, []);
 
   return (
-        <div className="flex flex-row w-full h-full">
+        <div className="flex flex-row w-full h-full overflow-x-clip">
           <div className="flex flex-grow flex-col items-center">
             <div className="flex flex-col items-start w-[36.18vw] st:w-[521px] h-full text-black">
               <Header isLoading={isLoading} />
@@ -47,9 +47,7 @@ export default function LibraryDetailPage({ params }) {
                 libraryInfo={libraryInfo}
               ></DiscriptionSection>
               </Shimmer>
-              <Shimmer isLoading = {isLoading}>
-              <StatsSection libraryInfo={libraryInfo}></StatsSection>
-              </Shimmer>
+              <StatsSection libraryInfo={libraryInfo} isLoading={isLoading}></StatsSection>
               <MapSection libraryInfo={libraryInfo}></MapSection>
             </div>
           </div>

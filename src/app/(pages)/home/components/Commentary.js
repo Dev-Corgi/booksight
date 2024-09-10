@@ -10,7 +10,7 @@ export default function Commentary({comment}) {
 
     useEffect(() => {
       async function fetchBook() {
-        setbook(await aladinISBNSearchHandler(comment.isbn13,"authors"));
+        setbook(await aladinISBNSearchHandler(comment.isbn13,["authors","ratingInfo"]));
         setIsLoading(false);
       }
   

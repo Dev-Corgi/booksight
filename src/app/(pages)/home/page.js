@@ -8,10 +8,10 @@ import aladinListSearchHandler from "@handler/aladinListSearchHandler";
 import naruKeywordSearchHandler from "@handler/naruKeywordHandler";
 export default function HomePage() {
 
-  const [bestSellerList, setbestSellerList] = useState(null)
-  const [itemNewSpecialList, setitemNewSpecialList] = useState(null)
-  const [deductionList, setdeductionList] = useState(null)
-  const [romanceList, setromanceList] = useState(null)
+  const [bestSellerList, setbestSellerList] = useState(Array.from({length:10}))
+  const [itemNewSpecialList, setitemNewSpecialList] = useState(Array.from({length:10}))
+  const [deductionList, setdeductionList] = useState(Array.from({length:10}))
+  const [romanceList, setromanceList] = useState(Array.from({length:10}))
 
   useEffect(() => {
   async function fetchLists(){

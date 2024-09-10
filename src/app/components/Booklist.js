@@ -4,21 +4,19 @@ import { useRouter } from "next/navigation";
 import Book from "@components/Book";
 import ReviewStars from "./ReviewStars";
 import Shimmer from "./Simmer";
+import getScore from "root/utils/getScore";
 
 export default function Booklist({ className, width = 125.2, books }) {
   const router = useRouter();
   const originWidth = 125.2;
   const scale = width / originWidth;
   const [isLoading, setIsLoading] = useState(true);
-  const [bookDatas, setBookDatas] = useState(Array.from({length : 10}));
 
   useEffect(() => {
-    // Set loading to false once books are loaded
-    if (books) {
-      setBookDatas(books);
-      setIsLoading(false);
+    if(!books.some(item => item == undefined)){
+      setIsLoading(false)
     }
-  }, [books]);
+  }, [books])
 
   const handleClick = (isbn13) => {
     router.push(`/bookdetail/${isbn13}`);
@@ -26,7 +24,7 @@ export default function Booklist({ className, width = 125.2, books }) {
 
   return (
     <div className={`${className}`}>
-      {bookDatas.map((book, index) => {
+      {books.map((book, index) => {
         return (
           <div
             className="aspect-[1/2]"
@@ -53,7 +51,7 @@ export default function Booklist({ className, width = 125.2, books }) {
               <Shimmer isLoading={isLoading}>
                 <ReviewStars
                   width={67.85}
-                  score={book == undefined ? 5 : book.customerReviewRank}
+                  score={book == undefined ? 5 : getScore(book)}
                   className="mt-[15.09px]"
                 ></ReviewStars>
               </Shimmer>

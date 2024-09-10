@@ -9,7 +9,7 @@ import store from "@redux/store";
 export default function LibrarySearchPage(props) {
   return (
     <Provider store={store}>
-    <div className="flex flex-row">
+    <div className="flex flex-row overflow-x-clip">
       <MapBrowser></MapBrowser>
 
       <div className="ml-[108.8px] flex-grow h-min flex flex-col">

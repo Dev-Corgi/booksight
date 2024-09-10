@@ -13,14 +13,14 @@ import store from "@redux/store";
 export default function BookDetailPage({ params }) {
   const isbn13 = params.slug;
   const [book, setbook] = useState(undefined)
-  const [authorList, setauthorList] = useState(null)
-  const [recommentList, setrecommentList] = useState(null)
+  const [authorList, setauthorList] = useState(Array.from({length:10}))
+  const [recommentList, setrecommentList] = useState(Array.from({length:10}))
   const [isLoading,setIsLoading] = useState(true);
 
 
   useEffect(() => {
     async function fetchAladinISBNSearchHandler(){
-    setbook(await aladinISBNSearchHandler(isbn13,["reviewList","fulldescription","authors"]));
+    setbook(await aladinISBNSearchHandler(isbn13,["reviewList","fulldescription","authors","ratingInfo"]));
     }
     fetchAladinISBNSearchHandler();
   }, [])
@@ -39,7 +39,7 @@ export default function BookDetailPage({ params }) {
 
   return (
     <Provider store={store}>
-    <div className="w-full flex flex-col items-center justify-start overflow-y-scroll scroll no-scrollbar">
+    <div className="w-full flex flex-col items-center justify-start overflow-y-scroll scroll no-scrollbar overflow-x-clip">
       <BookSection book={book}></BookSection>
       <div className="flex flex-col w-[85vw] mt-[110px] gap-y-[62px]">
         <DescriptionSection book = {book}></DescriptionSection>

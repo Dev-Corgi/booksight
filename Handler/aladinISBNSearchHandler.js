@@ -5,7 +5,7 @@ export default async function aladinISBNSearchHandler(ItemId,OptResult=null) {
     
 
     try {
-      const response = await fetch(`/api/aladinISBNSearch?ItemId=${ItemId}${OptResult == null ? "" :`&OptResult=${OptResult}`}`);
+      const response = await fetch(`/api/aladinISBNSearch?ItemId=${ItemId}${OptResult == null ? "" :`&OptResult=${OptResult.join(',')}`}`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch aladinISBNSearch");
@@ -18,6 +18,7 @@ export default async function aladinISBNSearchHandler(ItemId,OptResult=null) {
       console.log(error);
     }
   }
+  
 
   function getAuthor(author) {
     const authorInput = author;

@@ -212,7 +212,6 @@ export default function LocationSetModal({
     // 확인 버튼을 누르면 브라우저의 권한 요청 팝업 띄우기
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        console.log(position);
         setTempLocation({latitude : position.coords.latitude, longitude : position.coords.longitude});
         setTempZoom(10);
         // console.log("위치 권한이 허용되었습니다.");
