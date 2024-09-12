@@ -95,12 +95,14 @@ export default function BookSection({ book }) {
               </p>
             </div>
           </div>
+          <Shimmer isLoading={isLoading}>
           <Book
             className="ml-[200px] w-[392.37px] h-[589.83px]"
             book={book}
             shadowType="shadow"
             coverSize={500}
           ></Book>
+          </Shimmer>
         </div>
       </div>
     </>
