@@ -25,7 +25,7 @@
       "static/chunks/594-06787f610d973a56.js",
       "static/chunks/84-d29c400fc6c9adf6.js",
       "static/chunks/718-e70d3be72602d586.js",
-      "static/chunks/app/(pages)/authordetail/[authorCode]/page-54604c379e9782aa.js"
+      "static/chunks/app/(pages)/authordetail/[authorCode]/page-16679f34cd30d167.js"
     ],
     "/(pages)/bookdetail/[slug]/page": [
       "static/chunks/webpack-2ebc241c820d86de.js",
@@ -39,17 +39,7 @@
       "static/chunks/917-4eeaf2e39a48c841.js",
       "static/chunks/994-22ea77c1a44f1ec1.js",
       "static/chunks/718-e70d3be72602d586.js",
-      "static/chunks/app/(pages)/bookdetail/[slug]/page-b627c520129fe85f.js"
-    ],
-    "/(pages)/home/page": [
-      "static/chunks/webpack-2ebc241c820d86de.js",
-      "static/chunks/fd9d1056-467e31974ddb1d20.js",
-      "static/chunks/23-6877cb3ffd858bf3.js",
-      "static/chunks/main-app-871ba252a0ac53f5.js",
-      "static/chunks/534-e0a02c809697df5e.js",
-      "static/chunks/594-06787f610d973a56.js",
-      "static/chunks/84-d29c400fc6c9adf6.js",
-      "static/chunks/app/(pages)/home/page-0186d528ad1af0f5.js"
+      "static/chunks/app/(pages)/bookdetail/[slug]/page-267e663804bfeaf2.js"
     ],
     "/(pages)/librarydetail/[slug]/page": [
       "static/chunks/webpack-2ebc241c820d86de.js",
@@ -61,6 +51,16 @@
       "static/chunks/917-4eeaf2e39a48c841.js",
       "static/chunks/994-22ea77c1a44f1ec1.js",
       "static/chunks/app/(pages)/librarydetail/[slug]/page-459109f99a17ab83.js"
+    ],
+    "/(pages)/home/page": [
+      "static/chunks/webpack-2ebc241c820d86de.js",
+      "static/chunks/fd9d1056-467e31974ddb1d20.js",
+      "static/chunks/23-6877cb3ffd858bf3.js",
+      "static/chunks/main-app-871ba252a0ac53f5.js",
+      "static/chunks/534-e0a02c809697df5e.js",
+      "static/chunks/594-06787f610d973a56.js",
+      "static/chunks/84-d29c400fc6c9adf6.js",
+      "static/chunks/app/(pages)/home/page-0186d528ad1af0f5.js"
     ],
     "/(pages)/librarysearch/page": [
       "static/chunks/webpack-2ebc241c820d86de.js",

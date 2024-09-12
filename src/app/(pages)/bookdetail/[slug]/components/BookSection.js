@@ -99,6 +99,7 @@ export default function BookSection({ book }) {
             className="ml-[200px] w-[392.37px] h-[589.83px]"
             book={book}
             shadowType="shadow"
+            coverSize={500}
           ></Book>
         </div>
       </div>

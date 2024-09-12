@@ -41,7 +41,7 @@ export default function TimelineComponent({book}) {
             <Shimmer isLoading={book == undefined}>
             <div className = "relative ml-[13px] mt-[8px] w-[60px] h-[90px] rounded-[5px] overflow-hidden">
               {book != undefined &&
-              <Image alt = "bookCoverImg" src = {book.cover.replace(/coversum/, "cover500")} fill sizes={1} className = "object-fill"></Image>
+              <Image alt = "bookCoverImg" src = {book.cover.replace(/coversum/, "cover200")} fill sizes={1} className = "object-fill"></Image>
               }
               </div>
             </Shimmer>

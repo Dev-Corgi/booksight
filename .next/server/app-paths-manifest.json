@@ -2,8 +2,8 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/(pages)/authordetail/[authorCode]/page": "app/(pages)/authordetail/[authorCode]/page.js",
   "/(pages)/bookdetail/[slug]/page": "app/(pages)/bookdetail/[slug]/page.js",
-  "/(pages)/home/page": "app/(pages)/home/page.js",
   "/(pages)/librarydetail/[slug]/page": "app/(pages)/librarydetail/[slug]/page.js",
+  "/(pages)/home/page": "app/(pages)/home/page.js",
   "/(pages)/librarysearch/page": "app/(pages)/librarysearch/page.js",
   "/(pages)/login/page": "app/(pages)/login/page.js",
   "/(pages)/mypage/page": "app/(pages)/mypage/page.js",
@@ -21,11 +21,11 @@
   "/api/isRentPossible/route": "app/api/isRentPossible/route.js",
   "/api/naruKeywordSearch/route": "app/api/naruKeywordSearch/route.js",
   "/api/newAuthorCrawler/route": "app/api/newAuthorCrawler/route.js",
-  "/api/readersSearch/route": "app/api/readersSearch/route.js",
   "/api/reverseGeoCode/route": "app/api/reverseGeoCode/route.js",
+  "/api/readersSearch/route": "app/api/readersSearch/route.js",
   "/api/reviewCrawler/route": "app/api/reviewCrawler/route.js",
   "/api/searchNearByLibrary/route": "app/api/searchNearByLibrary/route.js",
   "/api/searchRegionLibrary/route": "app/api/searchRegionLibrary/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }
