@@ -21,9 +21,9 @@ export default function QuoteRecommendationComponent(){
                    {sampleText}
                    </p>
 
-                   <div className = "flex flex-row gap-[8px] mt-[29px]">
+                   <div className = "flex flex-row gap-[9px] mt-[29px]">
                     <div className = "relative w-[30px] h-[30px] mt-[2px] rounded-[4px] overflow-hidden border-[1px] border-white">
-                        <Image alt= "bookCover"  src = {SampleBookImage} fill sizes={1} className = "object-fill"></Image>
+                        <Image alt= "bookCover"  src = {SampleBookImage} fill sizes={1} className = "object-cover"></Image>
                     </div>
 
                     <div className = "flex flex-col text-white">

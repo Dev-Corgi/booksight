@@ -1,4 +1,3 @@
-import React,{useEffect,uesState} from "react";
 import TitleTag from "@/app/components/TitleTag";
 import QuoteRecommendationComponent from "./QuoteRecommendationComponent";
 

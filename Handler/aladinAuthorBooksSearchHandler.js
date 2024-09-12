@@ -84,17 +84,12 @@ export default async function aladinAuthorSearchHandler(
   }
 
   async function NewValidAuthorItemId(books,itemIds){
-    console.log(typeof itemIds[0]);
-    console.log(`리스트는 : ${(itemIds)}`)
     itemIds = itemIds.map(Number);
 
     const filteredBooks = await Promise.all(
       books.map(async (book) => {
-        console.log(typeof book.itemId);
-        console.log(`아이디는 : ${book.itemId}`)
 
       if(itemIds.includes(book.itemId)){
-        console.log("매칭!")
         return {
           title : book.title,
           authorName : book.author,

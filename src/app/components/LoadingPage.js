@@ -6,7 +6,7 @@ export default function LoadingPage() {
   const prize =
     "당신 근처의 도서관을 발견하고, 책으로 가득한\n하루를 만들어 나가세요";
   return (
-    <div className="flex w-screen h-screen items-center justify-center">
+    <div className="flex w-screen h-screen items-center justify-center bg-background z-50">
       <div className="flex flex-col items-center mt-[10px]">
         <div className="relative w-[406px] h-[70px]">
           <Image src={logoImg} alt="logoImg" fill sizes={1}></Image>
