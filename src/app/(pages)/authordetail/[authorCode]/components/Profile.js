@@ -7,9 +7,10 @@ import Image from "next/image";
 import getRandomProfileImage from "root/utils/getRandomProfileImage";
 import Shimmer from "@/app/components/Simmer";
 
-export default function Profile({books,authorName,authorCode}) {
+export default function Profile({books,authorName,authorCode,authorScore = undefined, authorBookCount = undefined}) {
 
-  const [score, setscore] = useState(undefined)
+  const [score, setscore] = useState(authorScore != undefined ? authorScore : undefined)
+  const [bookCount, setbookCount] = useState(authorBookCount != undefined ? authorBookCount : undefined)
   const [src, setSrc] = useState(`https://image.aladin.co.kr/Author/Photo/${authorCode}/${authorCode}_2.jpg`);
   const [isLoading, setisLoading] = useState(true)
 
@@ -21,8 +22,12 @@ export default function Profile({books,authorName,authorCode}) {
   }, [books])
 
   useEffect(()=>{
-    if(isLoading == false){
+    if(isLoading == false && score == undefined){
       setscore(calculateAverageReviewRank(books))
+    }
+
+    if(isLoading == false && authorBookCount == undefined){
+      setbookCount(books.length)
     }
   },[isLoading])
 
@@ -33,7 +38,7 @@ export default function Profile({books,authorName,authorCode}) {
 
   const calculateAverageReviewRank = (books) => {
     // ratingCount가 0이 아닌 객체들만 필터링
-    const filteredArray = books.filter(item => item.subInfo.ratingInfo.ratingCount > 0);
+    const filteredArray = books.filter(item => item.customerReviewRank != 0);
   
     // 필터링된 배열이 비어있는 경우 0 반환
     if (filteredArray.length === 0) return 0;
@@ -80,7 +85,7 @@ export default function Profile({books,authorName,authorCode}) {
         </div>
 
         <div className="flex flex-row mt-[9px] gap-[9px]">
-          <Shimmer isLoading={isLoading}>
+          <Shimmer isLoading={score == undefined}>
           <div className="w-[111px] h-[21px]">
             <ReviewStars score={score} width={111}></ReviewStars>
           </div>
@@ -90,9 +95,9 @@ export default function Profile({books,authorName,authorCode}) {
           </Shimmer>
         </div>
 
-       <Shimmer isLoading={isLoading}>
+       <Shimmer isLoading={bookCount == undefined}>
         <p className="font-NotoSansKRMedium text-[16px] text-black mt-[8px]">
-          {isLoading ? "등록된 저서: ?? 권" : `등록된 저서 : ${books.length} 권`}
+          {bookCount != undefined ? `등록된 저서 : ${bookCount} 권` :  "등록된 저서: ?? 권"}
         </p>
         </Shimmer>
 

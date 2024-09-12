@@ -1,4 +1,5 @@
 import aladinISBNSearchHandler from "./aladinISBNSearchHandler";
+import getAuthor from "root/utils/getAuthor";
 
 export default async function aladinListSearchHandler(type,CategoryId = null) {
 
@@ -32,11 +33,22 @@ export default async function aladinListSearchHandler(type,CategoryId = null) {
   //   book.author = getAuthor(book.author);
   // }
 
-  const ISBNSearchResults = await Promise.all(
-    filteredResult.map(async (book) => await aladinISBNSearchHandler(book.isbn13,["authors","ratingInfo"]))
-  );
+  const bookResults = filteredResult.map((book)=>{
+    book.author = getAuthor(book.author);
+    return{
+      title : book.title,
+      authorName : book.author,
+      isbn13 : book.isbn13,
+      cover: book.cover,
+      customerReviewRank : book.customerReviewRank
+    }
+  })
 
-  return ISBNSearchResults;
+  // const ISBNSearchResults = await Promise.all(
+  //   filteredResult.map(async (book) => await aladinISBNSearchHandler(book.isbn13,["authors","ratingInfo"]))
+  // );
+
+  return bookResults;
 
   // return aladinListSearchResult.item;
 

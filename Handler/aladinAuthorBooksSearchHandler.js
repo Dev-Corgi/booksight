@@ -4,6 +4,7 @@ export default async function aladinAuthorSearchHandler(
   authorName,
   authorCode
 ) {
+
   async function fetchAladinAuthorSearch(Query) {
     try {
       // 첫 번째 호출에서 totalResults와 itemsPerPage를 가져옴
@@ -82,10 +83,65 @@ export default async function aladinAuthorSearchHandler(
     return validBooks;
   }
 
+  async function NewValidAuthorItemId(books,itemIds){
+    console.log(typeof itemIds[0]);
+    console.log(`리스트는 : ${(itemIds)}`)
+    itemIds = itemIds.map(Number);
+
+    const filteredBooks = await Promise.all(
+      books.map(async (book) => {
+        console.log(typeof book.itemId);
+        console.log(`아이디는 : ${book.itemId}`)
+
+      if(itemIds.includes(book.itemId)){
+        console.log("매칭!")
+        return {
+          title : book.title,
+          authorName : book.author,
+          isbn13 : book.isbn13,
+          cover: book.cover,
+          customerReviewRank : book.customerReviewRank,
+          pubDate: book.pubDate
+        }
+      }
+      return null;
+      })
+    );
+
+    const validBooks = filteredBooks.filter((book) => book !== null);
+
+    return validBooks;
+
+
+  }
+
+  async function fetchAuthorItemIdCrawler(authorName,authorCode) {
+    try {
+      const response = await fetch(`/api/authorItemIdCrawler?authorName=${authorName}&authorCode=${authorCode}`);
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch authorItemId");
+      }
+
+      const result = await response.json();
+
+      return result;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   const AladinAuthorSearchResult = await fetchAladinAuthorSearch(authorName);
-  const ValidAuthorResult = await fetchValidAuthorCode(
+  const AuthorItemIds =  await fetchAuthorItemIdCrawler(authorName,authorCode);
+
+  // const ValidAuthorResult = await fetchValidAuthorCode(
+  //   AladinAuthorSearchResult,
+  //   authorCode
+  // );
+
+  const ValidAuthorResult = await NewValidAuthorItemId(
     AladinAuthorSearchResult,
-    authorCode
+    AuthorItemIds.itemIds
   );
 
   return ValidAuthorResult;

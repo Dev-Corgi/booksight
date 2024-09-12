@@ -15,7 +15,6 @@ export default function BookDetailPage({ params }) {
   const [book, setbook] = useState(undefined)
   const [authorList, setauthorList] = useState(Array.from({length:10}))
   const [recommentList, setrecommentList] = useState(Array.from({length:10}))
-  const [isLoading,setIsLoading] = useState(true);
 
 
   useEffect(() => {
@@ -28,7 +27,6 @@ export default function BookDetailPage({ params }) {
   useEffect(() => {
     if (book !== undefined) {
     async function fetchRecommendations(){
-      setauthorList(await aladinKeywordSearchHandler(book.subInfo.authors[0].authorName,"Author"));
       setrecommentList(await aladinListSearchHandler("ItemEditorChoice",book.categoryId))
     }
     fetchRecommendations();
@@ -44,7 +42,7 @@ export default function BookDetailPage({ params }) {
       <div className="flex flex-col w-[85vw] mt-[110px] gap-y-[62px]">
         <DescriptionSection book = {book}></DescriptionSection>
         <ReviewSection book = {book}></ReviewSection>
-        <AuthorSection book = {book}></AuthorSection>
+        <AuthorSection book = {book} setauthorList={setauthorList}></AuthorSection>
         <BooklistSection title = "작가의 다른책" books={authorList}></BooklistSection>
         <BooklistSection title = "이런책은 어떠세요?" books={recommentList}></BooklistSection>
       </div>

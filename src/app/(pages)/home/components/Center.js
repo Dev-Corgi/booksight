@@ -63,7 +63,7 @@ export default function Center(props) {
                 <p className="font-NotoSansKRMedium text-[0.9vw] st:text-[13px] mt-[-0.35vw] st:mt-[-5px]">
                   {books[currentBook] == undefined
                     ? "This Is Author"
-                    : books[currentBook].subInfo.authors[0].authorName}
+                    : books[currentBook].authorName}
                 </p>
               </Shimmer>
               <Shimmer isLoading={isLoading}>
@@ -87,6 +87,7 @@ export default function Center(props) {
               className="w-full h-full"
               book={books[0]}
               shadowType="shadow"
+              coverSize={500}
             ></Book>
           </div>
           </Shimmer>
@@ -99,6 +100,7 @@ export default function Center(props) {
               className="w-full h-full"
               book={books[1]}
               shadowType="shadow"
+              coverSize={500}
             ></Book>
           </div>
           </Shimmer>
@@ -111,6 +113,7 @@ export default function Center(props) {
               className="w-full h-full"
               book={books[2]}
               shadowType="shadow"
+              coverSize={500}
             ></Book>
           </div>
           </Shimmer>

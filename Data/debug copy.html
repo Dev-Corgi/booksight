@@ -1,0 +1,61 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+
+<head>
+    <title>알라딘</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://image.aladin.co.kr/img/m/aladin_favicon_xc9.ico" />
+
+    <script src="/m/js/ui.common.plugin.js?date=2024091203" type="text/javascript"></script>
+    <script src="js/m.common.js?date=2024091203" type="text/javascript"></script>
+    <script src="js/m.search.js?date=2024091203" type="text/javascript"></script>
+    <script src="/m/js/jquery.simplemodal.1.4.4.min.js" type="text/javascript"></script>
+    <link href="/Ucl_Editor/css/mobile/welcome_v1.css?ver=202409120332" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        document.domain = "aladin.co.kr";
+
+        $(document).ready(function () {
+            $('.clear-word').bind("click", function () {
+                $("#SearchWord, #SearchWordBanner").val("");
+                $('.clear-word').hide();
+            });
+            if ($("#SearchWordBanner").val().length > 0) {
+                $('.clear-word').show();
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <div class="search_list_numbox">
+        <div class="search_list_newnum">
+            <ul>
+                <li><a href="javascript:void(0);" onclick="Page_Set('1')" class="search_numlist_on">1</a></li>
+                <li><a href="javascript:void(0);" onclick="Page_Set('2')" class="search_numlist_off">2</a></li>
+                <li><a href="javascript:void(0);" onclick="Page_Set('3')" class="search_numlist_off">3</a></li>
+                <li><a href="javascript:void(0);" onclick="Page_Set('4')" class="search_numlist_off">4</a></li>
+                <li><a href="javascript:void(0);" onclick="Page_Set('5')" class="search_numlist_off">5</a></li>
+                <li><a href="javascript:void(0);" onclick="Page_Set('6');" class="search_numlist_next"><img
+                            src="//image.aladin.co.kr/img/m/2018/icon_next.png" style="width:13px" /></a>
+                </li>
+                <li><a href="javascript:void(0);" onclick="Page_Set('8');" class="search_numlist_next"><img
+                            src="//image.aladin.co.kr/img/m/2018/icon_last_1.png" style="width:13px" /></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

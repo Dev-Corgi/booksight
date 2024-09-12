@@ -1,4 +1,5 @@
 import aladinISBNSearchHandler from "./aladinISBNSearchHandler";
+import getAuthor from "root/utils/getAuthor";
 
 export default async function aladinKeywordSearchHandler(SearchWord,QueryType = "Keyword") {
 
@@ -20,26 +21,29 @@ export default async function aladinKeywordSearchHandler(SearchWord,QueryType = 
     }
   }
 
-  function getAuthor(author) {
-    const authorInput = author;
-    const pattern = /^(.*?)\s*\(지은이\)/;
-    const match = authorInput.match(pattern);
-    
-    return match ? match[1] : author;
-}
-
   const aladinKeywordSearchResult = await aladinKeywordSearchHandler(SearchWord,QueryType);
 
   const filteredResult = aladinKeywordSearchResult.item.filter(book => book.isbn13 !== "");
+
+  const bookResults = filteredResult.map((book)=>{
+    return{
+      title : book.title,
+      authorName : getAuthor(book.author),
+      isbn13 : book.isbn13,
+      cover: book.cover,
+      customerReviewRank : book.customerReviewRank
+    }
+  })
+  
 //   for(const book of filteredResult){
 //   book.author = getAuthor(book.author);
 // }
 
-  const ISBNSearchResults = await Promise.all(
-    filteredResult.map(async (book) => await aladinISBNSearchHandler(book.isbn13,["authors","ratingInfo"]))
-  );
+  // const ISBNSearchResults = await Promise.all(
+  //   filteredResult.map(async (book) => await aladinISBNSearchHandler(book.isbn13,["authors","ratingInfo"]))
+  // );
 
-  return ISBNSearchResults;
+  return bookResults;
 
   // const result = JSON.parse(JSON.stringify(keywordSearchResultData.item));
   // for(const book of result){

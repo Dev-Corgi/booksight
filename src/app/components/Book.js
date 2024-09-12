@@ -5,7 +5,7 @@ import bookFrame from "@png/bookFrame.png";
 import bookShadow from "@png/bookShadow.png";
 import { ColorExtractor } from "react-color-extractor";
 
-export default function Book({ className, book, shadowType = "null" }) {
+export default function Book({ className, book, shadowType = "null",coverSize = 200 }) {
 
   const [dominantColor, setDominantColor] = useState("#000000");
 
@@ -36,7 +36,7 @@ export default function Book({ className, book, shadowType = "null" }) {
             }}
           >
             <img
-              src={book.cover.replace(/coversum/, "cover500")}
+              src={book.cover.replace(/coversum/, `cover${coverSize}`)}
               layout="fill"
               alt="bookCover"
               className="h-full w-full object-fill"
@@ -44,7 +44,7 @@ export default function Book({ className, book, shadowType = "null" }) {
            </ColorExtractor>
       ) : (
           <Image
-            src={book.cover.replace(/coversum/, "cover500")}
+            src={book.cover.replace(/coversum/, `cover${coverSize}`)}
             alt="bookCover"
             fill
             sizes={1}

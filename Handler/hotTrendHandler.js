@@ -1,4 +1,5 @@
 import aladinISBNSearchHandler from "./aladinISBNSearchHandler";
+import getAuthor from "root/utils/getAuthor";
 
 export default async function hotTrendHandler() {
   async function hotTrendHandler(date) {
@@ -41,8 +42,19 @@ export default async function hotTrendHandler() {
     hotTrendBooks.response.results[0].result.docs.map(async (book) => await aladinISBNSearchHandler(book.doc.isbn13,["authors","ratingInfo"]))
   );
 
+  const bookResults = responses.map((book)=>{
+    return{
+      title : book.title,
+      authorName : getAuthor(book.author),
+      isbn13 : book.isbn13,
+      cover: book.cover,
+      customerReviewRank : book.customerReviewRank,
+      description : book.description
+    }
+  })
 
-  return [responses[0], responses[1], responses[2]];
+
+  return [bookResults[0], bookResults[1], bookResults[2]];
 
 
 }
