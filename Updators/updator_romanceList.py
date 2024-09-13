@@ -10,7 +10,8 @@ def updator_romanceList():
             host="localhost",
             user="root",  # MySQL 사용자 이름
             password="Aa6765244!",  # MySQL 비밀번호
-            database="booklistdatas"  # 사용할 데이터베이스 (공백이 있으면 안 됩니다!)
+            database="booklistdatas",  # 사용할 데이터베이스 (공백이 있으면 안 됩니다!)
+            ssl_disabled=True  # Disable SSL if not required
         )
         cursor = conn.cursor()
 
