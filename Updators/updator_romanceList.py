@@ -1,28 +1,59 @@
 import json
-import os
+import mysql.connector
 from aladin_list_search_api import aladin_list_search_api
 
-def save_bestseller_data():
+def updator_romanceList():
+    conn = None  # conn 변수를 처음부터 정의
     try:
-        data = aladin_list_search_api("ItemEditorChoice",51250)
+        # 1. MySQL 연결 설정
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="root",  # MySQL 사용자 이름
+            password="Aa6765244!",  # MySQL 비밀번호
+            database="booklistdatas"  # 사용할 데이터베이스 (공백이 있으면 안 됩니다!)
+        )
+        cursor = conn.cursor()
+
+        # 2. 테이블 생성 (필요시)
+        create_table_query = """
+        CREATE TABLE IF NOT EXISTS romance_list (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            data JSON
+        )
+        """
+        cursor.execute(create_table_query)
         
-        if data is not None:
-            # 현재 스크립트 파일의 상위 폴더에 있는 RealData 폴더 경로 생성
-            current_dir = os.path.dirname(os.path.abspath(__file__))
-            real_data_dir = os.path.join(current_dir, "..", "RealData")
-            file_path = os.path.join(real_data_dir, "romanceList.json")
-            
-            # RealData 폴더가 존재하지 않으면 생성
-            os.makedirs(real_data_dir, exist_ok=True)
-            
-            # JSON 데이터를 RealData 폴더에 파일로 저장
-            with open(file_path, 'w', encoding='utf-8') as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-            print("Data saved successfully to RealData folder")
+        # 3. 기존 데이터 삭제
+        cursor.execute("TRUNCATE TABLE romance_list")
+
+        # 4. API 데이터 가져오기
+        result = aladin_list_search_api("ItemEditorChoice",51250)
+
+        if result is not None:
+            # 5. 데이터 삽입
+            insert_query = "INSERT INTO romance_list (data) VALUES (%s)"
+            cursor.execute(insert_query, (json.dumps(result),))  # Convert the result to JSON string and pass it as a tuple
+
+            # 6. 변경사항 저장
+            conn.commit()
+            print("Data saved successfully to MySQL database")
         else:
             print("No data to save")
+
+    except mysql.connector.Error as err:
+        print(f"MySQL Error: {err}")
     except Exception as e:
         print(f"Failed to fetch and save data: {e}")
+    finally:
+        if conn is not None and conn.is_connected():
+            cursor.close()
+            conn.close()
 
 # 함수 실행
-save_bestseller_data()
+updator_romanceList()
+
+
+
+
+
+

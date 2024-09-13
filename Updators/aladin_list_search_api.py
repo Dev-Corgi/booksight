@@ -11,7 +11,6 @@ def aladin_list_search_api(type, category_id=None):
             if category_id is not None:
                 api_url += f"&CategoryId={category_id}"
             
-            print(api_url)
             response = requests.get(api_url)
             response.raise_for_status()  # HTTP 오류 발생 시 예외 발생
             

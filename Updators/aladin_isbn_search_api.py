@@ -12,7 +12,6 @@ def aladin_isbn_search_handler(item_id, opt_result=None):
         if opt_result is not None:
             api_url += f"&OptResult={opt_result}"
         
-        print(f"apiUrl은 {api_url}")
         response = requests.get(api_url)
         response.raise_for_status()  # HTTP 오류 발생 시 예외 발생
 
@@ -35,7 +34,6 @@ def main(item_id, opt_result=None):
 
     item = aladin_isbn_search_result['item'][0]
     item['author'] = get_author(item['author'])
-    print(item)
     return item
 
 # 예시로 main 함수를 호출하는 코드
