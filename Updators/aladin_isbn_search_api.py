@@ -35,6 +35,7 @@ def main(item_id, opt_result=None):
 
     item = aladin_isbn_search_result['item'][0]
     item['author'] = get_author(item['author'])
+    print(item)
     return item
 
 # 예시로 main 함수를 호출하는 코드

@@ -1,10 +1,10 @@
 import json
 import os
-from aladin_list_search_api import aladin_list_search_api
+from hot_trend_api import hot_trend
 
 def save_bestseller_data():
     try:
-        data = aladin_list_search_api("Bestseller", 1)
+        data = hot_trend()
         
         if data is not None:
             # 현재 스크립트 파일의 상위 폴더에 있는 RealData 폴더 경로 생성

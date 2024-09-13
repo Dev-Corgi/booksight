@@ -2,7 +2,7 @@ import requests
 import re
 import os
 from datetime import datetime, timedelta
-from aladin_isbn_search_api import aladin_isbn_search_handler
+from aladin_isbn_search_api import main
 
 def hot_trend_api(date):
     # auth_key = os.getenv('NARU_API_KEY')  # 환경 변수에서 API 키 가져오기
@@ -42,7 +42,7 @@ def hot_trend():
     responses = []
     for book in docs:
         isbn13 = book.get('doc', {}).get('isbn13', '')
-        response = aladin_isbn_search_handler(isbn13, ["authors", "ratingInfo"])
+        response = main(isbn13, ["authors", "ratingInfo"])
         responses.append(response)
 
     book_results = []
