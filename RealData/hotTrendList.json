@@ -1,26 +1,72 @@
 [
-    {
-        "title": "솔이의 추석 이야기",
-        "authorName": "이억배",
-        "isbn13": "9788986621198",
-        "cover": "https://image.aladin.co.kr/product/8/33/coversum/s872839779_1.jpg",
-        "customerReviewRank": 9,
-        "description": "추석날 아침 고향으로 떠나는 솔이네 가족들의 모습을 주인공으로, 추석 명절의 풍경을 그려낸 그림책. 명절을 맞는 사람들의 모습, 길거리의 풍경들이 솔이의 하루를 통해 자세히 그려졌다."
-    },
-    {
-        "title": "에그박사 7 - 자연 생물 관찰 만화",
-        "authorName": "에그박사",
-        "isbn13": "9791168412279",
-        "cover": "https://image.aladin.co.kr/product/29691/86/coversum/k742838586_1.jpg",
-        "customerReviewRank": 10,
-        "description": "인기 키즈 크리에이터 에그박사의 원작 영상을 생생한 관찰 스토리와 귀여운 생물 도감으로 재구성한 자연 생물 관찰 만화다. 과학자, 철학가, 예술가의 눈으로 곤충의 삶을 관찰했던 프랑스의 곤충학자 파브르의《곤충기》처럼 에그박사의 눈으로 바라본 신비롭고 놀라운 자연 생물의 이야기가 가득하다."
-    },
-    {
-        "title": "당신이 누군가를 죽였다",
-        "authorName": "히가시노 게이고",
-        "isbn13": "9791170611561",
-        "cover": "https://image.aladin.co.kr/product/34292/25/coversum/k692932177_1.jpg",
-        "customerReviewRank": 9,
-        "description": "일본 최고의 베스트셀러 작가 히가시노 게이고의 장편소설『당신이 누군가를 죽였다』가 출간되었다. 작품은 장르문학계의 거장인 작가가 101번째 작품을 맞아 추리소설의 원점으로 돌아가 ‘황금시대 미스터리’의 매력을 유감없이 발휘한 걸작으로 평단과 독자의 호평을 받고 있다."
-    }
+  {
+    "title": "언젠가 우리가 같은 별을 바라본다면",
+    "authorName": "차인표",
+    "isbn13": "9791191061048",
+    "cover": "https://image.aladin.co.kr/product/28513/21/coversum/k882835835_1.jpg",
+    "customerReviewRank": 10
+  },
+  {
+    "title": "이중 하나는 거짓말",
+    "authorName": "김애란",
+    "isbn13": "9791141601300",
+    "cover": "https://image.aladin.co.kr/product/34474/76/coversum/k292932634_3.jpg",
+    "customerReviewRank": 9
+  },
+  {
+    "title": "영원한 천국",
+    "authorName": "정유정",
+    "isbn13": "9791167374561",
+    "cover": "https://image.aladin.co.kr/product/34499/81/coversum/k712932751_1.jpg",
+    "customerReviewRank": 9
+  },
+  {
+    "title": "빛이 이끄는 곳으로",
+    "authorName": "백희성",
+    "isbn13": "9791193937198",
+    "cover": "https://image.aladin.co.kr/product/34449/77/coversum/k052932333_1.jpg",
+    "customerReviewRank": 10
+  },
+  {
+    "title": "푸른 들판을 걷다",
+    "authorName": "클레어 키건",
+    "isbn13": "9791130654621",
+    "cover": "https://image.aladin.co.kr/product/34499/68/coversum/k502932751_1.jpg",
+    "customerReviewRank": 10
+  },
+  {
+    "title": "우연은 비켜 가지 않는다",
+    "authorName": "줄리언 반스",
+    "isbn13": "9791130655925",
+    "cover": "https://image.aladin.co.kr/product/34625/43/coversum/k292933484_1.jpg",
+    "customerReviewRank": 10
+  },
+  {
+    "title": "당신이 누군가를 죽였다",
+    "authorName": "히가시노 게이고",
+    "isbn13": "9791170611561",
+    "cover": "https://image.aladin.co.kr/product/34292/25/coversum/k692932177_1.jpg",
+    "customerReviewRank": 9
+  },
+  {
+    "title": "모순 - 개정판",
+    "authorName": "양귀자",
+    "isbn13": "9788998441012",
+    "cover": "https://image.aladin.co.kr/product/2584/37/coversum/8998441012_3.jpg",
+    "customerReviewRank": 9
+  },
+  {
+    "title": "청과 부동명왕",
+    "authorName": "미야베 미유키",
+    "isbn13": "9791192313573",
+    "cover": "https://image.aladin.co.kr/product/34425/92/coversum/k302932026_2.jpg",
+    "customerReviewRank": 10
+  },
+  {
+    "title": "파친코 (합본 한정판)",
+    "authorName": "이민진",
+    "isbn13": "9791168341500",
+    "cover": "https://image.aladin.co.kr/product/33047/39/coversum/k952937890_1.jpg",
+    "customerReviewRank": 10
+  }
 ]

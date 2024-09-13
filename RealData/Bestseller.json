@@ -1,72 +1,72 @@
 [
-    {
-        "title": "청과 부동명왕",
-        "authorName": "미야베 미유키",
-        "isbn13": "9791192313573",
-        "cover": "https://image.aladin.co.kr/product/34425/92/coversum/k302932026_2.jpg",
-        "customerReviewRank": 10
-    },
-    {
-        "title": "언젠가 우리가 같은 별을 바라본다면",
-        "authorName": "차인표",
-        "isbn13": "9791191061048",
-        "cover": "https://image.aladin.co.kr/product/28513/21/coversum/k882835835_1.jpg",
-        "customerReviewRank": 10
-    },
-    {
-        "title": "이중 하나는 거짓말",
-        "authorName": "김애란",
-        "isbn13": "9791141601300",
-        "cover": "https://image.aladin.co.kr/product/34474/76/coversum/k292932634_3.jpg",
-        "customerReviewRank": 9
-    },
-    {
-        "title": "영원한 천국",
-        "authorName": "정유정",
-        "isbn13": "9791167374561",
-        "cover": "https://image.aladin.co.kr/product/34499/81/coversum/k712932751_1.jpg",
-        "customerReviewRank": 9
-    },
-    {
-        "title": "빛이 이끄는 곳으로",
-        "authorName": "백희성",
-        "isbn13": "9791193937198",
-        "cover": "https://image.aladin.co.kr/product/34449/77/coversum/k052932333_1.jpg",
-        "customerReviewRank": 10
-    },
-    {
-        "title": "푸른 들판을 걷다",
-        "authorName": "클레어 키건",
-        "isbn13": "9791130654621",
-        "cover": "https://image.aladin.co.kr/product/34499/68/coversum/k502932751_1.jpg",
-        "customerReviewRank": 10
-    },
-    {
-        "title": "우연은 비켜 가지 않는다",
-        "authorName": "줄리언 반스",
-        "isbn13": "9791130655925",
-        "cover": "https://image.aladin.co.kr/product/34625/43/coversum/k292933484_1.jpg",
-        "customerReviewRank": 10
-    },
-    {
-        "title": "당신이 누군가를 죽였다",
-        "authorName": "히가시노 게이고",
-        "isbn13": "9791170611561",
-        "cover": "https://image.aladin.co.kr/product/34292/25/coversum/k692932177_1.jpg",
-        "customerReviewRank": 9
-    },
-    {
-        "title": "모순 - 개정판",
-        "authorName": "양귀자",
-        "isbn13": "9788998441012",
-        "cover": "https://image.aladin.co.kr/product/2584/37/coversum/8998441012_3.jpg",
-        "customerReviewRank": 9
-    },
-    {
-        "title": "파친코 (합본 한정판)",
-        "authorName": "이민진",
-        "isbn13": "9791168341500",
-        "cover": "https://image.aladin.co.kr/product/33047/39/coversum/k952937890_1.jpg",
-        "customerReviewRank": 10
-    }
+  {
+    "title": "언젠가 우리가 같은 별을 바라본다면",
+    "authorName": "차인표",
+    "isbn13": "9791191061048",
+    "cover": "https://image.aladin.co.kr/product/28513/21/coversum/k882835835_1.jpg",
+    "customerReviewRank": 10
+  },
+  {
+    "title": "이중 하나는 거짓말",
+    "authorName": "김애란",
+    "isbn13": "9791141601300",
+    "cover": "https://image.aladin.co.kr/product/34474/76/coversum/k292932634_3.jpg",
+    "customerReviewRank": 9
+  },
+  {
+    "title": "영원한 천국",
+    "authorName": "정유정",
+    "isbn13": "9791167374561",
+    "cover": "https://image.aladin.co.kr/product/34499/81/coversum/k712932751_1.jpg",
+    "customerReviewRank": 9
+  },
+  {
+    "title": "빛이 이끄는 곳으로",
+    "authorName": "백희성",
+    "isbn13": "9791193937198",
+    "cover": "https://image.aladin.co.kr/product/34449/77/coversum/k052932333_1.jpg",
+    "customerReviewRank": 10
+  },
+  {
+    "title": "푸른 들판을 걷다",
+    "authorName": "클레어 키건",
+    "isbn13": "9791130654621",
+    "cover": "https://image.aladin.co.kr/product/34499/68/coversum/k502932751_1.jpg",
+    "customerReviewRank": 10
+  },
+  {
+    "title": "우연은 비켜 가지 않는다",
+    "authorName": "줄리언 반스",
+    "isbn13": "9791130655925",
+    "cover": "https://image.aladin.co.kr/product/34625/43/coversum/k292933484_1.jpg",
+    "customerReviewRank": 10
+  },
+  {
+    "title": "당신이 누군가를 죽였다",
+    "authorName": "히가시노 게이고",
+    "isbn13": "9791170611561",
+    "cover": "https://image.aladin.co.kr/product/34292/25/coversum/k692932177_1.jpg",
+    "customerReviewRank": 9
+  },
+  {
+    "title": "모순 - 개정판",
+    "authorName": "양귀자",
+    "isbn13": "9788998441012",
+    "cover": "https://image.aladin.co.kr/product/2584/37/coversum/8998441012_3.jpg",
+    "customerReviewRank": 9
+  },
+  {
+    "title": "청과 부동명왕",
+    "authorName": "미야베 미유키",
+    "isbn13": "9791192313573",
+    "cover": "https://image.aladin.co.kr/product/34425/92/coversum/k302932026_2.jpg",
+    "customerReviewRank": 10
+  },
+  {
+    "title": "파친코 (합본 한정판)",
+    "authorName": "이민진",
+    "isbn13": "9791168341500",
+    "cover": "https://image.aladin.co.kr/product/33047/39/coversum/k952937890_1.jpg",
+    "customerReviewRank": 10
+  }
 ]
