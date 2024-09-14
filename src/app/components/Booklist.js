@@ -25,7 +25,7 @@ export default function Booklist({ className, width = 125.2, books }) {
                 scale: `${scale}`,
               }}
             >
-              <Shimmer isLoading={!book}>
+              <Shimmer isLoading={!book} className={"w-min h-min"}>
                 <ClientRouterWrapper url={book == undefined ?  undefined :`/bookdetail/${book.isbn13}`}>
                 <Book
                   className="w-[125.2px] h-[181.51px]"
@@ -34,19 +34,19 @@ export default function Booklist({ className, width = 125.2, books }) {
                 ></Book>
                 </ClientRouterWrapper>
               </Shimmer>
-              <Shimmer isLoading={!book}>
+              <Shimmer isLoading={!book} className={"w-min h-min"}>
                 <ReviewStars
                   width={67.85}
                   score={book == undefined ? 5 : getScore(book)}
                   className="mt-[15.09px]"
                 ></ReviewStars>
               </Shimmer>
-              <Shimmer isLoading={!book}>
+              <Shimmer isLoading={!book} className={"w-min h-min"}>
                 <p className="font-KopubWorldBold text-black w-[125.2px] text-[13px] mt-[3.85px] truncate">
                   {book == undefined ? "title" : book.title}
                 </p>
               </Shimmer>
-              <Shimmer isLoading={!book}>
+              <Shimmer isLoading={!book} className={"w-min h-min"}>
                 <p className="font-NotoSansKRMedium text-textColor-secondary text-[10px] -mt-[1px] truncate">
                   {book == undefined ? "author" : book.authorName}
                 </p>

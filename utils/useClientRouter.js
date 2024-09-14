@@ -9,7 +9,6 @@ export function ClientRouterWrapper({url,children}) {
   return(
     <Suspense>
         <div className = "flex" onClick = {() => {
-          console.log("push!")
           router.push(url)
           }}>
             {children}

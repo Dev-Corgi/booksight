@@ -7,3 +7,7 @@ pm2 list
 pm2 delete all
 
 pm2 stop my-next-app
+
+pm2 startup
+
+pm2 save
