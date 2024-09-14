@@ -7,20 +7,25 @@ export default function MapSection({ libraryInfo }) {
   const [staticMapImg, setstaticMapImg] = useState(undefined);
   const [isLoading, setisLoading] = useState(true);
 
+
   useEffect(() => {
-    async function fetchGetStaticMap() {
-      if (libraryInfo != undefined) {
+    const fetchData = async () => {
+      try {
+        const result = await libraryInfo;
         setstaticMapImg(
           await getStaticMapHandler({
-            latitude: libraryInfo.libInfo.latitude,
-            longitude: libraryInfo.libInfo.longitude,
+            latitude: result.latitude,
+            longitude: result.longitude,
           })
         ),
           setisLoading(false);
+      } catch (error) {
+        console.error("Error fetching book data:", error);
+        // 에러 처리 로직을 추가할 수 있습니다.
       }
-    }
+    };
 
-    fetchGetStaticMap();
+    fetchData();
   }, [libraryInfo]);
 
   return (

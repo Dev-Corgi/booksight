@@ -3,13 +3,18 @@
 import { useRouter } from 'next/navigation';
 import { Suspense } from 'react';
 
-export function ClientRouterWrapper({url,children}) {
+export function ClientRouterWrapper({url = null,isback = false, children}) {
   const router = useRouter();
 
   return(
     <Suspense>
         <div className = "flex" onClick = {() => {
-          router.push(url)
+          if(url != null){
+            router.push(url)
+          }
+          else if(isback){
+            router.back()
+          }
           }}>
             {children}
         </div>

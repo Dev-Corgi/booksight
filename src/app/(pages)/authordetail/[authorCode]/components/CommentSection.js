@@ -1,4 +1,3 @@
-"use client"
 
 import ProfilePic from "@png/profile.jpg";
 import TitleTag from "@/app/components/TitleTag";

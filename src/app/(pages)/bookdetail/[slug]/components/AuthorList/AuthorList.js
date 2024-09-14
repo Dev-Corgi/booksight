@@ -23,7 +23,7 @@ export default function AuthorList({ book }) {
 
     return (
         <>
-            <BooklistSection title="이런 책은 어떠세요?" books={authorList} />
+            <BooklistSection title="작가의 다른책" books={authorList} />
         </>
     );
 }

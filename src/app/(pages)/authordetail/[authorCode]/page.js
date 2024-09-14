@@ -1,30 +1,34 @@
-"use client";
 
 import Profile from "./components/Profile";
-import React, { useEffect, useState } from "react";
 import DiscriptionSection from "./components/DiscriptionSection";
 import CommentSection from "./components/CommentSection";
 import TimelineSection from "./components/TimelineSection";
-import BooklistSection from "@/app/components/BooklistSection";
-import aladinAuthorSearchHandler from "@handler/aladinAuthorBooksSearchHandler";
-import { useSearchParams } from "next/navigation";
+// import aladinAuthorSearchHandler from "@handler/aladinAuthorBooksSearchHandler";
+// import authorCrawlerHandler from "@handler/authorCrawlerHander";
+import AuthorBooksSearchAPI from "root/api/authorBooksSearchAPI";
+import authorCrawlerAPI from "root/api/authorCrawlerAPI";
+import AuthorList from "./components/AuthorList";
 
-export default function AuthorDetailPage({ params }) {
-  const searchParams = useSearchParams();
+export default function AuthorDetailPage({ params, searchParams }) {
   const authorCode = params.authorCode;
-  const authorName = searchParams.get("authorName"); // 다른 쿼리 파라미터
+  const authorName = searchParams.authorName; // 쿼리 파라미터에서 authorName 가져오기
 
-  const [books, setBooks] = useState(Array.from({ length: 10 }));
+  // const [books, setBooks] = useState(Array.from({ length: 10 }));
 
-  useEffect(() => {
-    if (authorName != undefined && authorCode != undefined) {
-      async function fetchAuthorData() {
-        setBooks(await aladinAuthorSearchHandler(authorName, authorCode));
-      }
+  // useEffect(() => {
+  //   if (authorName != undefined && authorCode != undefined) {
+  //     async function fetchAuthorData() {
+  //       setBooks(await aladinAuthorSearchHandler(authorName, authorCode));
+  //     }
 
-      fetchAuthorData();
-    }
-  }, [authorName, authorCode]);
+  //     fetchAuthorData();
+  //   }
+  // }, [authorName, authorCode]);
+
+  const books = AuthorBooksSearchAPI(authorName, authorCode)
+  const authorDisc = authorCrawlerAPI(
+    `https://www.aladin.co.kr/author/wauthor_overview.aspx?AuthorSearch=@${authorCode}&amp;partner=openAPI`
+  )
 
   return (
     <div className="flex overflow-y-scroll scroll no-scrollbar overflow-x-clip">
@@ -40,7 +44,7 @@ export default function AuthorDetailPage({ params }) {
             <div className="flex flex-row  gap-[54px] h-[639px]">
               <div className="flex flex-col flex-grow gap-[60px]">
                 <DiscriptionSection
-                  authorCode={authorCode}
+                  authorDisc={authorDisc}
                 ></DiscriptionSection>
 
                 <CommentSection></CommentSection>
@@ -49,10 +53,7 @@ export default function AuthorDetailPage({ params }) {
               <TimelineSection books={books}></TimelineSection>
             </div>
 
-            <BooklistSection
-              title="작가의 다른책"
-              books={books}
-            ></BooklistSection>
+             <AuthorList books={books}></AuthorList>
           </div>
         </div>
       </div>

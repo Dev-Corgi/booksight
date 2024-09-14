@@ -7,7 +7,7 @@
       "@components/*":["./src/app/components/*"],
       "@redux/*":["./redux/*"],
       "@hooks/*":["./redux/hooks/*"],
-      "@data/*":["./Data/*"],
+      "@data/*":["./RealData/*"],
       "@handler/*":["./Handler/*"],
       "@maps/*":["./public/assets/svg/Maps/*"],
       "root/*":["./*"]

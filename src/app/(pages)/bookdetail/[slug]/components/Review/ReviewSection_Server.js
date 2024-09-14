@@ -1,5 +1,5 @@
 import TitleTag from "@/app/components/TitleTag";
-import ReviewComponent_Server from "./ReviewComponent_Server";
+import ReviewComponent from "./ReviewComponent";
 
 export default function ReviewSection({ className, book }) {
 
@@ -12,11 +12,11 @@ export default function ReviewSection({ className, book }) {
           <div className="grid grid-rows-2 grid-flow-col gap-[80.08px] w-full overflow-clip">
             {Array.from({length : 5}).map((_, index) => {
               return (
-                <ReviewComponent_Server
+                <ReviewComponent
                 key={index}
                 book={book}
                 index = {index}
-                ></ReviewComponent_Server>
+                ></ReviewComponent>
               );
             })}
           </div>
