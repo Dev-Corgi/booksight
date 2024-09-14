@@ -10,7 +10,7 @@ export default function Booklist({ className, width = 125.2, books }) {
 
   return (
     <div className={`${className}`}>
-      {books.map((book, index) => {
+      {books.slice(0, 10).map((book, index) => {
         return (
           <div
             className="aspect-[1/2]"

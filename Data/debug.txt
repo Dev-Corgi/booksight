@@ -1,0 +1,13 @@
+ GET /authordetail/210854?authorName=%EA%B9%80%EC%95%A0%EB%9E%80 200 in 4785ms
+ GET /authordetail/210854?authorName=%EA%B9%80%EC%95%A0%EB%9E%80 200 in 86ms
+ ○ Compiling /api/authorCrawler ...
+ ✓ Compiled /api/authorCrawler in 1195ms (651 modules)
+ ✓ Compiled (771 modules)
+ GET /favicon.ico 200 in 2635ms
+ GET /api/authorCrawler?url=https://www.aladin.co.kr/author/wauthor_overview.aspx?AuthorSearch=@210854&amp;partner=openAPI 200 in 3521ms
+ GET /api/aladinAuthorSearch?Query=%EA%B9%80%EC%95%A0%EB%9E%80&Start=1 200 in 3528ms
+ GET /api/aladinAuthorSearch?Query=%EA%B9%80%EC%95%A0%EB%9E%80&Start=1 200 in 583ms
+ GET /api/aladinAuthorSearch?Query=%EA%B9%80%EC%95%A0%EB%9E%80&Start=4 200 in 723ms
+ GET /api/aladinAuthorSearch?Query=%EA%B9%80%EC%95%A0%EB%9E%80&Start=2 200 in 771ms
+ GET /api/aladinAuthorSearch?Query=%EA%B9%80%EC%95%A0%EB%9E%80&Start=3 200 in 929ms
+ ✓ Compiled /api/authorItemIdCrawler in 108ms (773 modules) GET /api/authorItemIdCrawler?authorName=%EA%B9%80%EC%95%A0%EB%9E%80&authorCode=210854 200 in 5877ms

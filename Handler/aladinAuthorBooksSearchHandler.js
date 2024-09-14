@@ -1,5 +1,3 @@
-import aladinISBNSearchHandler from "./aladinISBNSearchHandler";
-
 export default async function aladinAuthorSearchHandler(
   authorName,
   authorCode
@@ -60,29 +58,6 @@ export default async function aladinAuthorSearchHandler(
     }
   }
 
-  async function fetchValidAuthorCode(books, authorCode) {
-    const filteredBooks = await Promise.all(
-      books.map(async (book) => {
-        const ISBNresult = await aladinISBNSearchHandler(book.isbn13, [
-          "authors",
-          "ratingInfo",
-        ]);
-        if (
-          ISBNresult.subInfo.authors.some(
-            (author) => author.authorId == authorCode
-          )
-        ) {
-          return ISBNresult;
-        }
-        return null; // 조건을 충족하지 않으면 null을 반환
-      })
-    );
-
-    const validBooks = filteredBooks.filter((book) => book !== null);
-
-    return validBooks;
-  }
-
   async function NewValidAuthorItemId(books,itemIds){
     itemIds = itemIds.map(Number);
 
@@ -126,8 +101,10 @@ export default async function aladinAuthorSearchHandler(
     }
   }
 
-  const AladinAuthorSearchResult = await fetchAladinAuthorSearch(authorName);
-  const AuthorItemIds =  await fetchAuthorItemIdCrawler(authorName,authorCode);
+  const [AladinAuthorSearchResult, AuthorItemIds] = await Promise.all([
+    fetchAladinAuthorSearch(authorName),
+    fetchAuthorItemIdCrawler(authorName, authorCode)
+  ]);
 
   // const ValidAuthorResult = await fetchValidAuthorCode(
   //   AladinAuthorSearchResult,
