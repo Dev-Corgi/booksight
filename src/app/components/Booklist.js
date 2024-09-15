@@ -4,12 +4,13 @@ import Shimmer from "./Simmer";
 import getScore from "root/utils/getScore";
 import { ClientRouterWrapper } from "root/utils/useClientRouter";
 
-export default function Booklist({ className, width = 125.2, books }) {
+export default function Booklist({ className, width = 125.2, books,ref = null }) {
   const originWidth = 125.2;
   const scale = width / originWidth;
 
   return (
-    <div className={`${className}`}>
+    <div className={`${className}`}
+    ref = {ref}>
       {books.slice(0, 10).map((book, index) => {
         return (
           <div

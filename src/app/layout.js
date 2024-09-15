@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import LayoutConfig from "root/utils/LayoutConfig";
 import Script from "next/script";
+import Header from "./components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -21,14 +22,15 @@ export default function RootLayout({ children }) {
           />
         </head>
       </head>
-      <body className={inter.className}>
-        <div className="flex flex-col h-screen overflow-hidden">
+      <body className="relative w-screen overflow-x-clip overflow-y-clip">
+        <div className="absolute flex flex-col w-screen h-screen overflow-hidden mt-[75px]">
           <Suspense>
             <LayoutConfig />
             {children}
           </Suspense>
           <div id="rentModal"></div>
         </div>
+        <Header className="absolute mt-[30px]"></Header>
       </body>
     </html>
   );
