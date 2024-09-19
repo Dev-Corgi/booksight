@@ -22,6 +22,7 @@ export default async function NLKeywordSearchHandler(kwd) {
   }
 
   const NLKeywordSearchResult = await fetchNLKeywordSearch(kwd);
+  console.log(NLKeywordSearchResult.result);
   if(!NLKeywordSearchResult.result){return undefined}
   const result = NLKeywordSearchResult.result.map((item, index) => {
     return {
