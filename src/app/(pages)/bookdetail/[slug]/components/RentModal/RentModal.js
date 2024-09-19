@@ -1,6 +1,6 @@
 "use client";
 import ReactDOM from "react-dom";
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import TitleTag from "@/app/components/TitleTag";
 import CloseButton from "./components/CloseButton";
 import Tab from "./components/Tab";
@@ -19,17 +19,15 @@ export default function RentModal({
   const [isLocationModalOpen, setIsLocationModalOpen] = useState(false);
 
   useEffect(() => {
-    console.log("오픈 제로!")
     if (isRentModalOpen) {
-      console.log("오픈 시작!")
-        // 처음 페이지 로드 시 geolocation 권한을 확인
-        if (localStorage.getItem("userAddress") == null) {
-          setisRentModalOpen(false);
-          setIsLocationModalOpen(true);
-        } else {
-          const location = JSON.parse(localStorage.getItem("userAddress"));
-          dispatch(setLocation(location));
-        }
+      // 처음 페이지 로드 시 geolocation 권한을 확인
+      if (localStorage.getItem("userAddress") == null) {
+        setisRentModalOpen(false);
+        setIsLocationModalOpen(true);
+      } else {
+        const location = JSON.parse(localStorage.getItem("userAddress"));
+        dispatch(setLocation(location));
+      }
     }
   }, [isRentModalOpen]);
 
@@ -42,11 +40,16 @@ export default function RentModal({
       {isRentModalOpen && (
         <div className="fixed flex flex-col justify-end inset-0 w-full h-screen bg-black bg-opacity-80">
           <div className="relative flex flex-col items-center w-full h-[86%] bg-background rounded-t-[35px]">
-            <CloseButton requestClose={() => setisRentModalOpen(false)}></CloseButton>
-            <div className="w-[166px] h-[59px] mt-[41.19px]">
-              <TitleTag height={59} title="도서 대출" font="KopubWorldBold" />
+            <CloseButton
+              requestClose={() => setisRentModalOpen(false)}
+            ></CloseButton>
+            <div className="relative flex mt-[33px] lg:mt-[3.22vw]">
+              <p className="font-KopubWorldBold whitespace-nowrap z-10 text-[27px] lg:text-[2.64vw] pr-[8px] lg:pr-[0.78vw]">
+                도서 대출
+              </p>
+              <div className="absolute w-full h-[10px] lg:h-[0.98vw] mt-[23px] lg:mt-[2.25vw] bg-primary z-0"></div>
             </div>
-            <div className="flex flex-row justify-between w-full h-[45px] pl-[50px] pr-[58px] -mt-[7.14]">
+            <div className="flex flex-row justify-between w-full h-[33px] lg:h-[3.22vw] pl-[36px] lg:pl-[3.52vw] pr-[47px] lg:pr-[4.59vw] -mt-[5px] lg:-mt-[0.49vw]">
               <Tab></Tab>
               <TagList isOpen={isRentModalOpen}></TagList>
             </div>

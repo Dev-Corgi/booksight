@@ -560,25 +560,25 @@ export default function MapBrowser() {
   };
 
   return (
-    <div className="relative flex flex-col items-center ml-[79px] w-[413.2px] h-[725px] rounded-[45px] bg-black overflow-clip">
-      <div className="flex flow-row justify-between items-start w-[337.2px] gap-[83px] mt-[29px] whitespace-nowrap">
-        <p className="font-NotoSansKRSemiBold text-[35px] text-primary">
+    <div className="relative flex flex-col items-center ml-[56px] lg:ml-[5.47vw] w-[294px] lg:w-[28.71vw] h-[516px] lg:h-[50.39vw] rounded-[20px] lg:rounded-[1.95vw] bg-black overflow-clip">
+      <div className="flex flow-row justify-between items-start w-[240px] lg:w-[23.44vw]  mt-[27px] lg:mt-[2.64vw] whitespace-nowrap">
+        <p className="font-NotoSansKRSemiBold text-[25px] lg:text-[2.44vw] text-primary">
           {mapName}
         </p>
         <div
           className="flex flex-row items-center gap-[5px] mt-[9px]"
           onClick={handleBackClick}
         >
-          <div className="relative w-[18px] h-[16px]">
+          <div className="relative w-[13px] lg:w-[1.27vw] h-[12px] lg:h-[1.17vw]">
             <BackArrowIcon className="text-primary"></BackArrowIcon>
           </div>
-          <p className="font-NotoSansKRSemiBold text-[16px] text-primary">
+          <p className="font-NotoSansKRSemiBold text-[12px] lg:text-[1.17vw] text-primary">
             뒤로 가기
           </p>
         </div>
       </div>
       <div className="absolute flex w-full h-full items-center justify-center pointer-events-none">
-        <div className="relative flex justify-center items-center w-[325px] h-[471px] pointer-events-auto">
+        <div className="relative flex justify-center items-center w-[231px] lg:w-[22.56vw] h-[330px] lg:h-[32.23vw] pointer-events-auto">
           {Maps[mapId]}
         </div>
       </div>

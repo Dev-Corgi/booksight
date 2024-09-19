@@ -26,7 +26,7 @@ export default function ReviewComponent({ book, index }) {
       try {
         const result = await book;
         const reviewResult = result.reviewList[index];
-        if (index+1 > result.reviewList.length) {
+        if (index + 1 > result.reviewList.length) {
           setisExist(false);
           return;
         }
@@ -38,8 +38,9 @@ export default function ReviewComponent({ book, index }) {
         console.error("Error fetching book data:", error);
       }
     };
-
-    fetchData();
+    if (book != undefined) {
+      fetchData();
+    }
   }, [book]);
 
   const localImages = [
@@ -64,71 +65,67 @@ export default function ReviewComponent({ book, index }) {
 
   return (
     <>
-      {isExist &&
-        <div className="relative w-[544.96px] h-[250.99px] overflow-visible">
-          <div className="absolute w-[611.37px] h-[331.06px] left-0 top-0">
-            <Image
-              src={ReviewFrameImg}
-              alt="reviewFrame"
-              fill
-              sizes={1}
-              className="object-cover"
-            ></Image>
-          </div>
+      {isExist && (
+        <Shimmer isLoading={reviewData == undefined} className={"flex"}>
+          <div className="relative w-[387px] lg:w-[37.79vw] h-[178px] lg:h-[17.38vw] overflow-visible">
+            <div className="absolute flex left-0 top-0">
+              <div className="relative w-[430px] lg:w-[41.99vw] h-[233px] lg:h-[22.75vw]">
+                <Image
+                  src={ReviewFrameImg}
+                  alt="reviewFrame"
+                  fill
+                  sizes={1}
+                  className="object-cover"
+                ></Image>
+              </div>
+            </div>
 
-          <Shimmer
-            isLoading={reviewData == undefined}
-            className={"relative w-full h-full"}
-          >
-            <div className="absolute left-[32.23px] top-[31.25px] w-min h-min">
-              <div className="relative w-[91.31px] h-[17.23px]">
-                <ReviewStars
-                  width={91.31}
-                  score={reviewData != undefined && reviewData.reviewRank}
-                ></ReviewStars>
+            <div className="absolute left-[22px] lg:left-[2.15vw] top-[22px] lg:top-[2.15vw] w-min h-min flex flex-col">
+              <ReviewStars
+                className={"gap-[2px] lg:gap-[0.2vw]"}
+                width="w-[10px] lg:w-[0.98vw]"
+                score={reviewData != undefined && reviewData.reviewRank}
+              ></ReviewStars>
 
-                <p className="w-[456px] h-[85px] font-NotoSansKRMedium text-[15px] leading-[28px] mt-[23.76px] text-white">
-                  {reviewData != undefined &&
-                    (reviewData.text == "No description found"
-                      ? ""
-                      : reviewData.text)}
-                </p>
+              <p className="w-[325px] lg:w-[31.74vw] h-[61px] lg:h-[5.96vw] font-NotoSansKRMedium text-[11px] lg:text-[1.07vw] leading-[20px] lg:leading-[1.95vw] mt-[16px] lg:mt-[1.56vw] text-white">
+                {reviewData != undefined &&
+                  (reviewData.text == "No description found"
+                    ? ""
+                    : reviewData.text)}
+              </p>
 
-                <div className="flex flex-row items-center w-min h-min gap-[11.23px] mt-[21.94px]">
-                  <div className="relative w-[40.53px] h-[40.53px] rounded-full overflow-clip">
-                    {reviewData && (
-                      <Image
-                        src={getRandomImage()}
-                        alt="profilePic"
-                        fill
-                        sizes={1}
-                      ></Image>
-                    )}
-                  </div>
+              <div className="flex flex-row items-center w-min h-min gap-[8px] lg:gap-[0.78vw] mt-[15px] lg:mt-[1.46vw]">
+                <div className="relative w-[28px] lg:w-[2.73vw] h-[28px] lg:h-[2.73vw] rounded-full overflow-hidden">
+                  {reviewData && (
+                    <Image
+                      src={getRandomImage()}
+                      alt="profilePic"
+                      fill
+                      sizes={1}
+                    ></Image>
+                  )}
+                </div>
 
-                  <div className="flex flex-col whitespace-nowrap">
-                    <p className="font-NotoSansKRSemiBold text-[14px] text-white">
-                      {reviewData != undefined && reviewData.writer}
-                    </p>
-                    {reviewData && (
-                      <Link
-                        className="font-NotoSansKRMedium text-[11px] text-white underline-offset-4 underline"
-                        href={
-                          reviewData == undefined
-                            ? "undefined"
-                            : reviewData.link
-                        }
-                      >
-                        원문보기
-                      </Link>
-                    )}
-                  </div>
+                <div className="flex flex-col whitespace-nowrap">
+                  <p className="font-NotoSansKRSemiBold text-[10px] lg:text-[0.98vw] mt-[1px] lg:mt-[0.1vw] text-white">
+                    {reviewData != undefined && reviewData.writer}
+                  </p>
+                  {reviewData && (
+                    <Link
+                      className="font-NotoSansKRMedium text-[8px] lg:text-[0.78vw] mt-[1px] lg:mt-[0.1vw] text-white underline-offset-4 underline"
+                      href={
+                        reviewData == undefined ? "undefined" : reviewData.link
+                      }
+                    >
+                      원문보기
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
-          </Shimmer>
-        </div>
-      }
+          </div>
+        </Shimmer>
+      )}
     </>
   );
 }

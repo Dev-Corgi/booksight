@@ -32,17 +32,17 @@ export default function BookInfo({ book }) {
   }, [book]);
   return (
     <>
-      <div className="flex flex-col w-min h-min">
+      <div className="flex flex-col w-[329px] lg:w-[32.13vw] h-min">
         {/* //author */}
         <Shimmer isLoading={isLoading} className={"w-min h-min"}>
-          <p className="mt-[51px] text-[19px] font-NotoSansKRMedium text-textColor-secondary whitespace-nowrap">
+          <p className="mt-[36px] lg:mt-[3.52vw] text-[14px] lg:text-[1.37vw] font-NotoSansKRMedium text-textColor-secondary whitespace-nowrap">
             {currentBook == undefined ? "this is author" : currentBook.author}
           </p>
         </Shimmer>
         {/* title */}
-        <Shimmer isLoading={isLoading} className = {"w-min h-min"}>
+        <Shimmer isLoading={isLoading} className={"w-min h-min"}>
           <p
-            className="mt-[6px] text-[63px] w-[374px] font-KopubWorldBold text-textColor-primary h-[125px] leading-[65px] overflow-hidden"
+            className="mt-[4px] lg:mt-[0.39vw] text-[45px] lg:text-[4.39vw] w-[267px] lg:w-[26.07vw] font-KopubWorldBold text-textColor-primary leading-[55px] lg:leading-[5.37vw] overflow-hidden"
             style={{
               display: "-webkit-box",
               WebkitLineClamp: 2,
@@ -53,7 +53,7 @@ export default function BookInfo({ book }) {
           </p>
         </Shimmer>
         {/* category */}
-        <div className="flex flex-row gap-[7px] mt-[15px]">
+        <div className="flex flex-row gap-[5px] lg:gap-[0.49vw] mt-[8px] lg:mt-[7.99px]">
           {(currentBook == undefined
             ? "국내도서>소설/시/희곡>세계의 소설>북유럽소설"
             : currentBook.categoryName
@@ -61,9 +61,9 @@ export default function BookInfo({ book }) {
             .split(">")
             .map((tag, index) => {
               return (
-                <Shimmer isLoading={isLoading} key={index} className = {"flex"}>
-                  <div className="flex px-[9.6px] py-[5px] rounded-full outline outline-[1.5px] outline-primary">
-                    <p className="text-[14px] font-NotoSansKRSemiBold text-primary whitespace-nowrap">
+                <Shimmer isLoading={isLoading} key={index} className={"flex"}>
+                  <div className="flex px-[7px] lg:px-[0.68vw]  py-[3px] lg:py-[0.29vw] rounded-full outline outline-[0.85px] lg:outline-[0.08vw] outline-primary">
+                    <p className="text-[10px] lg:text-[0.98vw] font-NotoSansKRSemiBold text-primary whitespace-nowrap">
                       {tag}
                     </p>
                   </div>
@@ -74,17 +74,18 @@ export default function BookInfo({ book }) {
 
         {/* score */}
 
-        <div className="flex flex-row w-min h-min mt-[20px]">
-          <Shimmer isLoading={isLoading} className = "flex">
-            <div className="w-[111px] h-[20.94px]">
+        <div className="flex flex-row items-center w-min h-min mt-[15px] lg:mt-[1.46vw] gap-[6px] lg:gap-[0.59vw]">
+          <Shimmer isLoading={isLoading} className="flex">
+            <div className="w-min h-min">
               <ReviewStars
-                width={111}
+                className="gap-[2px] lg:gap-[0.2vw]"
+                width={"w-[13px] lg:w-[1.27vw]"}
                 score={currentBook == undefined ? 5 : score}
               ></ReviewStars>
             </div>
           </Shimmer>
-          <Shimmer isLoading={isLoading} className = "w-min h-min">
-            <p className="ml-[10px] text-black text-[14px] font-NotoSansKRMedium -mt-[1px] text-nowrap">{`${
+          <Shimmer isLoading={isLoading} className="w-min h-min">
+            <p className=" text-black text-[10px] lg:text-[0.98vw] font-NotoSansKRMedium  text-nowrap">{`${
               currentBook == undefined ? 5 : score == undefined ? "- " : score
             }/10`}</p>
           </Shimmer>
@@ -92,30 +93,30 @@ export default function BookInfo({ book }) {
 
         {/* rentButton */}
 
-        <div className="flex flex-row w-min h-min mt-[20px] gap-[14px]">
+        <div className="flex flex-row w-min h-min mt-[15px] lg:mt-[1.46vw] gap-[10px] lg:gap-[0.98vw]">
           <RentButton book={currentBook}></RentButton>
           <PurchaseButton book={currentBook}></PurchaseButton>
         </div>
 
-        <div className="flex flex-row gap-[6px] mt-[24px]">
-          <div className="relative w-[20px] h-[20px]">
+        <div className="flex flex-row items-center gap-[4px] lg:gap-[0.39vw] mt-[17px] lg:mt-[1.66vw]">
+          <div className="relative w-[15px] lg:w-[1.46vw] h-[15px] lg:h-[1.46vw]">
             <InfoIcon className=" text-primary"></InfoIcon>
           </div>
-          <p className="font-NotoSansKRMedium text-[15px] text-primary">
+          <p className="font-NotoSansKRMedium text-[11px] lg:text-[1.07vw] text-primary">
             도서 DB 제공 : 알라딘 인터넷서점(www.aladin.co.kr)
           </p>
         </div>
       </div>
-        <div className = "flex ml-[200px]">
-      <Shimmer isLoading={isLoading} className = "flex">
-        <Book
-          className="w-[392.37px] h-[589.83px]"
-          book={currentBook}
-          shadowType="shadow"
-          coverSize={500}
-        ></Book>
-      </Shimmer>
-         </div>
+      <div className="flex ml-[100px] lg:ml-[9.77vw]">
+        <Shimmer isLoading={isLoading} className="flex">
+          <Book
+            className="w-[288px] lg:w-[28.13vw] h-[420px] lg:h-[41.02vw]"
+            book={currentBook}
+            shadowType="shadow"
+            coverSize={500}
+          ></Book>
+        </Shimmer>
+      </div>
     </>
   );
 }

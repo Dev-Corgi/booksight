@@ -11,13 +11,13 @@ export default function RentButton({ book }) {
   return (
     <>
       <div
-        className="flex items-center justify-center w-[165px] h-[58px] rounded-[18px] bg-primary"
+        className="flex items-center justify-center w-[118px] lg:w-[11.52vw] h-[42px] lg:h-[4.1vw] rounded-[13px] lg:rounded-[1.27vw] bg-primary"
         onClick={() => {
           console.log("오픈!")
           setisRentModalOpen(true)
         }}
       >
-        <p className="font-NotoSansKRSemiBold text-[19px] text-white">
+        <p className="font-NotoSansKRSemiBold text-[14px] lg:text-[1.37vw] text-white">
           대여하기
         </p>
       </div>

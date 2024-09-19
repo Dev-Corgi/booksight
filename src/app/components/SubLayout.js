@@ -6,15 +6,15 @@ export default function SubLayout({ pathName }) {
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-min mt-[47px]">
-      <div className="flex flex-col w-min h-min">
-        <p className="font-KopubWorldBold whitespace-nowrap z-10 text-[38px] pr-[0.49vw]">
+    <div className="flex flex-col items-center w-full h-min mt-[35px] lg:mt-[3.42vw]">
+      <div className="relative flex">
+        <p className="font-KopubWorldBold whitespace-nowrap z-10 text-[27px] lg:text-[2.64vw] pr-[8px] lg:pr-[0.78vw]">
           {titles[pathName]}
         </p>
-        <div className="w-full h-[14px] -mt-[24px] bg-primary z-0"></div>
+        <div className="absolute w-full h-[10px] lg:h-[0.98vw] mt-[23px] lg:mt-[2.25vw] bg-primary z-0"></div>
       </div>
 
-      <div className="w-full mt-[50px]"></div>
+      <div className="w-full mt-[30px] lg:mt-[2.93vw]"></div>
     </div>
   );
 }

@@ -13,7 +13,8 @@ export default function BooklistSection({ title, books }) {
   const [isLeftOverflowing, setIsLeftOverflowing] = useState(false);
   const [isRightOverflowing, setIsRightOverflowing] = useState(false);
   const [xPosition, setXPosition] = useState(0); // 애니메이션을 위한 x 위치
-  const [rect,setRect] = useState({ width: 0, height: 0, top: 0, left: 0 });
+  const [rect, setRect] = useState({ width: 0, height: 0, top: 0, left: 0 });
+  const [isActive, setisActive] = useState(false);
 
   const checkOverflow = () => {
     const parentElement = parentRef.current;
@@ -22,14 +23,9 @@ export default function BooklistSection({ title, books }) {
       const parentRect = parentElement.getBoundingClientRect();
       const childRect = childElement.getBoundingClientRect();
 
-      console.log(`부모 오른쪽 : ${parentRect.right}`)
-      console.log(`부모 왼쪽 : ${parentRect.left}`)
-      console.log(`자식 오른쪽 : ${childRect.right}`)
-      console.log(`자식 왼쪽 : ${childRect.left}`)
-
       // 왼쪽이 부모의 경계를 넘어가는지 체크
       const leftOverflow = childRect.left < parentRect.left;
-
+//a
       // 오른쪽이 부모의 경계를 넘어가는지 체크
       const rightOverflow = childRect.right > parentRect.right;
 
@@ -51,7 +47,14 @@ export default function BooklistSection({ title, books }) {
     };
   }, [rect]); // books가 변경될 때마다 체크
 
-  
+  useEffect(() => {
+    if (
+      !books.some((item) => item === undefined)
+    ){
+      updateRect();
+    setisActive(true);
+    }
+  }, [books]);
 
   const handleRightArrowClick = () => {
     const parentElement = parentRef.current;
@@ -79,19 +82,17 @@ export default function BooklistSection({ title, books }) {
     }
   };
 
-  const updateRect = () =>{
+  const updateRect = () => {
     const childElement = childRef.current;
     const { width, height, top, left } = childElement.getBoundingClientRect();
     setRect({ width, height, top, left });
-  }
-
-  
+  };
 
   return (
     <div className={"flex flex-col flex-grow h-min overflow-x-clip"}>
       <TitleTag title={title} />
       <div
-        className="relative flex flex-grow ml-[28px] mt-[14px] overflow-x-clip"
+        className="relative flex flex-row mt-[10px] lg:mt-[0.98vw] ml-[20px] lg:ml-[1.95vw] overflow-x-clip"
         ref={parentRef}
         onMouseEnter={() => {
           setIsMouseHover(true);
@@ -100,24 +101,25 @@ export default function BooklistSection({ title, books }) {
           setIsMouseHover(false);
         }}
       >
-          <motion.div animate={{ x: xPosition }} transition={{ ease: "easeInOut", duration: 0.3 }}
+        <motion.div
+          animate={{ x: xPosition }}
+          transition={{ ease: "easeInOut", duration: 0.3 }}
           onAnimationComplete={() => {
-           updateRect()
+            updateRect();
           }}
-          >
-        <div className="flex" 
-        ref={childRef}>
+        >
+          <div className="flex w-min" ref={childRef}>
             <Suspense>
               <Booklist
-                className="relative flex flex-row w-min h-min gap-[45px]"
+                className="relative flex flex-row w-min h-min gap-[32px] lg:gap-[3.13vw]"
                 books={books}
               />
             </Suspense>
-        </div>
-          </motion.div>
-        {isMouseHover && isRightOverflowing && (
+          </div>
+        </motion.div>
+        {isMouseHover && isRightOverflowing && isActive && (
           <div
-            className="absolute -right-[20px] w-[120px] h-[120px] mt-[30px]"
+            className="absolute -right-[53px] lg:-right-[5.18vw] w-[85px] lg:w-[8.3vw] h-[85px] lg:h-[8.3vw] mt-[22px] lg:mt-[2.15vw]"
             onClick={handleRightArrowClick} // 클릭 시 애니메이션 실행
           >
             <div className="flex flex-row items-center w-full h-full rounded-full bg-primary bg-opacity-80">
@@ -127,9 +129,11 @@ export default function BooklistSection({ title, books }) {
             </div>
           </div>
         )}
-        {isMouseHover && isLeftOverflowing && (
-          <div className="absolute -left-[74px] w-[120px] h-[120px] mt-[30px] origin-center rotate-180"
-          onClick={handleLeftArrowClick}>
+        {isMouseHover && isLeftOverflowing && isActive &&(
+          <div
+            className="absolute -left-[53px] lg:-left-[5.18vw] w-[85px] lg:w-[8.3vw] h-[85px] lg:h-[8.3vw] mt-[22px] lg:mt-[2.15vw] origin-center rotate-180"
+            onClick={handleLeftArrowClick}
+          >
             <div className="flex flex-row items-center w-full h-full rounded-full bg-primary bg-opacity-80">
               <div className="relative ml-[18px] w-[24px] h-[24px]">
                 <ArrowIcon className="text-white" />

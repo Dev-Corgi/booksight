@@ -124,11 +124,11 @@ export default function LibList() {
   };
 
   return (
-    <div onScroll={handleScroll} className = "flex-grow mt-[33.56px] rounded-tl-[23.69px] h-[700px] overflow-y-scroll scroll no-scrollbar">
+    <div onScroll={handleScroll} className = "flex-grow mt-[28px] lg:mt-[2.73vw] rounded-tl-[15px] lg:rouned-tl-[1.46vw] h-[494px] lg:h-[48.24vw] overflow-y-scroll scroll no-scrollbar">
       <div  className="flex flex-col w-full">
         {libs.map((library, index) => (
-          <div className="relative w-full h-[80px]" key={index} onClick={() => {if(library != undefined) {handleLibraryClick(library.lib.libCode)}}}>
-            <div className="absolute w-full h-[80px]">
+          <div className="relative w-full h-[57px] lg:h-[5.57vw]" key={index} onClick={() => {if(library != undefined) {handleLibraryClick(library.lib.libCode)}}}>
+            <div className="absolute w-full h-full">
               <Image
                 src={library != undefined ? library.lib.picture : getRandomImage()}
                 alt="libraryImg"
@@ -136,30 +136,29 @@ export default function LibList() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute w-full h-full bg-black opacity-60 border-t-[1px] border-b-[1px] border-white border-opacity-30"></div>
-            <div className="absolute flex flex-row w-full">
-              <p className="ml-[18.22px] mt-[22.42px] font-MontserratSemiBold text-[14px] text-primary">
+            <div className="absolute w-full h-full bg-black opacity-60 border-t-[0.5px] lg:border-t-[0.05vw] border-b-[0.5px] lg:boreder-b-[0.05vw] border-white border-opacity-30"></div>
+            <div className="absolute flex flex-row w-full h-full">
+              <p className="ml-[13px] lg:ml-[1.27vw] mt-[16px] lg:mt-[1.56vw] font-MontserratSemiBold text-[10px] lg:text-[0.98vw] text-primary">
                 {"0" + (index + 1)}
               </p>
-              <p className="ml-[15.53px] mt-[19.55px] w-[280px] font-NotoSansKRBold text-[24px] text-primary truncate">
+              <p className="ml-[11px] lg:ml-[1.07vw] mt-[14px] lg:mt-[1.37vw] w-[200px] lg:w-[19.53vw] font-NotoSansKRBold text-[17px] lg:text-[1.66vw] text-primary truncate">
                 {library != undefined ? library.lib.libName : "도서관 이름 로딩중"}
               </p>
-              <div className="flex flex-row justify-start flex-grow gap-[60px] mt-[30px] ml-[132.08px]">
-
-                <div className="flex flex-row items-center gap-[2.83px]">
-                  <div className="relative w-[19px] h-[19px]">
+              <div className="flex flex-row justify-start items-start flex-grow gap-[40px] lg:gap-[3.91vw] mt-[21px] lg:mt-[2.05vw] ml-[50px] lg:ml-[4.88vw]">
+                <div className="flex flex-row items-center gap-[2px] lg:gap-[0.2vw]">
+                  <div className="relative w-[14px] lg:w-[1.37vw] h-[14px] lg:h-[1.37vw]">
                     <PlaceIcon className="text-primary"></PlaceIcon>
                   </div>
-                  <p className="font-NotoSansKRBold text-primary text-[14px] w-[171px] truncate">
+                  <p className="font-NotoSansKRBold text-primary text-[10px] lg:text-[0.98vw] w-[122px] lg:w-[11.91vw] truncate">
                     {library != undefined ? library.lib.address : "도서관 주소 로딩중"}
                   </p>
                 </div>
 
-                <div className="flex flex-row items-center gap-[2.83px]">
-                  <div className="relative w-[19px] h-[19px]">
+                <div className="flex flex-row items-center gap-[2px] lg:gap-[0.2vw]">
+                  <div className="relative w-[14px] lg:w-[1.37vw] h-[14px] lg:h-[1.37vw]">
                     <CallIcon className="text-primary"></CallIcon>
                   </div>
-                  <p className="font-NotoSansKRBold text-primary text-[14px]">
+                  <p className="font-NotoSansKRBold text-primary text-[10px] lg:text-[0.98vw]">
                     {library != undefined ? library.lib.tel : "010-1234-5678"}
                   </p>
                 </div>
@@ -167,7 +166,7 @@ export default function LibList() {
               </div>
             </div>
             {library == undefined && (
-              <div className="absolute w-full h-[80px] backdrop-blur-[6px] bg-[#00000000]"></div>
+              <div className="absolute w-full h-full backdrop-blur-[6px] bg-[#00000000]"></div>
             )}
           </div>
         ))}

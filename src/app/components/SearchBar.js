@@ -40,10 +40,9 @@ export default function SearchBar() {
   };
 
   return (
-    <div className = "w-full h-[45px]">
-    <div className="w-full flex flex-col">
-      <div className="w-full h-[45px] flex flex-row items-center justify-start gap-[10px] pl-[10px] bg-searchBar rounded-[40px]">
-        <div className="relative w-[30px] h-full">
+    <div className="relative w-[378px] h-[30px] lg:w-[36.91vw] lg:h-[2.93vw] flex flex-col overflow-visible">
+      <div className="w-full h-[32px] lg:h-[2.93vw] flex flex-row items-center justify-start gap-[7px] lg:gap-[0.68vw] pl-[14px] lg:pl-[1.37vw] bg-searchBar rounded-full">
+        <div className="relative w-[21px] lg:w-[2.05vw] h-[21px] lg:h-[2.05vw]">
           <UserInterfaceIcon className="w-full h-full text-black"></UserInterfaceIcon>
         </div>
         <input
@@ -54,13 +53,12 @@ export default function SearchBar() {
           onBlur={handleBlur}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
-          className="flex-grow h-full font-NotoSansKRBold text-[15px] text-black  placeholder:text-[15px] placeholder:text-black placeholder:font-NotoSansKRBold placeholder:text-opacity-50  bg-transparent focus:outline-none focus:ring-0"
+          className="flex-grow h-full font-NotoSansKRBold text-[11px] lg:text-[1.07vw] text-black  placeholder:text-[11px] lg:placeholder:text-[1.07vw] placeholder:text-black placeholder:font-NotoSansKRBold placeholder:text-opacity-50  bg-transparent focus:outline-none focus:ring-0"
         ></input>
       </div>
-      <div className="flex mt-[12px]">
+      <div className="absolute w-full flex mt-[44px] lg:mt-[4.3vw]">
         <AutoKeywordModal input = {inputValue} isFocus={isFocus}></AutoKeywordModal>
       </div>
-    </div>
     </div>
   );
 }

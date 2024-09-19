@@ -1,19 +1,17 @@
 // import React,{useState,useEffect} from "react"
 "use server"
-import { Suspense } from "react";
 import Center from "./components/Center";
-// import CategoryList from "./components/CategoryListLegacy";
 import CategoryList from "./components/CategoryList";
 import BooklistSection from "@/app/components/BooklistSection";
 // import aladinListSearchHandler from "@handler/aladinListSearchHandler";
 // import naruKeywordSearchHandler from "@handler/naruKeywordHandler";
 import AuthorRecommendationList from "./components/AuthorRecommendationList";
 import QuoteRecommendationList from "./components/QuoteRecommendationList";
-// import CategoryList from "./components/CategoryList";
 
 import pool from "root/lib/db";
 
 export default async function HomePage() {
+
 
   async function getBestSellerList() {
     const [rows] = await pool.query('SELECT data FROM bestseller_list');
@@ -41,12 +39,10 @@ const deductionList = await getDeductionList();
 const romanceList = await getRomanceList();
 
 
-
-
   return (
-    <div className="w-full h-full flex flex-col  items-center overflow-x-clip overflow-y-scroll scroll no-scrollbar">
-      <Center className="mt-[6.46vw] st:mt-[93px]"></Center>
-      <div className = "flex flex-col w-full ml-[6.39vw] mt-[3.19vw] st:ml-[108px] st:mt-[46px] gap-[60px]">
+    <div className="w-full h-full flex flex-col items-start justify-start overflow-x-clip overflow-y-scroll scroll no-scrollbar">
+      <Center></Center>
+      <div className = "flex flex-col w-[100vw] pl-[76px] pt-[32px] lg:pt-[3.13vw] gap-[42px] lg:gap-[4.1vw]">
       <BooklistSection title="베스트 셀러" books={bestSellerList}></BooklistSection>
       <BooklistSection title="주목할 신간 도서" books={itemNewSpecialList}></BooklistSection>
       <CategoryList></CategoryList>

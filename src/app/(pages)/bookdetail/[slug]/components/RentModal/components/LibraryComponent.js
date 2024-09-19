@@ -81,53 +81,6 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
     }
   }, [isOpen, location,isOnlyPossible]);
 
-  // useEffect(() => {
-  //   async function fetchLibraryInfo() {
-  //     const promises = nearbyLibraryCodes.map(async (library) => {
-  //       const libraryInfo = await getLibraryInfoHandler(library.libCode);
-  //       const libraryPicture = await getLibraryPictureHandler(library.libCode);
-  //       const rentPossible = await isRentPossibleHandler(
-  //         library.libCode,
-  //         isbn13
-  //       );
-
-  //       return { libraryInfo, libraryPicture, rentPossible };
-  //     });
-
-  //     const results = await Promise.all(promises);
-
-  //     const libraries = results.map((result) => {
-  //       const { libraryInfo, libraryPicture, rentPossible } = result;
-  //       const library = libraryInfo.libInfo;
-  //       library.picture = libraryPicture;
-  //       library.rentState =
-  //         rentPossible.response.result.hasBook === "N"
-  //           ? "미 소장"
-  //           : rentPossible.response.result.loanAvailable === "Y"
-  //           ? "대출 하기"
-  //           : "대출 불가";
-  //       return library;
-  //     });
-
-  //     const sortedLibraries = libraries.sort((a, b) => {
-  //       const priority = {
-  //         "대출 하기": 1,
-  //         "대출 불가": 2,
-  //         "미 소장": 3,
-  //       };
-  //       return priority[a.rentState] - priority[b.rentState];
-  //     });
-
-  //     setProcessedLibraries(sortedLibraries);
-  //   }
-
-  //   if (isOpen) {
-  //     fetchLibraryInfo();
-  //   }
-  // }, [nearbyLibraryCodes]);
-
-  /////////////////////////////////////
-
   useEffect(() => {
     if (
       isOpen &&
@@ -303,16 +256,16 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
   }
 
   return (
-    <div className="flex flex-row justify-end w-full pl-[50px]">
+    <div className="flex flex-row justify-end w-full pl-[36px] lg:pl-[3.52vw]">
       {processedLibraries.length != 0 && (
         <div
           onScroll={handleScroll}
-          className="flex-grow mt-[33.56px] rounded-tl-[23.69px] h-[741px] whitespace-nowrap overflow-y-scroll scroll no-scrollbar"
+          className="flex-grow mt-[28px] lg:mt-[2.73vw] rounded-tl-[17px] lg:rounded-tl-[1.66vw] h-[493px] lg:h-[48.14vw] whitespace-nowrap overflow-y-scroll scroll no-scrollbar"
         >
           <div className="flex flex-col w-full">
             {processedLibraries.map((library, index) => (
               <div
-                className="relative w-full h-[80px]"
+                className="relative w-full h-[57px] lg:h-[5.57vw]"
                 key={index}
                 onClick={() => {
                   if (library != undefined) {
@@ -320,7 +273,7 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
                   }
                 }}
               >
-                <div className="absolute w-full h-[80px]">
+                <div className="absolute w-full h-[57px] lg:h-[5.57vw]">
                   <Image
                     src={
                       library != undefined ? library.picture : getRandomImage()
@@ -338,52 +291,52 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
                       : library.rentState === "대출 하기"
                       ? "bg-opacity-50"
                       : "bg-opacity-70"
-                  } border-t-[1px] border-b-[1px] border-white border-opacity-30`}
+                  } border-t-[0.5px] lg:border-t-[0.05vw] border-b-[0.5px] lg:border-b-[0.05vw] border-white border-opacity-30`}
                 ></div>
-                <div className="absolute flex flex-row h-full  justify-between items-center  w-full">
+                <div className="absolute flex flex-row h-full  justify-between items-center w-full">
 
-                  <div className="flex flex-row ml-[18.22px]">
-                    <p className="font-MontserratSemiBold text-[14px] text-primary">
+                  <div className="flex flex-row ml-[13px] lg:ml-[1.27vw]">
+                    <p className="font-MontserratSemiBold text-[10px] lg:text-[0.98vw] text-primary">
                       {"0" + (index + 1)}
                     </p>
-                    <p className="ml-[15.53px] w-[280px] font-NotoSansKRBold text-[24px] text-primary">
+                    <p className="ml-[11px] lg:ml-[1.07vw] w-[200px] lg:w-[19.53vw] font-NotoSansKRBold text-[18px] lg:text-[1.76vw] text-primary">
                       {library == undefined
                         ? "도서관 이름 로딩중"
                         : library.libName}
                     </p>
                   </div>
 
-                  <div className="flex flex-row justify-start gap-[60px] ml-[189px]">
-                    <div className="flex flex-row w-[200px] items-center gap-[2.83px]">
-                      <div className="relative w-[19px] h-[19px]">
+                  <div className="flex flex-row justify-start gap-[42px] lg:gap-[4.1vw] ml-[126px] lg:ml-[12.3vw]">
+                    <div className="flex flex-row w-[142px] lg:w-[13.87vw] items-center gap-[2px] lg:gap-[0.2vw]">
+                      <div className="relative w-[14px] lg:w-[1.37vw] h-[14px] lg:h-[1.37vw]">
                         <PlaceIcon className="text-primary" />
                       </div>
-                      <p className="font-NotoSansKRBold text-primary text-[14px] w-[178px] truncate">
+                      <p className="font-NotoSansKRBold text-primary text-[10px] lg:text-[0.98vw] w-[126px] lg:w-[12.3vw] truncate">
                         {library == undefined
                           ? "도서관 주소 로딩중"
                           : library.address}
                       </p>
                     </div>
-                    <div className="flex flex-row w-[130px] items-center gap-[2.83px]">
-                      <div className="relative w-[19px] h-[19px]">
+                    <div className="flex flex-row w-[93px] lg:w-[9.08vw] items-center gap-[2px] lg:gap-[0.2vw]">
+                      <div className="relative w-[14px] lg:w-[1.37vw] h-[14px] lg:h-[1.37vw]">
                         <CallIcon className="text-primary" />
                       </div>
-                      <p className="font-NotoSansKRBold text-primary text-[14px] w-[108px]">
+                      <p className="font-NotoSansKRBold text-primary text-[10px] lg:text-[0.98vw] w-[67px] lg:w-[6.54vw]">
                         {library == undefined ? "010-1234-5678" : library.tel}
                       </p>
                     </div>
-                    <div className="flex flex-row w-[74px] items-center gap-[2.83px]">
-                      <div className="relative w-[19px] h-[19px]">
+                    <div className="flex flex-row w-[53px] lg:w-[5.18vw] items-center gap-[2px] lg:gap-[0.2vw]">
+                      <div className="relative w-[14px] lg:w-[1.37vw] h-[14px] lg:h-[1.37vw]">
                         <FootprintIcon className="text-primary" />
                       </div>
-                      <p className="font-NotoSansKRBold text-primary text-[14px] w-[52px]">
+                      <p className="font-NotoSansKRBold text-primary text-[10px] lg:text-[0.98vw] w-[37px] lg:w-[3.61vw]">
                         {library == undefined ? "?km" : `${library.distance}km`}
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex justify-center items-center w-[121px] h-[38px] border-[2px] border-primary rounded-[10px] mr-[58px]">
-                    <p className="font-NotoSansKRSemiBold text-[14px] text-primary">
+                  <div className="flex justify-center items-center w-[86px] lg:w-[8.4vw] h-[27px] lg:h-[2.64vw] border-[1.5px] lg:border-[0.15vw] border-primary rounded-[7px] lg:rounded-[0.68vw] mr-[41px] lg:mr-[4vw]">
+                    <p className="font-NotoSansKRSemiBold text-[10px] lg:text-[0.98vw] text-primary">
                       {library == undefined ? "로딩중" : library.rentState}
                     </p>
                   </div>
@@ -392,7 +345,7 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
                   <div className="absolute w-full h-full bg-black opacity-30"></div>
                 )}
                 {library == undefined && (
-                  <div className="absolute w-full h-[80px] backdrop-blur-[6px] bg-[#00000000]"></div>
+                  <div className="absolute w-full h-[57px] lg:h-[5.57vw] backdrop-blur-[6px] bg-[#00000000]"></div>
                 )}
               </div>
             ))}
@@ -400,8 +353,8 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
         </div>
       )}
       {!isLoading && processedLibraries.length == 0 && (
-        <div className="h-[799px] w-full mt-[33.56px] flex flex-col items-center">
-          <div className="relative mt-[42px] w-[451px] h-[449px]">
+        <div className="w-full mt-[29px] lg:mt-[2.83vw] flex flex-col items-center">
+          <div className="relative mt-[42px] w-[328px] lg:w-[32.03vw] h-[320px] lg:h-[31.25vw]">
             <Image
               src={NoFoundPic}
               alt="noFoundPic"
@@ -410,7 +363,7 @@ export default function LibraryComponent({ isOpen, isbn13 }) {
               className="object-contain"
             ></Image>
           </div>
-          <p className="mt-[30px]">
+          <p className="mt-[31px] lg:mt-[3.03vw] text-[17px] lg:text-[1.66vw] text-textColor-secondary">
             주변에 대여가능한 도서관이 존재하지 않습니다
           </p>
         </div>

@@ -23,14 +23,14 @@ export default function RootLayout({ children }) {
         </head>
       </head>
       <body className="relative w-screen overflow-x-clip overflow-y-clip">
-        <div className="absolute flex flex-col w-screen h-screen overflow-hidden mt-[75px]">
+        <div className="absolute flex flex-col w-screen h-screen overflow-hidden pt-[75px]">
           <Suspense>
             <LayoutConfig />
             {children}
           </Suspense>
           <div id="rentModal"></div>
         </div>
-        <Header className="absolute mt-[30px]"></Header>
+        <Header></Header>
       </body>
     </html>
   );

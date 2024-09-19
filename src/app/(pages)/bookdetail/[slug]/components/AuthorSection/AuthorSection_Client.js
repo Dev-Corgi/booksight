@@ -87,14 +87,17 @@ export default function AuthorSection_Client({ book }) {
 
   return (
     <Shimmer isLoading={isLoading} className={"w-full h-full"}>
-      <div className="relative flex flex-row mx-[36px] mt-[38px] mb-[24px] gap-[18px]">
-        <div className="absolute right-0 top-0 flex flex-row justify-end gap-[16px]">
-          <div className="flex w-[130px] h-[45px] justify-center items-center bg-primary rounded-[14px]">
-            <div className="flex flex-row items-end gap-[8px] h-[22px] text-white">
-              <div className="relative w-[20px] h-[20px]">
+      <div className = "flex w-[832px] lg:w-[81.25vw]  rounded-[10px] lg:rounded-[0.98vw] overflow-hidden bg-discriptionPanel">
+      <div className="relative flex flex-row mx-[25px] lg:mx-[2.44vw] mt-[27px] lg:mt-[2.64vw] mb-[17px] lg:mb-[1.66vw] gap-[13px] lg:gap-[1.27vw]">
+
+        <div className="absolute right-0 top-0 flex flex-row justify-end gap-[11px] lg:gap-[1.07vw]">
+
+          <div className="flex justify-center items-center w-[77px] lg:w-[7.52vw] h-[27px] lg:h-[2.64vw] bg-primary rounded-[7px] lg:rounded-[0.68vw]">
+            <div className="flex flex-row items-center gap-[3px] lg:gap-[0.29vw] h-[22px] lg:h-[2.15vw] text-white">
+              <div className="relative w-[13px] lg:w-[1.27vw] h-[13px] lg:h-[1.27vw]">
                 <SavedIcon></SavedIcon>
               </div>
-              <p className="font-NotoSansKRSemiBold text-[15px]">구독하기</p>
+              <p className="font-NotoSansKRSemiBold text-[9.5px] lg:text-[0.93vw]">구독하기</p>
             </div>
           </div>
 
@@ -105,20 +108,18 @@ export default function AuthorSection_Client({ book }) {
                 : null
             }
           >
-            <div className="flex w-[130px] h-[45px] justify-center items-center bg-black rounded-[14px]">
-              <div className="flex flex-row items-end gap-[8px] h-[22px] text-white">
-                <div className="relative w-[20px] h-[20px]">
-                  <ExportIcon></ExportIcon>
-                </div>
-                <p className="font-NotoSansKRSemiBold text-[15px]">
-                  상세 페이지
-                </p>
+          <div className="flex justify-center items-center w-[77px] lg:w-[7.52vw] h-[27px] lg:h-[2.64vw] bg-black rounded-[7px] lg:rounded-[0.68vw]">
+            <div className="flex flex-row items-center gap-[3px] lg:gap-[0.29vw] h-[22px] lg:h-[2.15vw] text-white">
+              <div className="relative w-[13px] lg:w-[1.27vw] h-[13px] lg:h-[1.27vw]">
+                <ExportIcon></ExportIcon>
               </div>
+              <p className="font-NotoSansKRSemiBold text-[9.5px] lg:text-[0.93vw]">상세 페이지</p>
             </div>
+          </div>
           </ClientRouterWrapper>
         </div>
 
-        <div className="relative w-[91px] h-[91px] rounded-full overflow-hidden flex-shrink-0">
+        <div className="relative w-[65px] lg:w-[6.35vw] h-[65px] lg:h-[6.35vw] rounded-full overflow-hidden flex-shrink-0">
           {!isLoading && (
             <Image
               src={authorData.authorPic}
@@ -130,27 +131,15 @@ export default function AuthorSection_Client({ book }) {
         </div>
 
         <div className="flex flex-col w-full">
-          <p className="font-NotoSansKRMedium text-[27px] text-textColor-primary">
+          <p className="font-NotoSansKRSemiBold text-[17px] lg:text-[1.66vw] text-textColor-primary">
             {!isLoading ? authorData.authorName : "작가명 로딩중"}
           </p>
 
-          {/* <ReviewStars
-            width={111}
-            score={authorData.authorScore}
-            className="mt-[7px]"
-          ></ReviewStars>
-
-          <div className="flex flex-row items-end w-min h-min gap-[6px] font-NotoSansKRMedium mt-[15px] text-nowrap">
-            <p className="text-textColor-primary text-[14px]">
-              {`등록된 저서 : ${authorData.authorBookCount} 권`}
-            </p>
-          </div> */}
-
-          <p className="font-NotoSansKRRegular text-[16px] text-textColor-primary -tracking-[2px] mt-[27px]">
+          <p className="font-NotoSansKRMedium text-[11px] lg:text-[1.07vw] text-textColor-primary mt-[13px] lg:mt-[1.27vw]">
             {authorData.authorDisc}
           </p>
-
         </div>
+      </div>
       </div>
     </Shimmer>
   );

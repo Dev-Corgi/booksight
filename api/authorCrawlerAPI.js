@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { JSDOM } from 'jsdom';
-// valid 뭔가 잘못 날아간다
+
 export default async function authorCrawlerAPI(url) {
     async function fetchAuthorCrawler(url) {
         
@@ -16,6 +16,7 @@ export default async function authorCrawlerAPI(url) {
             const descriptionElement = document.querySelector('div[style="text-align: left"] p');
             const description = descriptionElement ? descriptionElement.textContent.trim() : 'Description not found';
 
+            
 
         return description;
       } catch (error) {

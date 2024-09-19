@@ -9,10 +9,10 @@ import store from "@redux/store";
 export default function LibrarySearchPage(props) {
   return (
     <Provider store={store}>
-    <div className="flex flex-row overflow-x-clip">
+    <div className="flex flex-row items-center overflow-x-clip">
       <MapBrowser></MapBrowser>
 
-      <div className="ml-[108.8px] flex-grow h-min flex flex-col">
+      <div className="ml-[79.5px] lg:ml-[7.76vw] flex-grow h-min flex flex-col">
         <InfoTab></InfoTab>
         <LibList></LibList>
       </div>

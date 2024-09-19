@@ -39,15 +39,15 @@ export default function TagList({ isOpen }) {
 
   return (
     <>
-      <div className="flex flex-row justify-end gap-[8px]">
+      <div className="flex flex-row justify-end gap-[6px] lg:gap-[0.59vw]">
       <Shimmer isLoading={isLoading}>
-          <div className="flex justify-center items-center py-[8px] px-[9.6px] border-[1.5px] border-textColor-primary rounded-full"
+          <div className="flex justify-center items-center py-[6px] lg:py-[0.59vw] px-[7px] lg:px-[0.68vw] border-[1px] lg:border-[0.1vw] border-textColor-primary rounded-full"
           onClick={() => dispatch(setIsOnlyPossible(!isOnlyPossible))}>
-            <div className="flex flex-row">
-              <div className="relative w-[20px] h-[20px]">
+            <div className="flex flex-row gap-[1px] lg:gap-[0.1vw]">
+              <div className="relative w-[14px] lg:w-[1.37vw] h-[14px] lg:h-[1.37vw]">
                 <EyeIcon className="text-textColor-primary" />
               </div>
-              <p className="font-NotoSansKRMedium text-textColor-primary text-[15px] ml-[1px]">
+              <p className="font-NotoSansKRMedium text-textColor-primary text-[11px] lg:text-[1.07vw]">
                 {isOnlyPossible ? "대출 가능 도서관만" : "모든 도서관"}
               </p>
             </div>
@@ -55,14 +55,14 @@ export default function TagList({ isOpen }) {
         </Shimmer>
         <Shimmer isLoading={isLoading}>
           <div
-            className="flex justify-center items-center py-[8px] px-[9.6px] border-[1.5px] border-textColor-primary rounded-full"
+            className="flex justify-center items-center py-[6px] lg:py-[0.59vw] px-[7px] lg:px-[0.68vw] border-[1px] lg:border-[0.1vw] border-textColor-primary rounded-full"
             onClick={() => setIsLocationModalOpen(true)}
           >
-            <div className="flex flex-row">
-              <div className="relative w-[20px] h-[20px]">
+            <div className="flex flex-row gap-[1px] lg:gap-[0.1vw]">
+              <div className="relative w-[14px] lg:w-[1.37vw] h-[14px] lg:h-[1.37vw]">
                 <PlaceIcon className="text-textColor-primary" />
               </div>
-              <p className="font-NotoSansKRMedium text-textColor-primary text-[15px] ml-[1px]">
+              <p className="font-NotoSansKRMedium text-textColor-primary text-[11px] lg:text-[1.07vw]">
                 {roadaddr == undefined ? "로딩중..." : roadaddr}
               </p>
             </div>
