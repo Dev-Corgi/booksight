@@ -263,7 +263,7 @@ export default function LocationSetModal({
 
   return ReactDOM.createPortal(
     <div className="fixed flex items-center justify-center inset-0 w-full h-screen bg-black bg-opacity-80">
-      <div className="relative flex flex-col items-center w-[385px] lg:w-[37.6vw] h-[312px] lg:h-[30.47vw] bg-background rounded-[8px] lg:rounded-[0.78vw]">
+      <div className="relative flex flex-col items-center w-[385px] lg:w-[37.6vw] pb-[14px] lg:pb-[1.37vw] bg-background rounded-[8px] lg:rounded-[0.78vw]">
         <div className="absolute right-[14px] lg:right-[1.37vw] top-[14px] lg:top-[1.37vw] w-[9px] lg:w-[0.88vw] h-[9px] lg:h-[0.88vw]">
           <CloseIcon onClick={requestClose}></CloseIcon>
         </div>
@@ -271,7 +271,7 @@ export default function LocationSetModal({
           {modalData[currentIndex].content}
         </div>
 
-        <p className="mt-[17px] lg:mt-[1.66vw] font-NotoSansKRMedium text-[16px] lg:text-[1.56vw] text-black">
+        <p className="mt-[17px] lg:mt-[1.66vw] font-NotoSansKRMedium text-[16px] lg:text-[1.56vw] text-black w-[313px] lg:w-[30.57vw]">
           {modalData[currentIndex].title}
         </p>
 
@@ -281,10 +281,10 @@ export default function LocationSetModal({
 
         <div className="w-full h-[0.5px] lg:h-[0.05vw] bg-textColor-secondary mt-[21px] lg:mt-[2.05vw]"></div>
 
-        <div className="mt-[17px] lg:mt-[1.66vw] flex flex-row w-[345px] lg:w-[33.69vw] justify-between">
+        <div className="mt-[17px] lg:mt-[1.66vw] flex flex-row items-center w-[345px] lg:w-[33.69vw] justify-between">
           {modalData[currentIndex].secondaryButtonText != "" && (
             <div
-              className="flex justify-center items-center w-[118px] lg:w-[11.52vw] h-[42px] lg:h-[4.1vw] bg-black rounded-[13px] lg:rounded-[1.27vw]"
+              className="flex justify-center items-center w-[118px] lg:w-[11.52vw] h-[42px] lg:h-[4.1vw] bg-black rounded-[8px] lg:rounded-[0.78vw]"
               onClick={modalData[currentIndex].secondaryButtonAction}
             >
               {modalData[currentIndex].secondaryButtonText != "" && (
@@ -296,7 +296,7 @@ export default function LocationSetModal({
           )}
 
           <div
-            className="flex justify-center items-center w-[118px] lg:w-[11.52vw] h-[42px] lg:h-[4.1vw bg-primary rounded-[13px] lg:rounded-[1.27vw]"
+            className="flex justify-center items-center w-[118px] lg:w-[11.52vw] h-[42px] lg:h-[4.1vw] bg-primary rounded-[8px] lg:rounded-[0.78vw]"
             onClick={modalData[currentIndex].primaryButtonAction}
           >
             <p className="w-full font-NotoSansKRSemiBold text-[14px] lg:text-[1.37vw] text-white text-center align-middle">

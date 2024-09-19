@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
             <LayoutConfig />
             {children}
           </Suspense>
-          <div id="rentModal"></div>
+          <div id="rentModal" className = "z-20"></div>
         </div>
         <Header></Header>
       </body>

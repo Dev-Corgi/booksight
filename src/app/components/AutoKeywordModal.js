@@ -18,7 +18,7 @@ export default function AutoKeywordModal({ input,isFocus }) {
       setdataList(await NLKeywordSearchHandler(input));
     }
 
-    if (isCompletedHangulString && isFocus) {
+    if (isCompletedHangulString(input) && isFocus) {
       fetchNLKeywordSearch(input);
     }
   }, [input]);
